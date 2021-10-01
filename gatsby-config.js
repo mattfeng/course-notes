@@ -1,5 +1,5 @@
 module.exports = {
-  pathPrefix: "course-notes/",
+  pathPrefix: "/course-notes",
   siteMetadata: {
     title: ``,
     description: ``,
