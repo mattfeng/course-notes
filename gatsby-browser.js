@@ -1,0 +1,1 @@
+require("katex/dist/contrib/mhchem.min.js")

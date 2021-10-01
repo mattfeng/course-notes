@@ -29,13 +29,16 @@ module.exports = {
       resolve: `gatsby-plugin-mdx`,
       options: {
         gatsbyRemarkPlugins: [
-          `gatsby-remark-copy-linked-files`
+          `gatsby-remark-copy-linked-files`,
         ],
         remarkPlugins: [
           [
-            require(`remark-math`),
+            require("remark-math"),
             {
-              strict: `ignore`
+              strict: `ignore`,
+              macros: {
+                "\\K#1": "\\text{K}_{#1}"
+              }
             }
           ],
         ],
