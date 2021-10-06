@@ -8,12 +8,12 @@ const IndexPage = () => (
       <ul>
         <li>
           <Link to="/5.12/unit1">
-            Unit 1 (L1 - L10): Structure, Energy, and Reactivity
+            unit 1 (l1 - l10): structure, energy, and reactivity
           </Link>
         </li>
         <li>
           <Link to="/5.12/unit2">
-            Unit 2 (L11 - L18): Chemistry of Alkenes and Alkynes
+            unit 2 (l11 - l18): chemistry of alkenes and alkynes
           </Link>
         </li>
       </ul>
@@ -23,7 +23,16 @@ const IndexPage = () => (
     <ul>
       <li>
         <Link to="/20.110/all">
-          All 20.110 Notes
+          all 20.110 notes
+        </Link>
+      </li>
+    </ul>
+    
+    <h1>17.395</h1>
+    <ul>
+      <li>
+        <Link to="/17.395/all">
+          all 17.395 notes
         </Link>
       </li>
     </ul>
@@ -32,12 +41,21 @@ const IndexPage = () => (
     <ul>
       <li>
         <Link to="/5.07/unit1">
-          Unit 1: Structure of the Elements of Life
+          unit 1: structure of the elements of life
         </Link>
       </li>
       <li>
         <Link to="/5.07/unit2">
-          Unit 2: Enzymes and Catalysis
+          unit 2: enzymes and catalysis
+        </Link>
+      </li>
+    </ul>
+    
+    <h1>building</h1>
+    <ul>
+      <li>
+        <Link to="/building">
+          how to build
         </Link>
       </li>
     </ul>
@@ -46,10 +64,19 @@ const IndexPage = () => (
       <h1>references</h1>
       <ul>
         <li>
-          <Link to="/ref/latex">LaTeX</Link>
+          <Link to="/ref/latex">latex</Link>
         </li>
         <li>
-          <Link to="/ref/gatsby">Gatsby</Link>
+          <Link to="/ref/gatsby">gatsby</Link>
+        </li>
+        <li>
+          <Link to="/ref/notes">notetaking</Link>
+        </li>
+        <li>
+          <Link to="/ref/macos">macos</Link>
+        </li>
+        <li>
+          <Link to="/ref/abrv">abbreviations</Link>
         </li>
       </ul>
     </div>
