@@ -5,6 +5,7 @@ import { MDXRenderer } from "gatsby-plugin-mdx"
 import Chem from "../components/chem"
 
 import "../styles/katex.css"
+import "../styles/main.scss"
 import * as styles from "../styles/notes.module.scss"
 
 require("katex/dist/katex.min.css")
