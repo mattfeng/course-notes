@@ -7,6 +7,7 @@ module.exports = {
     siteUrl: `https://mattfeng.tech/course-notes`,
   },
   plugins: [
+    `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
     {

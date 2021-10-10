@@ -5,6 +5,7 @@ import { MDXRenderer } from "gatsby-plugin-mdx"
 import Chem from "../components/chem"
 
 import "../styles/katex.css"
+import * as styles from "../styles/notes.module.scss"
 
 require("katex/dist/katex.min.css")
 
@@ -15,7 +16,7 @@ export default function BlogPost({ data }) {
   return (
     <>
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/contrib/mhchem.min.js" integrity="sha384-LIgAiYlGSAdpNC9+YDjDPF6JeS/RRIumtNo0CmyQERZ/+g0h9MbuYQwf/5pQ4Y4M"  crossorigin="anonymous"></script>
-    <div>
+    <div className={styles.mainContainer}>
       <h1>{ post.frontmatter.title }</h1>
       <MDXProvider components={shortcodes}>
         <MDXRenderer>
