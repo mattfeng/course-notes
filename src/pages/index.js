@@ -5,6 +5,10 @@ import * as styles from "../styles/notes.module.scss"
 
 const IndexPage = () => (
   <div className={styles.mainContainer}>
+    <Link to="/questions">
+      <h1>questions</h1>
+    </Link>
+
     <div>
       <h1>5.12</h1>
       <ul>
@@ -24,7 +28,7 @@ const IndexPage = () => (
     <h1>20.110</h1>
     <ul>
       <li>
-        <Link to="/20.110/all">
+        <Link to="/20.110">
           all 20.110 notes
         </Link>
       </li>
