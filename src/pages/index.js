@@ -1,8 +1,10 @@
 import * as React from "react"
 import { Link } from "gatsby"
 
+import * as styles from "../styles/notes.module.scss"
+
 const IndexPage = () => (
-  <>
+  <div className={styles.mainContainer}>
     <div>
       <h1>5.12</h1>
       <ul>
@@ -80,7 +82,7 @@ const IndexPage = () => (
         </li>
       </ul>
     </div>
-  </>
+  </div>
 )
 
 export default IndexPage
