@@ -3,6 +3,7 @@ import { graphql } from "gatsby"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import Chem from "../components/chem"
+import Tag from "../components/tag"
 
 import "../styles/katex.css"
 import "../styles/main.scss"
@@ -10,7 +11,7 @@ import * as styles from "../styles/notes.module.scss"
 
 require("katex/dist/katex.min.css")
 
-const shortcodes = {C: Chem}
+const shortcodes = {C: Chem, T: Tag}
 
 export default function BlogPost({ data }) {
   const post = data.mdx
