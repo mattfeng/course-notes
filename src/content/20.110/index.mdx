@@ -45,24 +45,126 @@ _todo: use Gibbs-Helmholtz equation to derive equation (13-2)_
 
 ## key concepts
 
-### specific heat
+### inexact differentials
+- inexact differentials are just **line integrals**
+    - a differential $\delta f = \mathbf{F} \cdot d\mathbf{r}$ is inexact if there does not exist a **potential function** $f$ such that $\nabla f = \mathbf{F}$
+- exact differentials are _line integrals over **conservative fields**_
 
-- for perfect gases, $\bar{C}_v = 3/2R$
-- for perfect gases, $\bar{C}_p - \bar{C}_v = R$
+### standards
+- **standard pressure.** <C chem="\pu{1 bar} = \pu{10^5 Pa}" />, denoted $p^\circ$.
+
+### kinetic theory of gases
+- three assumptions
+    1. gas consists of molecules of mass $m$ in ceaseless random motion obeying the laws of classical mechanics
+    2. the size of molecules is negligible; diameters are much smaller than average distance travelled between collisions
+    3. molecules interact only through brief **elastic collisions**: total translational kinetic energy is conserved
+
+### internal energy
+- **first law of thermodynamics.** $\boxed{dU = \delta q + \delta w}$
+
+### [natural variables](https://chem.libretexts.org/Bookshelves/Physical_and_Theoretical_Chemistry_Textbook_Maps/Physical_Chemistry_(McQuarrie_and_Simon)/22%3A_Helmholtz_and_Gibbs_Energies/22.05%3A_Thermodynamic_Functions_have_Natural_Variables)
+
+### phase rule (state postulate)
+- for simple, compressible systems, two state variables define the entire system, _one of which must be intrinsic_
+
+### enthalpy
+- $\boxed{H \overset{d}{=} U + PV}$, where $P$ is the pressure of the _system_
+- **`enth/1`.** for a **constant pressure process**, $\boxed{dH = \delta q}$
+    - **proof.**
+        - _(1)_ definition of $H$
+        - _(2)_ definition of $\Delta U$
+        - _(3)_ assume $P = P_{\text{ext}}$, i.e. mechanical equilibrium with surroundings
+
+$$
+\begin{aligned}
+H + dH &= (U + dU) + (P + dP)(V + dV) \\
+       &= U + dU + PV + PdV + VdP + dPdV \\
+       &= H + dU + PdV + VdP \\
+\therefore    dH &= dU + PdV + VdP \\
+                 &= \delta q + \delta w + PdV + VdP \\
+                 &= \delta q + \delta w + PdV \\
+                 &= \delta q - PdV + PdV \\
+                 &= \delta q
+\end{aligned}
+$$
+
+
+### specific heats
+
+- **definitions (always true)**
+    - $\boxed{C_v \overset{d}{=} \left(\frac{\partial q}{\partial T}\right)_V = \left(\frac{\partial U}{\partial T}\right)_V}$
+        - reason: for isochoric process, $dU = \delta q$
+        - the second equality doesn't impose additional assumptions because _the math (the partial derivative) dictates that we are holding volume constant_; the equality is always true, not just in some cases
+    - $\boxed{C_p \overset{d}{=} \left(\frac{\partial q}{\partial T}\right)_P = \left(\frac{\partial H}{\partial T}\right)_P}$
+        - reason: for isobaric process, $dH = \delta q$ (see `enth/1`).
+- for **perfect gases**,
+    - $\boxed{dU = C_v dT}$, for **all processes**
+        - **proof.**
+            - for perfect gases, internal energy is only a function of temperature, i.e. $U(T, V) \overset{p.g.}{=} U(T)$, so $C_v = \left(\frac{\partial U}{\partial T}\right)_V = \frac{dU}{dT}$ for all processes
+    - $\boxed{dH = C_p dT}$, for **all processes**
+        - **proof.**
+            - for perfect gases, $H(T, P) \overset{d}{=} U(T, P) + PV \overset{p.g.}{=} U(T) + nRT = H(T)$, that is, **enthalpy is only a function of temperature for perfect gases.**
+            - then $C_p = \left(\frac{\partial H}{\partial T}\right)_P = \frac{dH}{dT} \implies C_p dT = dH$ for all processes
+- for **perfect, monoatomic gases**, $\boxed{\bar{C}_v = 3/2R}$
+- for **perfect, diatomic gases**, $\boxed{\bar{C}_v = 5/2R}$
+- temperature depends only on _**translational energy** of perfect gas molecules_
+    - thus, polyatomic perfect gases have a higher specific heat to account of energy going into rotational and vibrational modes of motion
+- for **any perfect gas** (monoatomic and polyatomic), $\boxed{\bar{C}_p - \bar{C}_v = R}$
+    - **proof (TODO).**
+
+<C chem="\bar{C}_v = (\frac{}{})_p = ()_p + ()_p = \bar{C}_p - R" block={true}/>
 
 ### adiabatic processes
-- for perfect gases under reversible processes
-    - $\frac{T_2}{T_1} = \left(\frac{V_1}{V_2}\right)^R$
-    - $P_1V_1^\gamma = P_2V_2^\gamma$, where $\gamma = \frac{\bar{C}_p}{\bar{C}_v}$
+- for **perfect gases** under **adiabatic, reversible processes**
+    - $\boxed{\left(\frac{T_2}{T_1}\right)^{\bar{C}_v} = \left(\frac{V_1}{V_2}\right)^R}$
+    - $\boxed{\left(\frac{T_1}{T_2}\right)^{\bar{C}_p} = \left(\frac{P_1}{P_2}\right)^R}$
+    - $\boxed{P_1V_1^\gamma = P_2V_2^\gamma}$, where $\gamma = \frac{\bar{C}_p}{\bar{C}_v}$
+- for **all adiabatic processes**, $\boxed{q_{\text{surr}} = 0 \implies \Delta S_{\text{surr}} = 0}$, because there is no heat transfer to the surroundings
 
-### kirchoff's law of thermochemistry
-- assuming $\Delta C_p$ is constant (it wouldn't be constant if $C_{p,\text{prod}}$ changes faster or slower than $C_{p,\text{reactants}}$), $\Delta_{T_2} H = \Delta_{T_1} H + \Delta C_p \Delta T$
-- [Wikipedia](https://archive.is/gwMui)
+### kirchoff's law of thermochemistry ([wikipedia](https://archive.is/gwMui))
+- assuming $\Delta C_p$ is constant (e.g. it would not be constant if $C_{p,\text{prds}}$ changes faster or slower than $C_{p,\text{rxts}}$)
+    - $\boxed{\Delta_{T_2} H = \Delta_{T_1} H + \Delta C_p \Delta T}$
+    - $T_1$ is the temperature at which $\Delta H$ is given
+    - $T_2$ is the desired temperature we want to calculate $\Delta H$ for
 
 ### entropy
-- **standard entropy** ($S^\circ$) is the absolute entropy of a substance
-    - atm: <C chem="\pu{1 atm}" />
-    - temp: <C chem="\pu{298.15 K}" />
-- **entropy version of kirchoff's law.** assuming $\Delta C_p$ is constant, $\Delta_{T_2}S = \Delta_{T_1} S + \Delta C_p \ln \left(\frac{T_2}{T_1}\right)$
+- **standard entropy** ($S^\circ$) is the absolute entropy of a substance at
+    - pressure: <C chem="\pu{1 atm}" />
+    - temperature: <C chem="\pu{298.15 K}" />
+- [**entropy version of kirchoff's law.**](https://archive.is/wip/ERqJG) 
+    - assuming $\Delta C_p$ is constant, $\Delta_{T_2}S = \Delta_{T_1} S + \Delta C_p \ln \left(\frac{T_2}{T_1}\right)$
+- $\delta S = \frac{dq_{rev}}{T} \ge \frac{\delta q}{T}$
+    - in other words, $\Delta S = \frac{q_{rev}}{T}$, but $\Delta S \ge \frac{q}{T}$.
+    - in other words, $q_{rev} \ge q$
+    - $q$ is the actual heat of the path
+    - $q_{rev}$ is the heat of _a reversible path_ from the initial to final state
+- **entropy of heating at constant pressure.** $\boxed{\Delta S = C_p \ln \left(\frac{T_2}{T_1}\right)}$
+    - assumptions
+        - **isobaric process** on **perfect gases**
+        - $C_p$ does not vary with temperature
+    - **proof.**
+
+$$
+\begin{aligned}
+\Delta S &= \int \frac{d q_{rev}}{T} \\
+        &\overset{c.p.}{=} \int \frac{dH}{T} \\
+        &\overset{p.g.}{=} \int_{T_1}^{T_2} \frac{C_p dT}{T} \\
+        &= C_p \ln \left(\frac{T_2}{T_1}\right)
+\end{aligned}
+$$
+
+- **entropy of expansion at constant temperature.**
+    - for **isothermal processes** on **perfect gases**, $\boxed{\Delta S = nR \ln \frac{V_2}{V_1}}$
+        - if reversible, then $q = T\Delta S$
+        - if irreversible, $q < T\Delta S$
+        - $q_{rev} = \Delta S$, always
+    - **proof.**
+
+$$
+\begin{aligned}
+\end{aligned}
+$$
+
+- **entropy of phase transitions.**
 
 ## problem solving

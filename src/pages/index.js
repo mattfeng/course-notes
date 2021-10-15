@@ -5,12 +5,14 @@ import * as styles from "../styles/notes.module.scss"
 
 const IndexPage = () => (
   <div className={styles.mainContainer}>
-    <Link to="/questions">
-      <h1>questions</h1>
-    </Link>
 
     <div>
-      <h1>5.12</h1>
+      <h1>classes</h1>
+      <Link to="/questions">
+        <h2>questions</h2>
+      </Link>
+
+      <h2>5.12 organic chemistry 1</h2>
       <ul>
         <li>
           <Link to="/5.12/unit1">
@@ -25,7 +27,7 @@ const IndexPage = () => (
       </ul>
     </div>
 
-    <h1>20.110</h1>
+    <h2>20.110 thermodynamics of biomolecular systems</h2>
     <ul>
       <li>
         <Link to="/20.110">
@@ -34,7 +36,7 @@ const IndexPage = () => (
       </li>
     </ul>
     
-    <h1>17.395</h1>
+    <h2>17.395 innovation systems</h2>
     <ul>
       <li>
         <Link to="/17.395/all">
@@ -43,7 +45,7 @@ const IndexPage = () => (
       </li>
     </ul>
 
-    <h1>5.07</h1>
+    <h2>5.07 biochemistry 1</h2>
     <ul>
       <li>
         <Link to="/5.07/unit1">
@@ -53,6 +55,24 @@ const IndexPage = () => (
       <li>
         <Link to="/5.07/unit2">
           unit 2: enzymes and catalysis
+        </Link>
+      </li>
+    </ul>
+
+    <h2>21A.501 art, craft, and science</h2>
+    <ul>
+      <li>
+        <Link to="/21A.501/readings5">
+          readings 5
+        </Link>
+      </li>
+    </ul>
+
+    <h2>7.23 immunology</h2>
+    <ul>
+      <li>
+        <Link to="/7.23">
+          all 7.23 notes
         </Link>
       </li>
     </ul>

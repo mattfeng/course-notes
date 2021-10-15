@@ -16,7 +16,7 @@ export default function BlogPost({ data }) {
   const post = data.mdx
   return (
     <>
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/contrib/mhchem.min.js" integrity="sha384-LIgAiYlGSAdpNC9+YDjDPF6JeS/RRIumtNo0CmyQERZ/+g0h9MbuYQwf/5pQ4Y4M"  crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/contrib/mhchem.min.js" integrity="sha384-LIgAiYlGSAdpNC9+YDjDPF6JeS/RRIumtNo0CmyQERZ/+g0h9MbuYQwf/5pQ4Y4M"  crossOrigin="anonymous"></script>
     <div className={styles.mainContainer}>
       <h1>{ post.frontmatter.title }</h1>
       <MDXProvider components={shortcodes}>
