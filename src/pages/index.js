@@ -39,8 +39,13 @@ const IndexPage = () => (
     <h2>17.395 innovation systems</h2>
     <ul>
       <li>
-        <Link to="/17.395/all">
+        <Link to="/17.395">
           all 17.395 notes
+        </Link>
+      </li>
+      <li>
+        <Link to="/17.395/class5">
+          class 5: organization of innovation systems at the face-to-face level
         </Link>
       </li>
     </ul>

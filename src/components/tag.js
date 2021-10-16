@@ -4,9 +4,13 @@ import * as styles from "../styles/tag.module.scss"
 
 class Tag extends Component {
   render() {
-    const { tag } = this.props
+    const { tag, color } = this.props
+    const style = {
+      borderColor: color,
+      color
+    }
 
-    return <span className={styles.span}>
+    return <span className={styles.span} style={style}>
         { `@${tag}` }
     </span>
   }
