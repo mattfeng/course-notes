@@ -90,6 +90,47 @@ const IndexPage = () => (
         </Link>
       </li>
     </ul>
+    
+    <h1>deep learning</h1>
+    <ul>
+      <li>
+        <Link to="/deep/questions">
+          questions
+        </Link>
+      </li>
+
+      <li>
+        basics
+        <ul>
+          <li>
+            <Link to="/deep/basics/ae">
+              autoencoders
+            </Link>
+          </li>
+          <li>
+            <Link to="/deep/basics/prob">
+              probability
+            </Link>
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        bio
+        <ul>
+          <li>
+            <Link to="/deep/bio/alphafold">
+              alphafold
+            </Link>
+          </li>
+          <li>
+            <Link to="/deep/bio/antibody">
+              antibody design
+            </Link>
+          </li>
+        </ul>
+      </li>
+    </ul>
 
     <div>
       <h1>references</h1>
