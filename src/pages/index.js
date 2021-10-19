@@ -81,12 +81,31 @@ const IndexPage = () => (
         </Link>
       </li>
     </ul>
-    
+
+    <h2>20.465 engn the immune sysm in cancer and beyond</h2>
+    <ul>
+      <li>
+        <Link to="/20.465">
+          all 20.465 notes
+        </Link>
+      </li>
+    </ul>
+
+
     <h1>building</h1>
     <ul>
       <li>
         <Link to="/building">
           how to build
+        </Link>
+      </li>
+    </ul>
+
+    <h1>startups</h1>
+    <ul>
+      <li>
+        <Link to="/startup/pitch">
+          how to give a strong pitch
         </Link>
       </li>
     </ul>
@@ -110,6 +129,11 @@ const IndexPage = () => (
           <li>
             <Link to="/deep/basics/prob">
               probability
+            </Link>
+          </li>
+          <li>
+            <Link to="/deep/basics/colab">
+              google colab
             </Link>
           </li>
         </ul>

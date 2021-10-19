@@ -1,7 +1,26 @@
-# alphafold
+# AlphaFold 2 (AF2)
 
 ## how to use
-- multiple sequence alignment (MSA) should contain _at least 30 sequences_
+- inputs
+    - multiple sequence alignment (MSA) should contain _at least 30 sequences_
+    - an MSA of _100 sequences_ is generally good enough to use without templates
+- caveats
+    - uncertain domain placement
+        - AF2 is unaware of membranes; membrane proteins won't leave space for the cell membrane
+        - clashes can occur
+    - complexes
+        - AF2 is trained to only predict single chain protein structures
+            - heteromers are more problematic 
+        - some have success predicting complexes by joining two sequences with a _linker_
+            - ideas in AF2 can definitely be extended to complexes
+            - needs to be benchmarked
+
 
 ## measures of uncertainty
-- predicted (LDDT).
+- **predicted local distance difference test (pLDDT).** alphafold's per-residue prediction of its lDDT-Cα; provides a measure of _local confidence_
+    - closely related to [lDDT](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3799472/). measures the percentage of correctly predicted interatomic distances
+    - ranges from _0 to 100_
+    - prediction files contain the pLDDT in the _B-factors_ (higher is better, which is opposite of typical B-factors)
+    - low pLDDT (pLDDT < 50): _a prediction of disorder_
+- **predicted aligned error (PAE).** alphafold's prediction of its position error at residue $X$, if the predicted and true structures were aligned on residue $Y$.
+    - displayed as a _two-dimensional plot_

@@ -42,6 +42,12 @@ module.exports = {
             },
           },
           `gatsby-remark-copy-linked-files`,
+          {
+            resolve: `gatsby-remark-highlight-code`,
+            options: {
+              theme: `solarized-light`,
+            }
+          },
         ],
         remarkPlugins: [
           [
