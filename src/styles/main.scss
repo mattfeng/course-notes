@@ -19,4 +19,13 @@ a {
 
 deckgo-highlight-code {
     font-size: 11pt;
+    box-shadow: #ccc 0px 2px 8px;
+}
+
+code {
+    font-size: 11pt;
+    background-color: #fdf6e3;
+    color: #657b83;
+    border-radius: 5px;
+    padding: 1px 3px;
 }

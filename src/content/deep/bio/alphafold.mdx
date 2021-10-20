@@ -15,6 +15,18 @@
             - ideas in AF2 can definitely be extended to complexes
             - needs to be benchmarked
 
+## model structure
+- three modules: inputs, evoformer, and structure
+    - inputs
+        - out:
+            - **MSA representation.**
+            - **pair representation (templates).** templates are pairwise amino acid distance predictions
+    - evoformer
+        - in: MSA, pair representations
+        - out: refined MSA, pair representations
+    - structure
+        - in: MSA, pair representations
+        - out: list of Cartesian coordinates representing position of each atom of the protein, including sidechains
 
 ## measures of uncertainty
 - **predicted local distance difference test (pLDDT).** alphafold's per-residue prediction of its lDDT-Cα; provides a measure of _local confidence_

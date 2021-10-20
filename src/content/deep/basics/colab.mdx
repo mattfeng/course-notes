@@ -1,8 +1,29 @@
 # google colab
 
+## keyboard shortcuts
+
+- **`cmd+M+A`**. add cell above
+- **`cmd+M+B`**. add cell below
+
 ## mount google drive
 
 ```python
 from google.colab import drive
 drive.mount('/content/gdrive')
+```
+
+- files will be located in `/content/gdrive/My Drive/`
+
+## download files
+
+```python
+from google.colab import files
+files.download("<path to file>")
+```
+
+## check gpu
+
+```python
+import tensorflow as tf
+tf.test.gpu_device_name()
 ```
