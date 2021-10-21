@@ -24,6 +24,26 @@ const IndexPage = () => (
             unit 2 (l11 - l18): chemistry of alkenes and alkynes
           </Link>
         </li>
+        <li>
+          <Link to="/5.12/unit3">
+            unit 3
+          </Link>
+        </li>
+        <li>
+          <Link to="/5.12/unit4">
+            unit 4
+          </Link>
+        </li>
+        <li>
+          <Link to="/5.12/unit5">
+            unit 5
+          </Link>
+        </li>
+        <li>
+          <Link to="/5.12/glossary">
+            glossary
+          </Link>
+        </li>
       </ul>
     </div>
 
