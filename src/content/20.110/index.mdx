@@ -139,7 +139,7 @@ $$
     - in other words, $q_{rev} \ge q$
     - $q$ is the actual heat of the path
     - $q_{rev}$ is the heat of _a reversible path_ from the initial to final state
-- **entropy of heating at constant pressure.** $\boxed{\Delta S = C_p \ln \left(\frac{T_2}{T_1}\right)}$
+- **entropy of heating at constant pressure.** $\boxed{\Delta S = n \bar{C}_p \ln \left(\frac{T_2}{T_1}\right)}$
     - assumptions
         - **isobaric process** on **perfect gases**
         - $C_p$ does not vary with temperature
@@ -154,32 +154,49 @@ $$
 \end{aligned}
 $$
 
+- **entropy of heating at constant temperature.** $\boxed{\Delta S = n \bar{C}_p \ln \left(\frac{T_2}{T_1}\right)}$
+
 - **entropy of expansion at constant temperature.**
     - for **isothermal processes** on **perfect gases**, $\boxed{\Delta S = nR \ln \frac{V_2}{V_1}}$
         - if reversible, then $q = T\Delta S$
         - if irreversible, $q < T\Delta S$
         - $q_{rev} = \Delta S$, always
-    - **proof.**
+    - **proof.** we construct a reversible path that has the same initial and final states; this means that we can use $P_{\text{ext}} = P$ in our calculation
 
 $$
 \begin{aligned}
+&\Delta U = 0\\
+\implies & q = -w \\
+&= \int P_{\text{ext}} dV \\
+&= \int P dV \\
+&= nRT \int_{V_1}^{V_2} \frac{1}{V}dV\\
+&= nRT\ln\frac{V_2}{V_1}
+\end{aligned}
+$$
+
+Now, using the thermodynamic definition of entropy,
+
+$$
+\begin{aligned}
+\Delta S = \frac{q_{\text{rev}}}{T} = nR\ln\frac{V_2}{V_1}
 \end{aligned}
 $$
 
 - **entropy of phase transitions.**
+    - phase changes are only reversible at the phase transition temperature
+    - for a **reversible phase transition**, $\boxed{\Delta S = \frac{\Delta_{\text{transition}} H}{T_{\text{transition}}}}$
+
+## gibbs-helmholtz equation
+
+- $\boxed{\frac{\partial}{\partial T}\left(\frac{\Delta \bar{G}}{T}\right)_P = -\frac{\Delta \bar{H}}{T^2}}$
+- assuming $\Delta \bar{H}$ is independent of $T$, $\boxed{\frac{\Delta \bar{G}_2}{T_2} = \frac{\Delta \bar{G}_1}{T_1} + \Delta \bar{H} \left(\frac{1}{T_2} - \frac{1}{T_1}\right)}$
 
 ## problem solving
 
-
-## rec (10-19-2021)
-
-Energy in ordered form ($W_{ne}$)
-
-$$
-\begin{aligned}
-
-
-
-\end{aligned}
-$$
-
+- finding $\Delta S_{\text{sys}}$
+    - find a reversible path from state A to state B, and calculate $\Delta S$ using that; $q_{\text{irreversible path}} < q_{\text{reversible path}} = T_{\text{sys}} \Delta S_{\text{sys}}$
+    - we have three path primitives:
+        - isothermal expansion
+        - isobaric heating
+        - isochoric heating
+        - phase changes
