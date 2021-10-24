@@ -82,32 +82,69 @@
 ## problem solving
 
 ### which compound is the most nucleophilic?
-- charge
-- polarizability
 - most negative charge aggregated in one location
+- more electronegative $\implies$ worse nucleophile
+    - electronegative atoms like holding onto their negative charge
+- polarizability
+- steric effects
+- references
+    - [ucalgary](https://www.chem.ucalgary.ca/courses/351/Carey5th/Ch08/ch8-5.html)
+    - [socratic](https://socratic.org/questions/what-determines-the-nucleophile-s-strength)
 
 ### which compound is the most electrophilic?
 - most positive charge aggregated in one location
     - full positive charge stronger than partial
+- positive charge on more electronegative atom $\implies$ better electrophile
 - least sterically hindered
 - [C=O double bond is more electronegative than C-O bond](https://archive.md/SKsEn)
     - resonance structure <C chem="\ce{C^+-O-}" /> implies greater charge separation
 
+## numbers
+- <C chem="\pu{1.36 kcal/mol}" /> is 10-fold rate difference
+- radical stability
+    - 1º < 2º < 3º, each <C chem="\Delta \Delta G^{\circ} \approx 2 \text{-} 3 \pu{kcal/mol}" />
+
 ## reaction mechanisms
 
-### `alkene/1`. hydrohalogenation: addition of <C chem="\ce{H-X}" />
-- **kinetic controlled**: **once carbocation forms, there is no chance the reaction goes backwards**, i.e. _no equilibrium_
+### `alkene/1`. hydrohalogenation: addition of <C chem="\ce{H-X}" /> (<C chem="\ce{X} = \ce{Cl, Br, I}" />)
+- reagents
+    - 1 equivalent <C chem="\ce{X2}" />
+    - solvent: <C chem="\ce{CCl4}" /> or <C chem="\ce{CH2Cl2}" />
 
 ![Hydrohalogenation reaction mechanism.](../../images/5.12/unit2/hydrohalogenation.png)
 
+#### stereochemistry and regiochemistry
+- regiochemistry: markovnikov addition
+- stereochemistry: racemic mixture
+
+#### additional notes
+- **kinetic controlled**: **once carbocation forms, there is no chance the reaction goes backwards**, i.e. _no equilibrium_
+
 ### `alkene/2`. acid-catalyzed hydration
 
+#### regiochemistry and stereochemistry
+- follows _Markovnikov_ addition
+- stereochemistry: forms _racemic_ mixtures
+
+#### additional notes
+- if the solvent is an alcohol rather than water (i.e. <C chem="\ce{R-OH}" />), then in the second step, an alcohol will function as the nucleophile instead of water, leading to attachment of a <C chem="\ce{-OR}" /> group.
 
 ### `alkene/3`. halogenation: _anti_ addition of <C chem="\ce{X2}" />
 
+- reagents
+    - 1 equivalent <C chem="\ce{X2}" />
+    - solvent: <C chem="\ce{CCl4}" /> or <C chem="\ce{CH2Cl2}" />
+
+#### stereochemistry and regiochemistry
+- regiochemistry: irrelevant
+- stereochemistry: _anti_ addition
+
 ### `alkene/4`. halohydrin formation
 
-### `alkene/5`. hydroboration-oxidation: anti-markovnikovian synthesis of alcohols
+### `alkene/5`. hydroboration-oxidation: anti-markovnikovian _syn_-addition of water
+
+#### stereochemistry
+- only _syn_ addition is observed
 
 ### `alkene/6`. catalytic hydrogenation: addition of <C chem="\ce{H2}" />
 
@@ -128,11 +165,25 @@
 
 ### `alkene/9`. _syn_ dihydroxylation
 
+- reagents
+    - catalytic (aka [Upjohn dihydroxylation](https://www.organic-chemistry.org/namedreactions/upjohn-dihydroxylation.shtm))
+        - osmonium tetroxide (<C chem="\ce{OsO4}" />)
+        - _N_-methyl morpholine-_N_-oxide (<C chem="\ce{NMO}" />)
+        - solvent: aqueous acetone
+    - stoichiometric
+
+#### regiochemistry and stereochemistry
+- regiochemistry is **irrevelant** since we are adding two of the same group
+- stereochemistry is _syn_ addition
+    - **steric hindrance** can prevent particular stereoisomers from forming
+
 ### `alkene/10`. ozonolysis: addition of <C chem="\ce{O3}" /> followed by cleavage; forms _ketones_ and _aldehydes_
 
 - _stereochemistry and regiochemistry are irrelevant_
 
 ### `alkene/11`. oxymecuration-demercuration
+
+- used because **carbocation rearrangements** can happen in acid-catalyzed hydration (`alkene/2`).
 
 ### `radical/1`. alkene hydrohalogenation: addition of <C chem="\ce{H-X}" /> via a _radical chain mechanism_
 
@@ -140,7 +191,20 @@
 
 ### `alkyne/1`. alkyne hydrohalogenation (<C chem="\ce{X = Cl, Br, I}" />)
 
+- reagents
+    - peroxide: di-_tert_-butyl-peroxide
+
+![di-tert-butyl peroxide.](./assets/unit2/DTBP.png)
+
 ### `alkyne/2`. alkyne halogenation: addition of <C chem="\ce{X-X}" /> (<C chem="\ce{X = Cl, Br}" />)
+
+- reagents
+    - 1 equivalent <C chem="\ce{X2}" /> for _trans_ halide
+    - 2 equivalents (or excess) <C chem="\ce{X2}" /> for tetrahalide
+    - solvent: <C chem="\ce{CCl4}" /> or <C chem="\ce{CH2Cl2}" />
+
+#### stereochemistry
+- _trans_ product only
 
 ### `alkyne/3`. alkyne acid-catalyzed hydration: addition of <C chem="\ce{H-OH}" />, followed by tautomerization to _ketones_
 
