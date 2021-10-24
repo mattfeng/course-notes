@@ -2,6 +2,12 @@
 
 ## how to use
 - inputs
+    - multiple sequence alignment
+        - assembled using standard tools ([HHsuite](https://github.com/soedinglab/hh-suite), [HMMER](http://hmmer.org/))
+        - databases searched
+            - [MGnify](https://www.ebi.ac.uk/metagenomics/)
+            - [BFD](https://bfd.mmseqs.com/)
+            - [UniRef90](https://www.uniprot.org/help/uniref)
     - multiple sequence alignment (MSA) should contain _at least 30 sequences_
     - an MSA of _100 sequences_ is generally good enough to use without templates
 - caveats
@@ -36,3 +42,7 @@
     - low pLDDT (pLDDT < 50): _a prediction of disorder_
 - **predicted aligned error (PAE).** alphafold's prediction of its position error at residue $X$, if the predicted and true structures were aligned on residue $Y$.
     - displayed as a _two-dimensional plot_
+
+### backbone update
+
+![Algorithm 20: Backbone Update](./assets/A20_backbone-update.png)
