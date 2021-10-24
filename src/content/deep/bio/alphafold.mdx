@@ -1,5 +1,8 @@
 # AlphaFold 2 (AF2)
 
+## abbrevaitons
+- **IPA.** invariant point attention
+
 ## how to use
 - inputs
     - multiple sequence alignment
@@ -45,6 +48,24 @@
 
 ## mohammed al-quraishi, [a fount of good ideas](https://archive.md/3k7y9)
 
+### inputs
+- $\{s_i\}$.
+- $\{\mathbf{m}_{si}\}$. MSA representation
+    - $s$ indexes over sequences: $s = 1$ is the sequence for the protein we want to predict structure for; $s > 1$ are the other protein sequences in the MSA
+    - $i$ indexes over amino acids for each sequence, e.g. $i = 3$ is the third amino acid
+- $\{\mathbf{z}_{ij}\}$. pair representation
+- $\{\mathbf{s}_i\}$. &ldquo;single&rdquo; sequence representation
+
+### outputs
+- $\{\mathbf{x}^a_i\}$. atom coordinates
+- $\{r^{\text{pLDDT}}_i\}$. per-residue confidence
+
 ### backbone update
 
-![Algorithm 20: Backbone Update](./assets/A20_backbone-update.png)
+![Algorithm 23: Backbone Update](./assets/A23_backbone-update.png)
+
+### information flow
+
+### crops
+
+### continuous refinement
