@@ -90,26 +90,39 @@
 - references
     - [ucalgary](https://www.chem.ucalgary.ca/courses/351/Carey5th/Ch08/ch8-5.html)
     - [socratic](https://socratic.org/questions/what-determines-the-nucleophile-s-strength)
+- **the more stable, the less basic**
+- inductive effects that put electron density on carbon
+- lone pairs
+- $\pi$ bonds
 
 ### which compound is the most electrophilic?
 - most positive charge aggregated in one location
     - full positive charge stronger than partial
 - positive charge on more electronegative atom $\implies$ better electrophile
+- more electronegative is better electrophile
 - least sterically hindered
-- [C=O double bond is more electronegative than C-O bond](https://archive.md/SKsEn)
+- [the oxygen in a C=O double bond is more electronegative than that in a C-O bond](https://archive.md/SKsEn)
     - resonance structure <C chem="\ce{C^+-O-}" /> implies greater charge separation
+- inductive effects
+- empty _p_-orbital
+
+### which radical is the most stable?
+- compare BDEs; higher BDE = less stable = more reactive
+- _reactions will preferentially form the more stable radical_
 
 ## numbers
 - <C chem="\pu{1.36 kcal/mol}" /> is 10-fold rate difference
 - radical stability
     - 1º < 2º < 3º, each <C chem="\Delta \Delta G^{\circ} \approx 2 \text{-} 3 \pu{kcal/mol}" />
+- carbocation stability
+    - 1º < 2º < 3º, each <C chem="\Delta \Delta G^{\circ} \approx 18 \pu{kcal/mol}" />
+
 
 ## reaction mechanisms
 
 ### `alkene/1`. hydrohalogenation: addition of <C chem="\ce{H-X}" /> (<C chem="\ce{X} = \ce{Cl, Br, I}" />)
 - reagents
-    - 1 equivalent <C chem="\ce{X2}" />
-    - solvent: <C chem="\ce{CCl4}" /> or <C chem="\ce{CH2Cl2}" />
+    - hydrohalogen: <C chem="\ce{H-X}" />
 
 ![Hydrohalogenation reaction mechanism.](../../images/5.12/unit2/hydrohalogenation.png)
 
@@ -119,8 +132,10 @@
 
 #### additional notes
 - **kinetic controlled**: **once carbocation forms, there is no chance the reaction goes backwards**, i.e. _no equilibrium_
+- if _another nucleophile is also present_ (e.g. <C chem="\ce{H2O}" />), it will also react
 
 ### `alkene/2`. acid-catalyzed hydration
+- reagents
 
 #### regiochemistry and stereochemistry
 - follows _Markovnikov_ addition
@@ -130,7 +145,6 @@
 - if the solvent is an alcohol rather than water (i.e. <C chem="\ce{R-OH}" />), then in the second step, an alcohol will function as the nucleophile instead of water, leading to attachment of a <C chem="\ce{-OR}" /> group.
 
 ### `alkene/3`. halogenation: _anti_ addition of <C chem="\ce{X2}" />
-
 - reagents
     - 1 equivalent <C chem="\ce{X2}" />
     - solvent: <C chem="\ce{CCl4}" /> or <C chem="\ce{CH2Cl2}" />
@@ -140,6 +154,15 @@
 - stereochemistry: _anti_ addition
 
 ### `alkene/4`. halohydrin formation
+- reagents
+    - halogen: <C chem="\ce{X2}" />
+    - solvent: <C chem="\ce{H2O}" />
+- bridged halonium intermediate
+
+#### stereochemistry and regiochemistry
+- stereochemistry: _anti_ addition
+- regiochemistry: electrophile <C chem="\ce{X+}" /> bonds to the less substituted atom; <C chem="\ce{OH}" /> bonds to the more substituted carbon
+    - transition state, positive charge passes through carbon (partial carbocationic character; more substituted is more stable; water attacks the more substituted carbon)
 
 ### `alkene/5`. hydroboration-oxidation: anti-markovnikovian _syn_-addition of water
 
@@ -162,6 +185,11 @@
 ### `alkene/8`. _anti_ dihydroxylation
 
 - an extension of epoxidation
+- reagents
+    - a nucleophile, <C chem="\ce{NaOH}" />
+
+#### stereochemistry and regiochemistry
+- stereochemistry is _anti_ addition
 
 ### `alkene/9`. _syn_ dihydroxylation
 
@@ -179,29 +207,47 @@
 
 ### `alkene/10`. ozonolysis: addition of <C chem="\ce{O3}" /> followed by cleavage; forms _ketones_ and _aldehydes_
 
+- reagents
+    - step 1
+        - ozone: <C chem="\ce{O3}" />
+    - step 2
+        - reducing agents
+            - zinc in water: <C chem="\ce{Zn}, \ce{H2O}" />
+            - dimethylsulfide: <C chem="\ce{Me2S}" />
+
+### stereochemistry and regiochemistry
 - _stereochemistry and regiochemistry are irrelevant_
 
 ### `alkene/11`. oxymecuration-demercuration
 
 - used because **carbocation rearrangements** can happen in acid-catalyzed hydration (`alkene/2`).
 
-### `radical/1`. alkene hydrohalogenation: addition of <C chem="\ce{H-X}" /> via a _radical chain mechanism_
-
-### `radical/2`. radical polymerization
-
-### `alkyne/1`. alkyne hydrohalogenation (<C chem="\ce{X = Cl, Br, I}" />)
+### `radical/1`. radical addition of <C chem="\ce{H-Br}" />
 
 - reagents
-    - peroxide: di-_tert_-butyl-peroxide
+    - hydrohalogen: <C chem="\ce{HX}" />
+    - solvent (peroxide): di-_tert_-butyl-peroxide
 
 ![di-tert-butyl peroxide.](./assets/unit2/DTBP.png)
 
-### `alkyne/2`. alkyne halogenation: addition of <C chem="\ce{X-X}" /> (<C chem="\ce{X = Cl, Br}" />)
+#### stereochemistry and regiochemistry
+- for **alkenes**
+    - regiochemistry: bromine is added to less substituted carbon (_anti-Markovnikov_)
+    - stereochemistry: racemic mixture
+- for **alkynes**
+    - regiochemistry: bromine is added to less substituted carbon (_anti-Markovnikov_)
+    - stereochemistry: both _E_ and _Z_ stereoisomers are formed
+
+### `radical/3`. radical polymerization
+
+### `alkyne/1`. alkyne hydrohalogenation (<C chem="\ce{X = Cl, Br, I}" />) (lec 16)
+
+### `alkyne/2`. alkyne halogenation: addition of <C chem="\ce{X-X}" /> (<C chem="\ce{X = Cl, Br}" />) (lec 16)
 
 - reagents
     - 1 equivalent <C chem="\ce{X2}" /> for _trans_ halide
     - 2 equivalents (or excess) <C chem="\ce{X2}" /> for tetrahalide
-    - solvent: <C chem="\ce{CCl4}" /> or <C chem="\ce{CH2Cl2}" />
+    - solvent (not needed in Smith): <C chem="\ce{CCl4}" /> or <C chem="\ce{CH2Cl2}" />
 
 #### stereochemistry
 - _trans_ product only
@@ -209,13 +255,22 @@
 ### `alkyne/3`. alkyne acid-catalyzed hydration: addition of <C chem="\ce{H-OH}" />, followed by tautomerization to _ketones_
 
 - for terminal alkynes, a mixture of catalysts (<C chem="\ce{H2SO4, HgSO4}" />) is needed in order to activate the alkyne
+- reagents
+    - water, sulfuric acid: <C chem="\ce{H2O}" />, <C chem="\ce{H2SO4}" />
+    - mercuric sulfate: <C chem="\ce{HgSO4}" />
 
 #### regiochemistry and stereochemistry
 - this reaction is **not regioselective**; the products are mixed
 - **stereochemistry is not a consideration** because the double bond becomes a single bond after tautomerization
-    - there is a slight preference because one of the enols is more stable, but the effect is minimal
+    - the _E_-enol is more thermodynamically stable, but it doesn't matter tautomerization results in the same final ketone.
 
 ### `alkyne/4`. alkyne hydroboration-oxidation: anti-mknv addition of <C chem="\ce{H-OH}" />, followed by tautomerization to _aldehydes_
+- reagents
+    - borane, stabilized by tetrahydrofuran: <C chem="\ce{BH3.THF}" />
+    - base and peroxide: <C chem="\ce{NaOH}, \ce{H2O2}" />
+
+#### regiochemistry and stereochemistry
+- neither regiochemistry nor stereochemistry are considerations
 
 ### `alkyne/5`. reduction of alkyne to alkane
 - reagents
@@ -224,11 +279,20 @@
 - double _syn_ addition of <C chem="\ce{H2}" />
 
 ### `alkyne/6`. reduction of alkyne to _cis_ alkene
-
-- uses the **Lindlar reagent**
+- reagents
+    - uses the **Lindlar reagent**
 
 ### `alkyne/7`. reduction of alkyne to _trans_ alkene (the _&ldquo;dissolving metal reduction&rdquo;_)
-
 - involves **single electron transfer (SET)**
+- reagents
+    - sodium: <C chem="\ce{Na}" />
+    - ammonia: <C chem="\ce{NH3 (l)}" />
 
 ### `alkyne/8`. acetylide ion formation and <C chem="\ce{C-C}" /> bond formation
+
+- reagents
+    - strong base: <C chem="\ce{NaNH2}" />
+    - alkyl halide
+
+## todo
+- reaction mechanism for the one that makes a square???
