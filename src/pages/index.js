@@ -15,22 +15,28 @@ const IndexPage = () => (
       <ul>
         <li>
           <Link to="/5.12/unit1">
-            unit 1 (l1 - l10): structure, energy, and reactivity
+            unit 1 (1 &ndash; 10): structure, energy, and reactivity
           </Link>
         </li>
         <li>
           <Link to="/5.12/unit2">
-            unit 2 (l11 - l18): chemistry of alkenes and alkynes
+            unit 2 (11 &ndash; 18): chemistry of alkenes and alkynes
           </Link>
         </li>
         <li>
-          <Link to="/5.12/unit3">unit 3</Link>
+          <Link to="/5.12/unit3">
+            unit 3 (19 &ndash; 23): substitution and elimination reactions
+            </Link>
         </li>
         <li>
-          <Link to="/5.12/unit4">unit 4</Link>
+          <Link to="/5.12/unit4">
+            unit 4 (24 &ndash; 30): chemistry of the carbonyl group
+          </Link>
         </li>
         <li>
-          <Link to="/5.12/unit5">unit 5</Link>
+          <Link to="/5.12/unit5">
+            unit 5 (31 &ndash; 33): chemistry of aromatic compounds
+          </Link>
         </li>
         <li>
           <Link to="/5.12/glossary">glossary</Link>
@@ -73,7 +79,16 @@ const IndexPage = () => (
     <h2>21A.501 art, craft, and science</h2>
     <ul>
       <li>
-        <Link to="/21A.501/readings5">readings 5</Link>
+        <Link to="/21A.501/lec5">lecture 5: knowledge</Link>
+      </li>
+      <li>
+        <Link to="/21A.501/lec6">lecture 6: learning</Link>
+      </li>
+      <li>
+        <Link to="/21A.501/memo1">memo 1</Link>
+      </li>
+      <li>
+        <Link to="/21A.501/memo2">memo 2</Link>
       </li>
     </ul>
 
