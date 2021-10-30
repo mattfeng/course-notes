@@ -90,6 +90,9 @@ const IndexPage = () => (
       <li>
         <Link to="/21A.501/memo2">memo 2</Link>
       </li>
+      <li>
+        <Link to="/21A.501/lec6">lec 6: learning</Link>
+      </li>
     </ul>
 
     <h2>7.23 immunology</h2>
