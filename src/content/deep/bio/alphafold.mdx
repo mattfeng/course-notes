@@ -5,14 +5,19 @@
 
 ## how to use
 - inputs
-    - multiple sequence alignment
+    1. multiple sequence alignment
         - assembled using standard tools ([HHsuite](https://github.com/soedinglab/hh-suite), [HMMER](http://hmmer.org/))
         - databases searched
             - [MGnify](https://www.ebi.ac.uk/metagenomics/)
+                - metagenomic database can often find additional hits for otherwise small MSAs
             - [BFD](https://bfd.mmseqs.com/)
             - [UniRef90](https://www.uniprot.org/help/uniref)
-    - multiple sequence alignment (MSA) should contain _at least 30 sequences_
-    - an MSA of _100 sequences_ is generally good enough to use without templates
+        - multiple sequence alignment (MSA) should contain _at least 30 sequences_
+        - an MSA of _100 sequences_ is generally good enough to use without templates
+    2. residue pairs
+        - simple matrix for all residue/residue pairs
+    3. (optional) templates
+        - **templates.** PDB structures expected to be similar in structure
 - caveats
     - uncertain domain placement
         - AF2 is unaware of membranes; membrane proteins won't leave space for the cell membrane
@@ -31,20 +36,76 @@
             - **MSA representation.**
             - **pair representation (templates).** templates are pairwise amino acid distance predictions
     - evoformer
-        - in: MSA, pair representations
-        - out: refined MSA, pair representations
+        - i/o
+            - in: MSA, pair representations
+            - out: refined MSA, pair representations
+        - rationale
+            - uses many ideas from NLP: transformers and attention
     - structure
-        - in: MSA, pair representations
-        - out: list of Cartesian coordinates representing position of each atom of the protein, including sidechains
+        - i/o
+            - in: MSA, pair representations
+            - out
+                - list of Cartesian coordinates for residues
+                - chi angles for side chains
+        - notes
+            - the fact that residues form a chain _is not hard-coded_ into the network; the network learns to form a chain
+- final processing with OpenMM relaxation with AMBER forcefield
+- recycling 3 times
 
 ## measures of uncertainty
 - **predicted local distance difference test (pLDDT).** alphafold's per-residue prediction of its lDDT-Cα; provides a measure of _local confidence_
     - closely related to [lDDT](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3799472/). measures the percentage of correctly predicted interatomic distances
     - ranges from _0 to 100_
     - prediction files contain the pLDDT in the _B-factors_ (higher is better, which is opposite of typical B-factors)
-    - low pLDDT (pLDDT < 50): _a prediction of disorder_
 - **predicted aligned error (PAE).** alphafold's prediction of its position error at residue $X$, if the predicted and true structures were aligned on residue $Y$.
+    - measures confidence in the relative positions of pairs of residues; a measure of confidence of relative _domain positions_
     - displayed as a _two-dimensional plot_
+
+### interpretation
+- pLDDT
+    - low pLDDT (pLDDT < 50): _a prediction of disorder_, rather than lack of accuracy
+- PAE
+    - blocks represent domains
+
+### limitations of alphafold 2
+- not validated on predicting _effects of mutations_
+
+### accessing alphafold 2
+- alphafold protein structure database
+    - uses **reference proteomes** from UniProt
+- google colab
+    - wait times: the bottleneck is _searching genetics databases_
+- community colab version: **ColabFold**
+
+### use cases
+- structural bioinformatics
+    - predicting complexes between macromolecules
+    - provide information on protein dynamics
+    - functionally important residues
+    - ligand prediction - what binds?
+- structural biology
+    - accelerating structure studies
+        - improved construct design
+        - starting model for structure determination
+        - fitting models in low-res EM maps
+    - integrative/hybrid methods
+    - combination of sparse experimental data and predicted model may lead to actional data to test hypotheses
+        - chemical footprinting
+        - hydrogen-deuterium exchange
+        - smFRET
+
+#### modeling homo-oligomers
+- glycine linker
+- modify `residue_index` to have an offset
+- `a:b:c`; $a$ copies of peptide 1, $b$ copies of peptide 2, and $c$ copies of peptide 3
+
+#### synthetic proteins
+- expanding the number of models predicted can possibly lead to good predictions for synthetic sequences (e.g. `KKKKDDDDKKKKDDDDKKKKDDDDKKKKDDDD...`)
+
+#### intrinsically disordered regions
+- structural parameters derived from af2 are good for predicting disorder
+
+---
 
 ## mohammed al-quraishi, [a fount of good ideas](https://archive.md/3k7y9)
 
