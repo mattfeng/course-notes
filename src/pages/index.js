@@ -26,7 +26,7 @@ const IndexPage = () => (
         <li>
           <Link to="/5.12/unit3">
             unit 3 (19 &ndash; 23): substitution and elimination reactions
-            </Link>
+          </Link>
         </li>
         <li>
           <Link to="/5.12/unit4">
@@ -63,6 +63,21 @@ const IndexPage = () => (
         <Link to="/17.395/class5">
           class 5: organization of innovation systems at the face-to-face level
         </Link>
+      </li>
+      <li>
+        <Link to="/17.395/class6">class 6: DARPA</Link>
+      </li>
+      <li>
+        <Link to="/17.395/class7">class 7: ARPA-E</Link>
+      </li>
+      <li>
+        <Link to="/17.395/class8">class 8: advanced manufacturing</Link>
+      </li>
+      <li>
+        <Link to="/17.395/class7onepager">class 7 one pager</Link>
+      </li>
+      <li>
+        <Link to="/17.395/class8onepager">class 8 one pager</Link>
       </li>
     </ul>
 
