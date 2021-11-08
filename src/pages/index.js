@@ -110,6 +110,13 @@ const IndexPage = () => (
       </li>
     </ul>
 
+    <h2>15.401 finance theory 1</h2>
+    <ul>
+      <li>
+        <Link to="/15.401/notes">all 15.401 notes</Link>
+      </li>
+    </ul>
+
     <h2>7.23 immunology</h2>
     <ul>
       <li>
