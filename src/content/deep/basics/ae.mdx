@@ -2,10 +2,24 @@
 
 autoencoders are _unsupervised neural networks_ used to learn efficient _codings (a.k.a. **embeddings**)_ of unlabeled data (this process is otherwise known as **representation learning**).
 
+## types of autoencoders
+- **undercomplete.**
+    - no explicit regularization; only compress via bottleneck layer
+    - effectively a _nonlinear version of PCA_
+- **sparse.**
+    - minimize L2 norm of activations
+- **denoising.**
+    - minimize Jacobian of _decoder_ with respect to input
+- **contractive.**
+    - minimize Jacobian of _encoder_ with respect to input
+    - rationale: similar inputs should have similar embeddings
+
+
 ## variational autoencoders
 
 - $P_{gt}$ is the probability of the _ground truth_.
 - **goal:** learn a model $P$ that we can sample from, such that $P$ is as similar to $P_{gt}$ as possible
+
 
 
 ### evidence lower bound (ELBO)

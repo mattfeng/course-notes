@@ -1,0 +1,50 @@
+# pytorch
+
+## building modules
+
+```python
+from torch import nn
+
+def NNModule(nn.Module):
+    def __init__(self):
+        super(NNModule, self).__init__()
+        # define module here
+
+    # define forward pass here
+    def forward(self, x):
+        return output
+```
+
+## training loop
+
+- different kinds of [Optimizers](https://pytorch.org/docs/stable/optim.html)
+
+```python
+from torch import nn
+import torch.optim as optim
+
+# define model
+model = define_model()
+# define optimizer parameters
+opt_params = {}
+
+# define loss function
+# loss function should take
+#   in: (model_output, expected_model_output)
+#   out: a single value (the loss)
+loss_fn = define_loss_function()
+
+# create optimizier
+opt = optim.Optimizer(model.parameters(), **opt_params)
+
+# train loop
+num_epochs = 30
+
+for epoch in range(1, num_epochs + 1):
+    opt.zero_grad()
+
+    loss = loss_fn
+
+
+    opt.step()
+```

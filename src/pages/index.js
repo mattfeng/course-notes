@@ -152,6 +152,10 @@ const IndexPage = () => (
       </li>
 
       <li>
+        <Link to="/deep/pytorch">pytorch</Link>
+      </li>
+
+      <li>
         basics
         <ul>
           <li>
