@@ -1,0 +1,20 @@
+# the rosetta scoring function (evaluating energy)
+
+- the scoring function computes the energy of a system
+- previous scoring functions
+    - SCORE12
+    - Talaris13
+    - Talaris14
+    - REF2015
+        - finally compatible with kcal/mol, rather than REU
+- two types of scoring functions: (1) **low resolution** and (2) **high resolution**
+    - **low resolution**
+        - good for global search of conformational space
+
+
+- **energy terms.** the terms that make up the total energy of a system
+    - two kinds: (1) physics-based and (2) knowledge-based, i.e. experimental data
+    - **physics-based**
+        - `fa_atr`. attractive energy between two atoms on _different residues_ (Lennard-Jones potential VDW)
+        - `fa_rep`. repulsive energy between two atoms on _different residues_ (LJ potential VDW)
+        - `fa_rep_intra`. repulsive energy between two atoms on _the same residue_
