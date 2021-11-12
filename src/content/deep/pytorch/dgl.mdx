@@ -1,0 +1,143 @@
+# deep graph library (DGL)
+
+## graph
+
+- `add_edge`
+- `add_edges
+- `add_nodes
+- `add_self_loop
+- `adj
+- `adj_sparse
+- `adjacency_matrix
+- `adjacency_matrix_scipy
+- `all_edges
+- `apply_edges
+- `apply_nodes
+- `astype
+- `batch_num_edges
+- `batch_num_nodes
+- `batch_size
+- `canonical_etypes
+- `clone
+- `cpu
+- `create_formats_
+- `device
+- `dstdata
+- `dstnodes
+- `dsttypes
+- `edata
+- `edge_attr_schemes
+- `edge_id
+- `edge_ids
+- `edge_subgraph
+- `edge_type_subgraph
+- `edges
+- `etypes
+- `filter_edges
+- `filter_nodes
+- `find_edges
+- `formats
+- `from_networkx
+- `from_scipy_sparse_matrix
+- `get_etype_id
+- `get_ntype_id
+- `get_ntype_id_from_dst
+- `get_ntype_id_from_src
+- `group_apply_edges
+- `has_edge_between
+- `has_edges_between
+- `has_node
+- `has_nodes
+- `idtype
+- `in_degree
+- `in_degrees
+- `in_edges
+- `in_subgraph
+- `inc
+- `incidence_matrix
+- `int
+- `is_block
+- `is_homogeneous
+- `is_multigraph
+- `is_readonly
+- `is_unibipartite
+- `line_graph
+- `local_scope
+- `local_var
+- `long
+- `metagraph
+- `multi_pull
+- `multi_recv
+- `multi_send_and_recv
+- `multi_update_all
+- `ndata
+- `node_attr_schemes
+- `node_type_subgraph
+- `nodes
+- `ntypes
+- `num_dst_nodes
+- `num_edges
+- `num_nodes
+- `num_src_nodes
+- `number_of_dst_nodes
+- `number_of_edges
+- `number_of_nodes
+- `number_of_src_nodes
+- `out_degree
+- `out_degrees
+- `out_edges
+- `out_subgraph
+- `predecessors
+- `prop_edges
+- `prop_nodes
+- `pull
+- `push
+- `readonly
+- `recv
+- `register_apply_edge_func
+- `register_apply_node_func
+- `register_message_func
+- `register_reduce_func
+- `remove_edges
+- `remove_nodes
+- `remove_self_loop
+- `reorder_graph
+- `reverse
+- `send
+- `send_and_recv
+- `set_batch_num_edges
+- `set_batch_num_nodes
+- `set_e_initializer
+- `set_n_initializer
+- `shared_memory
+- `srcdata
+- `srcnodes
+- `srctypes
+- `subgraph
+- `successors
+- `to
+- `to_canonical_etype
+- [**`to_networkx`**](https://docs.dgl.ai/en/0.6.x/generated/dgl.to_networkx.html)
+- `to_simple
+- `update_all
+
+## datasets
+
+```python
+# importing data
+import dgl.data
+
+datasets = [
+    dgl.data.CoraGraphDataset(),
+    dgl.data.QM9Dataset(),
+    dgl.data.QM9EdgeDataset()
+]
+```
+
+### [QM9Dataset](https://docs.dgl.ai/en/0.6.x/api/python/dgl.data.html#qm9-dataset)
+
+- ndata
+    - `X.ndata['R']`. cartesian coordinate
+    - `X.ndata['Z']`. atomic number
+    - `X.nodes()`. get nodes
+    - `X.edges()`. get edges

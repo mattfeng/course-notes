@@ -1,5 +1,40 @@
 # google colab
 
+## setting up colab
+
+```bash
+!pip install -q condacolab
+```
+
+```python
+import condacolab
+condacolab.install()
+```
+
+```python
+import condacolab
+condacolab.check()
+```
+
+```bash
+# dependencies: rdkit
+!conda install -q -y -c conda-forge rdkit
+
+# dependencies: torch, dgl
+!pip3 install torch==1.9.1+cu111 -f https://download.pytorch.org/whl/torch_stable.html
+!pip3 install dgl-cu111 -f https://data.dgl.ai/wheels/repo.html
+
+# dependencies: dgllife
+!conda install -c dglteam dgllife
+```
+
+```python
+# importing
+# be sure to update python3.9 to the version you are using
+import sys
+sys.path.append('/usr/local/lib/python3.9/site-packages/')
+```
+
 ## keyboard shortcuts
 
 - **`cmd+M+A`**. add cell above

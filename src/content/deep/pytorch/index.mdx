@@ -17,11 +17,11 @@ def NNModule(nn.Module):
 
 ## training loop
 
-- different kinds of [Optimizers](https://pytorch.org/docs/stable/optim.html)
-
 ```python
 from torch import nn
 import torch.optim as optim
+
+from tqdm import tqdm
 
 # define model
 model = define_model()
@@ -37,14 +37,30 @@ loss_fn = define_loss_function()
 # create optimizier
 opt = optim.Optimizer(model.parameters(), **opt_params)
 
+# create dataloader
+# should be an iterator that returns (X, y)
+dataloader = define_dataloader()
+
 # train loop
 num_epochs = 30
 
 for epoch in range(1, num_epochs + 1):
-    opt.zero_grad()
 
-    loss = loss_fn
+    for batch, (X, y) in enumerate(tqdm(dataloader)):
+        # compute forward pass and loss
+        pred = model(*inputs)
+        loss = loss_fn(pred, y)
 
-
-    opt.step()
+        # backpropagation
+        opt.zero_grad()
+        loss.backward()
+        opt.step()
 ```
+
+## [commonly used optimizers (and notes)](https://pytorch.org/docs/stable/optim.html)
+
+### SGD
+
+### RMSprop
+
+### Adagrad
