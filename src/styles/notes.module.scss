@@ -1,7 +1,18 @@
+@import "fonts.scss";
+
+$sans: "Outfit", sans-serif;
+
 .mainContainer {
     max-width: 80ch;
     margin: 0 auto;
     padding: 0 20px;
+
+    font-family: $sans;
+    font-weight: 200;
+
+    h1, h2, h3 {
+        font-weight: 700;
+    }
 }
 
 li {
@@ -18,3 +29,4 @@ td, th {
     border: 1px solid #ccc;
     padding: 2px 6px;
 }
+
