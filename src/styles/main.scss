@@ -24,9 +24,14 @@ deckgo-highlight-code {
 }
 
 code {
-    font-size: 0.8em;
     background-color: #fdf6e3;
     color: #657b83;
     border-radius: 5px;
     padding: 1px 3px;
+}
+
+deckgo-highlight-code {
+    code {
+        font-size: 0.8em;
+    }
 }
