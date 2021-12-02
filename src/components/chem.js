@@ -2,7 +2,7 @@ import React, { Component } from "react"
 import katex from "katex"
 import * as styles from "../styles/chem.module.scss"
 
-require('katex/dist/contrib/mhchem.js');
+require("katex/dist/contrib/mhchem.js")
 
 class Chem extends Component {
   render() {
@@ -14,19 +14,20 @@ class Chem extends Component {
         "\\Keq": "\\text{K}_{eq}",
         "\\DG": "\\Delta G",
         "\\DH": "\\Delta H",
-        "\\DS": "\\Delta S"
-      }
+        "\\DS": "\\Delta S",
+      },
     })
 
     if (block) {
       return (
-        <div className={styles.block} dangerouslySetInnerHTML={{ __html: s }}></div>
+        <div
+          className={styles.block}
+          dangerouslySetInnerHTML={{ __html: s }}
+        ></div>
       )
     }
 
-    return (
-      <span dangerouslySetInnerHTML={{ __html: s }}></span>
-    )
+    return <span dangerouslySetInnerHTML={{ __html: s }}></span>
   }
 }
 

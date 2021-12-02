@@ -7,6 +7,7 @@ import Tag from "../components/tag"
 import { StaticImage } from "gatsby-plugin-image"
 import { Link } from "gatsby"
 import { defineCustomElements as deckDeckGoHighlightElement } from "@deckdeckgo/highlight-code/dist/loader"
+import katex from "katex"
 
 import "../styles/katex.css"
 import "../styles/main.scss"
@@ -27,7 +28,23 @@ const RA = () => {
   return <span>&rarr;</span>
 }
 
-const shortcodes = { C: Chem, T: Tag, Link, SI: StaticImage, SN2, RA }
+const PKA = () => {
+  const s = katex.renderToString("\\mathrm{p}K_a", {
+    throwOnError: false,
+    displayMode: false,
+  })
+  return <span dangerouslySetInnerHTML={{ __html: s }}></span>
+}
+
+const PKB = () => {
+  const s = katex.renderToString("\\mathrm{p}K_b", {
+    throwOnError: false,
+    displayMode: false,
+  })
+  return <span dangerouslySetInnerHTML={{ __html: s }}></span>
+}
+
+const shortcodes = { C: Chem, T: Tag, Link, SI: StaticImage, SN2, RA, PKA, PKB }
 
 export default function BlogPost({ data }) {
   const post = data.mdx
