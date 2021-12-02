@@ -6,6 +6,53 @@
 - organize by type of nucleophile
 - base-catalyzed tautomerization mechanism
 
+## Table of <PKA />
+
+<table>
+  <tr>
+    <th>compound</th>
+    <th><PKA /></th>
+    <th>notes</th>
+  </tr>
+
+  <tr>
+    <td>carboxamide</td>
+    <td>30</td>
+    <td>nitrogen is strong EDG competing with deprotonation of alpha-hydrogen</td>
+  </tr>
+  <tr>
+    <td>nitrile</td>
+    <td>25</td>
+    <td>just memorize</td>
+  </tr>
+  <tr>
+    <td>ester</td>
+    <td>25</td>
+    <td>oxygen donates electrons, which competes with deprotonation of alpha-hydrogen</td>
+  </tr>
+  <tr>
+    <td>ketone</td>
+    <td>20</td>
+    <td>alkyl groups are weaking EDG</td>
+  </tr>
+  <tr>
+    <td>aldehydes</td>
+    <td>17</td>
+    <td>hydrogens don't donate; aldehydes almost too easy to deprotonate</td>
+  </tr>
+  <tr>
+    <td>1,3-diesters</td>
+    <td>13</td>
+    <td>two resonance structures for conjugate base, but slightly blocked due to existing resonance in ester</td>
+  </tr>
+  <tr>
+    <td>1,3-dicarbonyls</td>
+    <td>9</td>
+    <td>two resonance structures for conjugate base</td>
+  </tr>
+
+</table>
+
 ## Types of compounds
 - Alkenes
 - Aldehydes
@@ -180,10 +227,84 @@
 
 ---
 
+## To enols/enolates
+
+### Ketones <RA /> enolates
+
+#### Powerful bases deprotonate ald/ket to form enolates
+
+<Collapse title="About LDA">
+
+- $\alpha$-carbon <PKA /> is around **20** (<PKB /> is **-6**).
+- The <PKB /> of amide anions is $14 - 35.7 =$ **-21.7**.
+- amide anions are used to get 100% formation of enolates.
+  - note the difference between [amide anion](https://en.wikipedia.org/wiki/Azanide) and an [amide (carboxamides)](https://en.wikipedia.org/wiki/Amide).
+
+<div style="display: block; width: 300px; margin: 0 auto;" >
+
+![Lithium diisopropylamide (LDA).](./assets/review/LDA.jpg)
+
+</div>
+
+- LDA is **highly hindered** (weak nucleophile).
+  - **the less hindered proton will be removed** <RA /> the **less stable enolate** is the **kinetic product** under the following conditions:
+    - solvent: <C chem="\ce{THF}" />
+    - temperature: <C chem="\pu{-78 ^\circ C}" />
+  
+
+![The less hindered side is deprotonated.](./assets/review/less-hindered.jpg)
+
+</Collapse>
+
+## From enols/enolates
+
+### Enolate <RA /> ketones (forming <C chem="\ce{C-C}" /> bonds)
+
+#### <Rxn /> Alkylation using alkyl halides (forms <C chem="\ce{C-C}" /> bonds)
+
+TODO
+
+### Enolate <RA /> $\alpha$-halo carbonyl compounds
+
+#### <Rxn /> $\alpha$-halogenation with <C chem="\ce{Br2}" /> in acidic conditions (`smith5e, 23.7C`/`kakioka, WS_11_23`)
+
+- **_reagents_**
+  - bromide <C chem="\ce{Br2}" />
+- **_solvent_**
+  - often acetic acid (<C chem="\ce{AcOH}" />)
+
+![alpha-halogenation with enols and bromide.](./assets/rxns/enol_alpha-halogenation.jpg)
+
+<Collapse title="Reaction details">
+
+- _stereochemistry_
+  - **racemic** (no control over adding to top or bottom of enolate)
+- _regiochemistry_
+  - adds to **less sterically hindered side**
+
+</Collapse>
+
+#### <Rxn /> Haloform reaction (formation of <C chem="\ce{CHX3}" />) (`smith5e, 23.7B`/`kakioka, WS_11_23`)
+
+<Collapse title="Reaction details">
+
+- notes
+  - overhalogenation occurs because the added halogen makes the $\alpha$-hydrogens even more acidic and likely to be deprotonated by the base.
+- _stereochemistry_
+  - **racemic** (no control over adding to top or bottom of enolate)
+- _regiochemistry_
+  - adds to **less sterically hindered side**
+
+</Collapse>
+
+---
+
 ## About enols/enolates
 - **enolates** are good for **<SN2 /> reactions!**
+- **enols** are much more nucleophlic than regular <C chem="\ce{C=C}" /> double bonds; see the resonance structure.
 
 ![The two depictions (resonance structures) of enolates; the alpha-carbon is the nucleophile!](./assets/review/depiction-of-enolates.jpg)
+
 - acidic vs. basic conditions
     - **enols**; important in acidic conditions (but not basic ones)
     - **enolates**; important in basic conditions (but not acidic ones)
@@ -199,21 +320,19 @@
 
 ![Acid-catalyzed tautomerization.](./assets/review/acid-catalyzed-tautomerization.jpg)
 
-## To enols/enolates
+- we use _acid_ to favor **enol** over **keto** form
 
-### Ketones <RA /> enolates
+### Enolates should avoid water and alcohols
 
-#### Powerful bases deprotonate ald/ket to form enolates
-- $\alpha$-carbon <PKA /> is around **20** (<PKB /> is **-6**).
+- once you make an enolate, **water and alcohols** have low enough <PKA /> that they will protonate your enolate, **destroying it**.
 
-<div style="display: block; width: 200px; margin: 0 auto;" >
+### Racemization/epimerization
+- deprotonation and reprotonation at the $\alpha$-carbon (a hydrogen must be present) will **racemize a stereogenic center**
+- if there are other stereogenic centers, the term **epimerization** is used
 
-![Lithium diisopropylamide.](./assets/review/LDA.jpg)
+---
 
-</div>
+## FAQ
 
-## From enols/enolates
-
-### Enolate <RA /> ketones (forming <C chem="\ce{C-C}" /> bonds)
-
-#### Reactions with alkyl halides form <C chem="\ce{C-C}" /> bonds
+### [Why are more substituted alkenes more stable?](https://www.masterorganicchemistry.com/2020/04/30/alkene-stability/#appendixone)
+- orbital mixing of <C chem="\ce{C-H}" /> sigma bonds in methyl group with the $\pi^*$ orbitals of the alkene double bond

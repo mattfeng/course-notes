@@ -4,6 +4,7 @@ import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import Chem from "../components/chem"
 import Tag from "../components/tag"
+import Collapse from "../components/collapse"
 import { StaticImage } from "gatsby-plugin-image"
 import { Link } from "gatsby"
 import { defineCustomElements as deckDeckGoHighlightElement } from "@deckdeckgo/highlight-code/dist/loader"
@@ -44,7 +45,22 @@ const PKB = () => {
   return <span dangerouslySetInnerHTML={{ __html: s }}></span>
 }
 
-const shortcodes = { C: Chem, T: Tag, Link, SI: StaticImage, SN2, RA, PKA, PKB }
+const Reaction = () => {
+  return <span className={styles.reaction}>&#x1F338;</span>
+}
+
+const shortcodes = {
+  C: Chem,
+  T: Tag,
+  Link,
+  SI: StaticImage,
+  SN2,
+  RA,
+  PKA,
+  PKB,
+  Collapse,
+  Rxn: Reaction,
+}
 
 export default function BlogPost({ data }) {
   const post = data.mdx
