@@ -39,6 +39,11 @@ const IndexPage = () => (
           </Link>
         </li>
         <li>
+          <Link to="/5.12/rxns">
+            full list of reactions (currently only unit 4)
+          </Link>
+        </li>
+        <li>
           <Link to="/5.12/glossary">glossary</Link>
         </li>
       </ul>
