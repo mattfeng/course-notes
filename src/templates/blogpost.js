@@ -25,6 +25,14 @@ const SN2 = () => {
   )
 }
 
+const SN1 = () => {
+  return (
+    <span>
+      S<sub>N</sub>1
+    </span>
+  )
+}
+
 const RA = () => {
   return <span>&rarr;</span>
 }
@@ -49,17 +57,23 @@ const Reaction = () => {
   return <span className={styles.reaction}>&#x1F338;</span>
 }
 
+const NoMechanism = () => {
+  return <span className={styles.nomech}>&#x26D4;</span>
+}
+
 const shortcodes = {
   C: Chem,
   T: Tag,
   Link,
   SI: StaticImage,
+  SN1,
   SN2,
   RA,
   PKA,
   PKB,
   Collapse,
   Rxn: Reaction,
+  Nmxn: NoMechanism,
 }
 
 export default function BlogPost({ data }) {

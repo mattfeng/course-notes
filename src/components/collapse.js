@@ -9,7 +9,7 @@ const Collapse = ({ title, children }) => {
     return (
       <div className={styles.container}>
         <div onClick={() => setShow(false)} className={styles.title}>
-          &#9654; {title}
+          <span className={styles.normal}>&#9660;</span> {title}
         </div>
         {children}
       </div>
@@ -19,7 +19,7 @@ const Collapse = ({ title, children }) => {
   return (
     <div className={styles.container}>
       <div className={styles.title} onClick={() => setShow(true)}>
-        &#9654; {title}
+        <span className={styles.normal}>&#9654;</span> {title}
       </div>
     </div>
   )
