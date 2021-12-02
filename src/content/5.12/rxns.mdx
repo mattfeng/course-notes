@@ -5,6 +5,7 @@
 - figure out last sulfur reaction other than protection/deprotection
 - organize by type of nucleophile
 - base-catalyzed tautomerization mechanism
+- Gilman reagents (curprates)
 
 ## Questions
 - Why is anhydride more reactive (electrophilic) than aldehyde? Withdrawing group?
@@ -54,7 +55,21 @@
     <td>9</td>
     <td>two resonance structures for conjugate base</td>
   </tr>
-
+  <tr>
+    <td><C chem="\ce{NaH}" /></td>
+    <td>35</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td><C chem="\ce{NaNH2}" /></td>
+    <td>25</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>pyridine</td>
+    <td>5-6</td>
+    <td></td>
+  </tr>
 </table>
 
 ## Types of compounds
@@ -137,11 +152,57 @@
 
 ## To alkenes
 
-### Alcohol <RA /> Alkene
+### Alcohol <RA /> alkene
 
-#### Dehydration with <C chem="\ce{POCl3}" /> and pyridine (`smith5e, 9.10`)
+#### Dehydration with <C chem="\ce{POCl3}" /> and pyridine (`smith5e, 9.10`/`L24`)
+
+- Used because **some organic compounds decompose in the prescence of strong acid** (see _alcohol dehydration_)
+
+![Alcohol to alkene without strong acid.](./assets/rxns/pocl3_alcohol-to-alkene.png)
 
 ## From alkenes
+
+### Alkene <RA /> alcohol
+
+#### <Rxn /> Oxymercuration (mknv)
+
+- **reagents**
+  - step 1
+    - <C chem="\ce{Hg(OAc)2}" />
+    - solvent (water)
+  - step 2
+    - <C chem="\ce{NaBH4}" />
+
+#### <Rxn /> Hydroboration-oxidation (anti-mknv)
+
+- **reagents**
+  - step 1: hydroboration
+    - <C chem="\ce{BH3}" />
+    - solvent (water)
+  - step 2: oxidation
+    - <C chem="\ce{H2O2}" />
+    - <C chem="\ce{NaOH}" />
+
+#### <Rxn /> Dihydroxylation
+
+- **reagents**
+  - step 1
+    - <C chem="\ce{OsO4}" />
+  - step 2
+    - <C chem="\ce{NaHSO3}" />
+    - <C chem="\ce{H2O}" />
+
+---
+
+## To ethers
+
+### Alcohols <RA /> ethers
+
+#### <Rxn /> Williamson ether synthesis
+
+![Williamson ether synthesis (intermolecular and intramolecular).](./assets/rxns/williamson-ether-synthesis.jpg)
+
+## From ethers
 
 ---
 
@@ -149,13 +210,53 @@
 
 ### Alkyne <RA /> ketone
 
-#### Hydration of alkynes with strong acid (<C chem="\ce{H2SO4}" />) and <C chem="\ce{HgSO4}" /> (`smith5e, 11.9`)
+#### Hydration of alkynes with strong acid (<C chem="\ce{H2SO4}" />) and <C chem="\ce{HgSO4}" /> (`smith5e, 11.9`) to form _ketones_
+
+- **reagents**
+  - <C chem="\ce{H2SO4}" />
+  - <C chem="\ce{HgSO4}" /> (only neede)
+
+#### Hydroboration of terminal alkyne (`L24`)
+- **reagents
 
 ## From aldehydes/ketones
 
 ### Aldehyde/ketone <RA /> alkene
 
-#### Wittig reaction (Wittig reagent: <C chem="\ce{Ph3P^+-C^-R^1R^2}" />)
+#### <Rxn /> Wittig reaction (Wittig reagent: <C chem="\ce{Ph3P^+-C^-R^1R^2}" />) (`L25`)
+
+![Wittig reaction.](./assets/rxns/wittig.png)
+
+![Wittig reaction mechanism.](./assets/rxns/wittig-mxn.png)
+
+<Collapse title="Making Wittig regents">
+
+![Making a Wittig reagent.](./assets/rxns/making-wittig.png)
+
+</Collapse>
+
+### Ald/ket <RA /> alcohols
+
+#### <Rxn /> Catalytic hydrogenation (`smith5e, 20.4C`)
+- **notes**
+  - carbon/carbon (<C chem="\ce{C=C}" /> double bonds are hydrogenated much more quickly than <C chem="\ce{C=O}" /> bonds.
+    - this enables different products between **xs** and **1 equiv** of <C chem="\ce{H2}" />.
+
+#### <Rxn /> Grignard addition (<C chem="\ce{C-C}" /> forming at the carbonyl carbon)
+
+- **reagents**
+  - step 1: Grignard reagent (<C chem="\ce{RMgX}" />)
+  - step 2: water or acid workup
+
+![Grignard mechanism.](./assets/rxns/grignard-mxn.png)
+
+#### <Rxn /> Addition with Gilman reagents (cuprates)
+
+---
+
+## To epoxides
+
+## From epoxides
 
 ---
 
@@ -164,23 +265,62 @@
 ## From acetals
 
 ---
-
+ 
 ## To alcohols
+
+### Ald/ket <RA /> alcohols
+
+#### <Rxn /> Carbonyl reduction with hydride reducing agents
+
+- **reagents**
+  - step 1: hydride nucleophile (<C chem="\ce{LiAl4}" /> or <C chem="\ce{NaBH4}" />)
+  - step 2: water or acid workup
+
+<Collapse title="About LiAlH4">
+
+- Lithium aluminium hydride (<C chem="\ce{LiAl4}" />) **also reacts with carboxylic acid derivatives**; avoid if **ester is also present**
+- Avoid water and alcohols; <C chem="\ce{LiAl4}" /> is also a strong base.
+
+</Collapse>
+
 
 ## From alcohols
 
-### Alcohol <RA /> Alkyl halide
+### Alcohol <RA /> Alkyl halide (formation of better LGs)
 
-#### <Rxn /> with <C chem="\ce{H-X}" />
+#### <Rxn /> with <C chem="\ce{H-X}" /> (<SN1 />, _3º alcohol only_) (`L23`)
 
-#### <Rxn /> with <C chem="\ce{PBr3}" />
+#### <Rxn /> with phosphorous tribromide (<C chem="\ce{PBr3}" />) (`L23`)
 
-#### <Rxn /> with <C chem="\ce{SOCl2}" />, pyridine
-- pyridine is present so that <C chem="\ce{HCl}" /> does not build up in solution (source: UC Irvine 51C)
+#### <Rxn /> with thionyl chloride (<C chem="\ce{SOCl2}" />), pyridine (`L23`)
+
+#### <Rxn /> with tosyl chloride (<C chem="\ce{TsCl}" />) (`L23`)
 
 ### Alcohol <RA /> ald/ket
 
-#### <Rxn /> PCC oxidation
+#### <Rxn /> PCC oxidation (`L24`)
+
+![PCC oxidation to convert alcohols to aldehydes and ketones.](./assets/rxns/pcc-oxidation.png)
+
+### Alcohol <RA /> alkenes
+
+#### <Rxn /> 1º alcohol dehyration (E2)
+
+- **reagents**
+  - strong acid, like <C chem="\ce{H2SO4}" />
+
+<Collapse title="Reaction details">
+
+- **notes**
+  - clean E1 because no good nucleophile is present to compete as <SN1 />.
+
+</Collapse>
+
+#### <Rxn /> 2º and 3º alcohol dehyration (E1)
+
+- **reagents**
+  - strong acid, like <C chem="\ce{H2SO4}" />
+
 
 ---
 
@@ -191,6 +331,12 @@
 #### Ester hydrolysis in aqueous acid (`smith5e, 22.11`)
 
 ## From carboxylic acids
+
+### Carboxylic acid <RA /> amide
+
+#### <Rxn /> via DCC (dicyclohexylcarbodiimide) (`L29`)
+
+![Carboxylic acids to amides via DCC.](./assets/rxns/dcc-carboxylic-acid-to-amide.jpg)
 
 ---
 
@@ -214,7 +360,9 @@
 
 ### Ester <RA /> ald/ket
 
-#### Ester reduction with DIBAL-H (_aldehyde only_) (`kakioka, WS_11_16`)
+#### <Rxn /> <Nmxn /> Ester reduction with DIBAL-H (_aldehyde only_) (`kakioka, WS_11_16`)
+
+![Reduction of esters to aldehydes with DIBAL-H.](./assets/rxns/reduction-of-esters-with-dibal.png)
 
 ### Ester <RA /> carboxylic acid
 
@@ -242,6 +390,16 @@
 
 ## From amides
 
+### Amides <RA /> amines
+
+#### <Rxn /> Reduction of amides to amines (`smith5e, 20.7B`)
+
+---
+
+## To amines
+
+## From amines
+
 ---
 
 ## To imines
@@ -258,11 +416,21 @@
 
 ## To nitriles
 
-### Ketone <RA /> cyanohydrin
+### Ald/ket <RA /> cyanohydrin
 
-#### <Rxn /> Cyanohydrin formation
+#### <Rxn /> Cyanohydrin formation (addition of _cyanide_ nucleophile)
+
+![Ald/ket to nitrile.](./assets/rxns/ketone-to-nitrile.png)
+
+![Ald/ket to nitrile mechanism.](./assets/rxns/ketone-to-nitrile-mxn.png)
 
 ## From nitriles
+
+### Nitrile <RA /> _aldehyde only_
+
+#### <Rxn /> <Nmxn /> Reduction of nitriles (`L25`)
+
+![Reduction of nitriles to aldehydes with DIBAL-H.](./assets/rxns/reduction-of-nitriles-with-dibal.png)
 
 ---
 
@@ -410,6 +578,17 @@
 </Collapse>
 
 ---
+
+## About carbonyls
+- **Thermodynamic driving force** for carbonyl reactions is the formation of the <C chem="\ce{C-Nu}" /> $\sigma$-bond which is stronger than the lost $\pi$-bond.
+
+## Nucleophile classes
+- 5 classes
+  1. hydride
+  2. carbon
+  3. oxygen (reversible)
+  4. sulfur (reversible)
+  5. nitrogen (reversible)
 
 ## About enols/enolates
 - **enolates** are good for **<SN2 /> reactions!**
