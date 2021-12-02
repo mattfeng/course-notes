@@ -2,7 +2,6 @@
 
 ## TODO
 - figure out which reactions are in equilibrium
-- figure out last sulfur reaction other than protection/deprotection
 - organize by type of nucleophile
 - base-catalyzed tautomerization mechanism
 - Gilman reagents (curprates)
@@ -11,7 +10,7 @@
 - Why is anhydride more reactive (electrophilic) than aldehyde? Withdrawing group?
 - Adding ketone to LDA vs. LDA to ketone?
 
-## Table of <PKA /> values
+<Collapse title="Table of pKa values">
 
 <table>
   <tr>
@@ -56,6 +55,11 @@
     <td>two resonance structures for conjugate base</td>
   </tr>
   <tr>
+    <td>alcohols</td>
+    <td>15-18</td>
+    <td><PKA /> increases as carbon chain grows; reasons: EDG and bulkiness.</td>
+  </tr>
+  <tr>
     <td><C chem="\ce{NaH}" /></td>
     <td>35</td>
     <td></td>
@@ -66,11 +70,23 @@
     <td></td>
   </tr>
   <tr>
+    <td>phenol</td>
+    <td>10</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>acetic acid</td>
+    <td>5</td>
+    <td></td>
+  </tr>
+  <tr>
     <td>pyridine</td>
     <td>5-6</td>
     <td></td>
   </tr>
 </table>
+
+</Collapse>
 
 <Collapse title="List of types of compounds">
 
@@ -227,7 +243,7 @@
 
 ### Ald/ket <RA /> alkane
 
-#### <Rxn /> Wolff-Kishner reaction: reduce ald/ket to alkane (`L27`)
+#### <Rxn /> Wolff-Kishner reaction: reduce ald/ket to alkane (`L27`/`klein, 19.6`)
 
 ![Wolff-Kishner reaction; convert ald/ket to alkane through hydrazone intermediate.](./assets/rxns/wolff-kishner.png)
 
@@ -237,7 +253,22 @@
 
 </Collapse>
 
-### Ald/ketone <RA /> alkene
+#### <Rxn /> Sulfur reaction, Protection: Protection/deprotection of ald/ket (`L27,2`)
+
+- **_reagents_**
+  - **protection**
+    - <C chem="\ce{HS(CH2)3SH}" />
+    - (solvent) <C chem="\ce{BF3 \cdot Et2O}" />
+  - **deprotection**
+    - <C chem="\ce{HgCl2}" />
+- mechanism is analogous to **acetal formation**
+
+#### <Rxn /> Sulfur reaction: Reduction to alkane with Raney nickel (`L27,2`)
+- Instead of deprotecting, we can also reduce the **dithioacetal** into an alkane.
+- **_reagents_**
+  - Raney nickel (<C chem="\ce{Ni/Al}" />)
+
+### Ald/ket <RA /> alkene
 
 #### <Rxn /> Wittig reaction (Wittig reagent: <C chem="\ce{Ph3P^+-C^-R^1R^2}" />) (`L25`)
 
@@ -280,7 +311,7 @@
 
 ### Ald/ket <RA /> acetal
 
-#### <Rxn /> Acetal formation with alcohol and acid catalysis (`L26`)
+#### <Rxn /> Protection: Acetal formation with alcohol and acid catalysis (`L26`)
 
 - **reagents**
   - **2 equiv** of alcohol
@@ -490,7 +521,7 @@
 
 ![Oximes and hydrazones.](./assets/rxns/oxime-hydrazone.png)
 
-#### <Rxn /> Wolff-Kishner reaction: reduce ald/ket to alkane (`L27`)
+#### <Rxn /> Wolff-Kishner reaction: reduce ald/ket to alkane (`L27`/`klein, 19.6`)
 
 ---
 
@@ -517,17 +548,6 @@
 ## To acid anhydrides
 
 ## From acid anhydrides
-
----
-
-## Sulfur reactions
-
-### Protection
-
-### Deprotection to carbonyl with <C chem="\ce{HgCl2}" />
-
-### Reduction to alkane with Raney nickel
-
 
 ---
 
@@ -670,6 +690,12 @@
   4. sulfur (reversible)
   5. nitrogen (reversible)
 
+## Carboxylic acids and nitriles (`L27`)
+- similarities
+  - electrophilic carbons (see: resonance structures)
+  - carbon atom contains 3 bonds to electronegative atoms
+  - $\pi$-bonds
+
 ## About enols/enolates
 - **enolates** are good for **<SN2 /> reactions!**
 - **enols** are much more nucleophlic than regular <C chem="\ce{C=C}" /> double bonds; see the resonance structure.
@@ -700,3 +726,6 @@
 
 ### [Why are more substituted alkenes more stable?](https://www.masterorganicchemistry.com/2020/04/30/alkene-stability/#appendixone)
 - orbital mixing of <C chem="\ce{C-H}" /> sigma bonds in methyl group with the $\pi^*$ orbitals of the alkene double bond
+
+### To form thermodynamic product, why do we add LDA to ketone?
+- Once kinetic product forms, it is an **enolate** that can react with **ketones**.

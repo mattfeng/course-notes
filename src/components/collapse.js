@@ -7,7 +7,7 @@ const Collapse = ({ title, children }) => {
 
   if (show) {
     return (
-      <div className={styles.container}>
+      <div className={styles.containerOpen}>
         <div onClick={() => setShow(false)} className={styles.title}>
           <span className={styles.normal}>&#9660;</span> {title}
         </div>
@@ -17,7 +17,7 @@ const Collapse = ({ title, children }) => {
   }
 
   return (
-    <div className={styles.container}>
+    <div className={styles.containerClosed}>
       <div className={styles.title} onClick={() => setShow(true)}>
         <span className={styles.normal}>&#9654;</span> {title}
       </div>
