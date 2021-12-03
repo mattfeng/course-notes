@@ -5,9 +5,6 @@
 - base-catalyzed tautomerization mechanism
 - Gilman reagents (cuprates)
 
-## Questions
-- Adding ketone to LDA vs. LDA to ketone?
-
 <Collapse title="Bases and nucleophiles chart">
 
 ![Good bases and nucleophiles chart.](./assets/review/nu-base.png)
@@ -436,6 +433,38 @@
 
 ---
 
+## _Oxidation_ reactions
+
+### <Rxn /> Oxidation of 1º alcohol <T tag="from alcohol to carboxylic acid" />
+
+- **_reagents_**
+  - chromium trioxide (<C chem="\ce{CrO3}" />)
+  - strong acid (<C chem="\ce{H3O+}" />)
+
+### <Rxn /> Oxidation of 2º alcohol <T tag="from alcohol to ketone" />
+
+- **_reagents_**
+  - chromium trioxide (<C chem="\ce{CrO3}" />)
+  - strong acid (<C chem="\ce{H3O+}" />)
+
+### <Rxn /> Oxidation of aldehyde <T tag="from aldehyde to carboxylic acid" />
+
+- **_reagents_**
+  - chromium trioxide (<C chem="\ce{CrO3}" />)
+  - strong acid (<C chem="\ce{H3O+}" />)
+
+<Collapse title="Mechanism for oxidation">
+
+![Oxidation of alcohol with chromic acid.](./assets/rxns/oxidation-alcohol-chromic-acid-mechanism.png)
+
+</Collapse>
+
+### <Rxn /> Oxidation in the presence of benzylic hydrogen
+
+![Oxidation can happen at both alkyls and vinyls as long as a benzylic hydrogen is present.](./assets/rxns/oxidation-benzylic-hydrogen.png)
+
+---
+
 ## To carboxylic acids
 
 ### Carboxylation
@@ -449,30 +478,6 @@
 ![Grignard carboxylation mechanism.](./assets/rxns/grignard-carboxylation-mxn.png)
 
 </Collapse>
-
-### _Oxidation_ reactions
-
-#### <Rxn /> 1º alcohol <RA /> carboxylic acid
-
-- **_reagents_**
-  - chromium trioxide (<C chem="\ce{CrO3}" />)
-  - strong acid (<C chem="\ce{H3O+}" />)
-
-#### <Rxn /> Aldehyde (two hydrogens) <RA /> carboxylic acid
-
-- **_reagents_**
-  - chromium trioxide (<C chem="\ce{CrO3}" />)
-  - strong acid (<C chem="\ce{H3O+}" />)
-
-<Collapse title="Mechanism for oxidation">
-
-![Oxidation of alcohol with chromic acid.](./assets/rxns/oxidation-alcohol-chromic-acid-mechanism.png)
-
-</Collapse>
-
-#### <Rxn /> Oxidation in the presence of benzylic hydrogen
-
-![Oxidation can happen at both alkyls and vinyls as long as a benzylic hydrogen is present.](./assets/rxns/oxidation-benzylic-hydrogen.png)
 
 ### _Hydrolysis_ reactions from carboxylic acid derivatives (CADs) (`L27,5`)
 
@@ -592,11 +597,48 @@
 
 ## To acyl chlorides
 
-### Carboxylic acid <RA /> acyl chloride
+### <Rxn /> via thionyl chloride (<C chem="\ce{SOCl2}" />) (`klein, 20.8`/`L28`) <T tag="from carboxylic acid to acyl chloride" />
 
-#### <Rxn /> via tionyl chloride (<C chem="\ce{SOCl2}" />) (`klein, 20.8`/`L28`)
+- formation of <C chem="\ce{SO2}" /> gas drives reaction to completion
 
 ## From acyl chlorides
+
+### <Rxn /> Hydrolysis with water and pyridine (`klein, 20.8`) <T tag="from acyl chloride to carboxylic acid" />
+- **pyridine** neutralizes the <C chem="\ce{HCl}" /> formed that can often produce undesired reactions with other functional groups present in the compound.
+
+![Hydrolysis of acyl chloride.](./assets/rxns/hydrolysis-of-acyl-chloride.png)
+
+![Hydrolysis of acyl chloride mechanism.](./assets/rxns/hydrolysis-acid-chloride-mxn.png)
+
+### <Rxn /> Alcoholysis with <C chem="\ce{ROH}" /> and pyridine (`klein, 20.8`) <T tag="from acyl chloride to ester" />
+- **pyridine** neutralizes the <C chem="\ce{HCl}" /> formed that can often produce undesired reactions with other functional groups present in the compound.
+
+![Alcoholysis of acyl chlorides.](./assets/rxns/alcoholysis-acyl-chloride.png)
+
+### <Rxn /> Aminolysis (`klein, 20.8`) <T tag="from acyl chloride to amide" />
+- two equivalents of <C chem="\ce{R^1R^2NH}" /> are used.
+  - the second equivalent neutralizes the <C chem="\ce{HCl}" /> formed
+  - or just use **pyridine**
+
+![Aminolysis of acyl chloride.](./assets/rxns/aminolysis-acyl-chloride.png)
+
+### <Rxn /> Reduction of acid chlorides with <C chem="\ce{LiAlH4}" /> (`klein, 20.8`) <T tag="from acyl chloride to alcohol" />
+
+- solvent: <C chem="\ce{THF}" />
+
+![Reduction of acyl chloride to 1º alcohol.](./assets/rxns/reduction-acid-chloride-to-alcohol.png)
+
+### <Rxn /> Reduction of acid chlorides with Grignard reagents (`klein, 20.8`) <T tag="from acyl chloride to alcohol" />
+
+- solvent: <C chem="\ce{Et2O}" />
+
+![Reduction of acid chlorides with Grignard reagents.](./assets/rxns/acid-chloride-grignard.png)
+
+### <Rxn /> Reduction of acid chlorides with Gilman reagent (<C chem="\ce{R2CuLi}" />) (`klein, 20.8`) <T tag="from acyl chloride to aldehyde" />
+
+- solvent: <C chem="\ce{Et2O}" />
+
+![Reduction of acid chlorides with Gilman reagents.](./assets/rxns/acid-chloride-gilman.png)
 
 ---
 
