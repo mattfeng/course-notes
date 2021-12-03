@@ -1,16 +1,16 @@
 # Full List of Reactions
 
 ## TODO
-- figure out which reactions are in equilibrium
 - organize by type of nucleophile
 - base-catalyzed tautomerization mechanism
-- Gilman reagents (curprates)
+- Gilman reagents (cuprates)
 
 ## Questions
-- Why is anhydride more reactive (electrophilic) than aldehyde? Withdrawing group?
 - Adding ketone to LDA vs. LDA to ketone?
 
 <Collapse title="Table of pKa values">
+
+- [source: pKa values for organic and inorganic Bronsted acids](https://owl.oit.umass.edu/departments/OrganicChemistry/appendix/pKaTable.html)
 
 <table>
   <tr>
@@ -82,6 +82,16 @@
   <tr>
     <td>pyridine</td>
     <td>5-6</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td><C chem="\ce{HCl}" /></td>
+    <td>-7</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td><C chem="\ce{H2SO4}" /></td>
+    <td>-10</td>
     <td></td>
   </tr>
 </table>
@@ -413,9 +423,56 @@
 
 ## To carboxylic acids
 
-### Ester <RA /> carboxylic acid
+### _Oxidation_ reactions
 
-#### Ester hydrolysis in aqueous acid (`smith5e, 22.11`)
+#### <Rxn /> 1º alcohol <RA /> carboxylic acid
+
+#### <Rxn /> Aldehyde (two hydrogens) <RA /> carboxylic acid
+
+### _Hydrolysis_ reactions from carboxylic acid derivatives (CADs) (`L27,5`)
+
+#### <Rxn /> Acyl chloride <RA /> carboxylic acid (`klein, 20.8`/`L28`)
+
+![Acyl chloride hydrolysis to carboxylic acid.](./assets/rxns/acyl-chloride-hydrolysis.png)
+
+<Collapse title="Mechanism for acyl chloride hydrolysis to carboxylic acid">
+
+![Mechanism for acyl chloride hydrolysis to carboxylic acid.](./assets/rxns/hydrolysis-acyl-chloride-mxn.png)
+
+</Collapse>
+
+#### <Rxn /> Nitrile <RA /> carboxylic acid
+
+- **_reagents_**
+  - acid, heat
+- **_applications_**
+  - alkyl bromide <RA /> nitrile (via <SN2 />) <RA /> carboxylic acid (hydrolysis)
+
+![Nitrile hydrolysis to carboxylic acid.](./assets/rxns/oxidation-nitrile-carboxylic-acid.png)
+
+#### <Rxn /> Amide <RA /> carboxylic acid
+
+#### <Rxn /> Ester <RA /> carboxylic acid: Ester hydrolysis in aqueous acid (`smith5e, 22.11A`)
+
+![Ester hydrolysis to form carboxylic acids.](./assets/rxns/ester-hydrolysis-carboxylic-acid.png)
+
+<Collapse title="Mechanism for acid-catalyzed hydrolysis of ester to carboxylic acid">
+
+![Acid-catalyzed hydrolysis.](./assets/rxns/acid-cat-ester-to-carboxylic-acid.png)
+
+</Collapse>
+
+#### <Rxn /> Ester <RA /> carboxylic acid: Base-_promoted_ (not catalyzed) ester hydrolysis a.k.a _saponification_ (`smith5e, 22.11B`)
+
+- use a **strong acid** at the end to protonate the **carboxylate anion**.
+
+![Base-promoted ester hydrolysis.](./assets/rxns/saponification.png)
+
+<Collapse title="Mechanism for base-promoted hydrolysis of ester to carboxylic acid">
+
+![Mechanism for base-promoted ester hydrolysis (saponification).](./assets/rxns/base-promo-ester-hydrolysis.png)
+
+</Collapse>
 
 ## From carboxylic acids
 
@@ -468,6 +525,10 @@
 ---
 
 ## To acyl chlorides
+
+### Carboxylic acid <RA /> acyl chloride
+
+#### <Rxn /> via tionyl chloride (<C chem="\ce{SOCl2}" />) (`klein, 20.8`/`L28`)
 
 ## From acyl chlorides
 
@@ -690,11 +751,24 @@
   4. sulfur (reversible)
   5. nitrogen (reversible)
 
-## Carboxylic acids and nitriles (`L27`)
-- similarities
-  - electrophilic carbons (see: resonance structures)
-  - carbon atom contains 3 bonds to electronegative atoms
-  - $\pi$-bonds
+## About carboxylic acids and nitriles (`L27`)
+
+### Similarities between carboxylic acids and nitriles
+- electrophilic carbons (see: resonance structures)
+- carbon atom contains 3 bonds to electronegative atoms
+- $\pi$-bonds
+
+### Activating and deactivating groups (`L27,4`)
+- **Activating groups** donate electron density (strengthening nucleophile)
+  - This decreases acidity
+- **Deactivating groups** withdraw electron density (weakening nucleophile)
+  - This increases acidity
+
+<Collapse title="Activating and deactivating groups">
+
+![Activating and deactivating groups (weaken/strengthening acids).](./assets/review/activating-deactivating.png)
+
+</Collapse>
 
 ## About enols/enolates
 - **enolates** are good for **<SN2 /> reactions!**
@@ -720,6 +794,8 @@
 - deprotonation and reprotonation at the $\alpha$-carbon (a hydrogen must be present) will **racemize a stereogenic center**
 - if there are other stereogenic centers, the term **epimerization** is used
 
+
+
 ---
 
 ## FAQ
@@ -727,5 +803,13 @@
 ### [Why are more substituted alkenes more stable?](https://www.masterorganicchemistry.com/2020/04/30/alkene-stability/#appendixone)
 - orbital mixing of <C chem="\ce{C-H}" /> sigma bonds in methyl group with the $\pi^*$ orbitals of the alkene double bond
 
-### To form thermodynamic product, why do we add LDA to ketone?
+### To form thermodynamic product, why do we add LDA into ketone?
 - Once kinetic product forms, it is an **enolate** that can react with **ketones**.
+
+### Which reactions are reversible?
+- oxygen, sulfur, and nitrogen are **reversible** when attacking carbonyls (condensation and hydrolysis) (`L27,2`)
+  - **hydrates, acetals, imines, enamines, oximes, hydrazones**
+
+### Why is anhydride more reactive (electrophilic) than aldehyde? Withdrawing group?
+- Oxygen is electron withdrawing through **inductive effects**.
+- Resonance also causes the central oxygen to have a **positive charge**, which pulls heavily on the neighboring carbon's electrons, making that carbon very **electrophilic.**
