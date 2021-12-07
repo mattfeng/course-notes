@@ -166,9 +166,8 @@
 
 </Collapse>
 
----
+<Collapse title="Reactivity trends">
 
-## Reactivity trends
 1. acyl chloride (most reactive)
 2. acid anhydride
 3. aldehyde
@@ -177,14 +176,7 @@
 6. ester
 7. amide (least reactive)
 
----
-
-## Organization of carbonyl chemistry
-- carbonyl carbon
-    - aldehydes/ketone
-    - carboxylic acid derivatives
-- alpha-carbon
-    - enols/enolates
+</Collapse>
 
 --- 
 
@@ -196,19 +188,21 @@
 
 ## To alkenes
 
-### Alcohol <RA /> alkene
+<Box>
 
-#### Dehydration with <C chem="\ce{POCl3}" /> and pyridine (`smith5e, 9.10`/`L24`)
+#### Dehydration with <C chem="\ce{POCl3}" /> and pyridine (`smith5e, 9.10`/`L24`) <T tag="from alcohol to alkene" />
 
 - Used because **some organic compounds decompose in the prescence of strong acid** (see _alcohol dehydration_)
 
 ![Alcohol to alkene without strong acid.](./assets/rxns/pocl3_alcohol-to-alkene.png)
 
+</Box>
+
 ## From alkenes
 
-### Alkene <RA /> alcohol
+<Box>
 
-#### <Rxn /> Oxymercuration (mknv)
+#### Oxymercuration-demercuration (mknv) (`klein, 8.6`) <T tag="from alkene to alcohol" /> <Nmxn />
 
 - **reagents**
   - step 1
@@ -217,7 +211,11 @@
   - step 2
     - <C chem="\ce{NaBH4}" />
 
-#### <Rxn /> Hydroboration-oxidation (anti-mknv)
+</Box>
+
+<Box>
+
+#### Hydroboration-oxidation (anti-mknv) (`klein, 8.7`) <T tag="anti-mknv" /> <T tag="from alkene to alcohol" />
 
 - **reagents**
   - step 1: hydroboration
@@ -227,7 +225,12 @@
     - <C chem="\ce{H2O2}" />
     - <C chem="\ce{NaOH}" />
 
-#### <Rxn /> Dihydroxylation
+</Box>
+
+
+<Box>
+
+#### _Syn_-dihydroxylation (``) <T tag="from alkene to alcohol" />
 
 - **reagents**
   - step 1
@@ -235,6 +238,15 @@
   - step 2
     - <C chem="\ce{NaHSO3}" />
     - <C chem="\ce{H2O}" />
+
+</Box>
+
+
+<Box>
+
+#### <Rxn /> _Anti_-dihydroxylation (``) <T tag="from alkene to alcohol" />
+
+</Box>
 
 ---
 
@@ -254,20 +266,29 @@
 
 ### Alkyne <RA /> ketone
 
+<Box>
+
 #### Hydration of alkynes with strong acid (<C chem="\ce{H2SO4}" />) and <C chem="\ce{HgSO4}" /> (`smith5e, 11.9`) to form _ketones_
 
 - **reagents**
   - <C chem="\ce{H2SO4}" />
   - <C chem="\ce{HgSO4}" /> (only neede)
 
+</Box>
+
+
+<Box>
+
 #### Hydroboration of terminal alkyne (`L24`)
-- **reagents
+- **reagents**
+
+</Box>
 
 ## From aldehydes/ketones
 
-### Ald/ket <RA /> alkane
+<Box>
 
-#### <Rxn /> Wolff-Kishner reaction: reduce ald/ket to alkane (`L27`/`klein, 19.6`)
+#### Wolff-Kishner reaction: reduce ald/ket to alkane (`L27`/`klein, 19.6`) <T tag="hydrazone" /> <T tag="from ald to alkane" /> <T tag="from ket to alkane" />
 
 ![Wolff-Kishner reaction; convert ald/ket to alkane through hydrazone intermediate.](./assets/rxns/wolff-kishner.png)
 
@@ -277,7 +298,13 @@
 
 </Collapse>
 
-#### <Rxn /> Sulfur reaction, Protection: Protection/deprotection of ald/ket (`L27,2`)
+</Box>
+
+
+
+<Box>
+
+#### Protection/deprotection of ald/ket via thioacetals (`L27,2`) <T tag="protection" /> <T tag="sulfur" /> <T tag="from ald to alkane" /> <T tag="from ket to alkane" />
 
 - **_reagents_**
   - **protection**
@@ -287,14 +314,24 @@
     - <C chem="\ce{HgCl2}" />
 - mechanism is analogous to **acetal formation**
 
-#### <Rxn /> Sulfur reaction: Reduction to alkane with Raney nickel (`L27,2`)
+</Box>
+
+
+
+<Box>
+
+#### Reduction to alkane with Raney nickel (`L27,2`) <T tag="sulfur" /> <T tag="from ald to alkane" /> <T tag="from ket to alkane" />
 - Instead of deprotecting, we can also reduce the **dithioacetal** into an alkane.
 - **_reagents_**
   - Raney nickel (<C chem="\ce{Ni/Al}" />)
 
+</Box>
+
 ### Ald/ket <RA /> alkene
 
-#### <Rxn /> Wittig reaction (Wittig reagent: <C chem="\ce{Ph3P^+-C^-R^1R^2}" />) (`L25`)
+<Box>
+
+#### Wittig reaction (Wittig reagent: <C chem="\ce{Ph3P^+-C^-R^1R^2}" />) (`L25`)
 
 ![Wittig reaction.](./assets/rxns/wittig.png)
 
@@ -306,20 +343,31 @@
 
 </Collapse>
 
+</Box>
+
+
 ### Ald/ket <RA /> alcohols
 
-#### <Rxn /> Catalytic hydrogenation (`smith5e, 20.4C`)
+<Box>
+
+#### Catalytic hydrogenation (`smith5e, 20.4C`)
 - **notes**
   - carbon/carbon (<C chem="\ce{C=C}" /> double bonds are hydrogenated much more quickly than <C chem="\ce{C=O}" /> bonds.
     - this enables different products between **xs** and **1 equiv** of <C chem="\ce{H2}" />.
 
-#### <Rxn /> Grignard addition (<C chem="\ce{C-C}" /> forming at the carbonyl carbon)
+</Box>
+
+<Box>
+
+#### Grignard addition (<C chem="\ce{C-C}" /> forming at the carbonyl carbon)
 
 - **reagents**
   - step 1: Grignard reagent (<C chem="\ce{RMgX}" />)
   - step 2: water or acid workup
 
 ![Grignard mechanism.](./assets/rxns/grignard-mxn.png)
+
+</Box>
 
 #### <Rxn /> Addition with Gilman reagents (cuprates)
 
@@ -374,9 +422,7 @@
  
 ## To alcohols
 
-### Ald/ket <RA /> alcohols
-
-#### <Rxn /> Carbonyl reduction with hydride reducing agents 
+#### <Rxn /> Carbonyl reduction with hydride reducing agents <T tag="from aldehyde to alcohol" /> <T tag="from ketone to alcohol" />
 
 - **reagents**
   - step 1: hydride nucleophile (<C chem="\ce{LiAl4}" /> or <C chem="\ce{NaBH4}" />)
@@ -395,7 +441,7 @@
 
 </Collapse>
 
-### <Rxn /> Ester reduction (`klein, 20.11`) <T tag="from ester to alcohol" />
+#### <Rxn /> Ester reduction (`klein, 20.11`) <T tag="from ester to alcohol" />
 
 ![](./assets/rxns/ester-reduction-to-primary-alcohol.png)
 
@@ -405,10 +451,10 @@
 
 </Collapse>
 
-### <Rxn /> Ester reduction (`klein, 20.11`) with Grignard reagents <T tag="from ester to alcohol" />
+#### <Rxn /> Ester reduction (`klein, 20.11`) with Grignard reagents <T tag="from ester to alcohol" />
 - requires **workup**
 
-#### <Rxn /> Addition of water (hydration)
+#### <Rxn /> Addition of water (hydration) <T tag="from aldehyde to alcohol" /> <T tag="from ketone to alcohol" />
 
 - **only aldehydes favored to form gem-diols**; acid/base catalyst only speeds up the reaction; doesn't affect the equilibrium.
 
@@ -416,15 +462,15 @@
 
 ## From alcohols
 
-### Alcohol <RA /> Alkyl halide (formation of better LGs)
+### Formation of better LGs
 
-#### <Rxn /> with <C chem="\ce{H-X}" /> (<SN1 />, _3º alcohol only_) (`L23`)
+#### <Rxn /> with <C chem="\ce{H-X}" /> (<SN1 />, _3º alcohol only_) (`L23`) <T tag="from alcohol to alkyl halide" />
 
-#### <Rxn /> with phosphorous tribromide (<C chem="\ce{PBr3}" />) (`L23`)
+#### <Rxn /> with phosphorous tribromide (<C chem="\ce{PBr3}" />) (`L23`) <T tag="from alcohol to alkyl halide" />
 
-#### <Rxn /> with thionyl chloride (<C chem="\ce{SOCl2}" />), pyridine (`L23`)
+#### <Rxn /> with thionyl chloride (<C chem="\ce{SOCl2}" />), pyridine (`L23`) <T tag="from alcohol to alkyl halide" />
 
-#### <Rxn /> with tosyl chloride (<C chem="\ce{TsCl}" />) (`L23`)
+#### <Rxn /> with tosyl chloride (<C chem="\ce{TsCl}" />) (`L23`) <T tag="from alcohol to alkyl halide" />
 
 ### Alcohol <RA /> ald/ket
 
@@ -455,19 +501,19 @@
 
 ## _Oxidation_ reactions
 
-### <Rxn /> Oxidation of 1º alcohol <T tag="from alcohol to carboxylic acid" />
+#### <Rxn /> Oxidation of 1º alcohol <T tag="from alcohol to carboxylic acid" />
 
 - **_reagents_**
   - chromium trioxide (<C chem="\ce{CrO3}" />)
   - strong acid (<C chem="\ce{H3O+}" />)
 
-### <Rxn /> Oxidation of 2º alcohol <T tag="from alcohol to ketone" />
+#### <Rxn /> Oxidation of 2º alcohol <T tag="from alcohol to ketone" />
 
 - **_reagents_**
   - chromium trioxide (<C chem="\ce{CrO3}" />)
   - strong acid (<C chem="\ce{H3O+}" />)
 
-### <Rxn /> Oxidation of aldehyde <T tag="from aldehyde to carboxylic acid" />
+#### <Rxn /> Oxidation of aldehyde <T tag="from aldehyde to carboxylic acid" />
 
 - **_reagents_**
   - chromium trioxide (<C chem="\ce{CrO3}" />)
@@ -479,7 +525,7 @@
 
 </Collapse>
 
-### <Rxn /> Oxidation in the presence of benzylic hydrogen
+#### <Rxn /> Oxidation in the presence of benzylic hydrogen
 
 ![Oxidation can happen at both alkyls and vinyls as long as a benzylic hydrogen is present.](./assets/rxns/oxidation-benzylic-hydrogen.png)
 
@@ -487,9 +533,7 @@
 
 ## To carboxylic acids
 
-### Carboxylation
-
-#### <Rxn /> Grignard reagent with <C chem="\ce{CO2}" />
+#### <Rxn /> Carboxylation: Grignard reagent with <C chem="\ce{CO2}" /> <T tag="to carboxylic acid" />
 
 ![Grignard reagent to carboxylic acid.](./assets/rxns/grignard-carboxylation.png)
 
@@ -501,7 +545,7 @@
 
 ### _Hydrolysis_ reactions from carboxylic acid derivatives (CADs) (`L27,5`)
 
-#### <Rxn /> Acyl chloride <RA /> carboxylic acid (`klein, 20.8`/`L28`)
+#### <Rxn /> Acyl chloride <RA /> carboxylic acid (`klein, 20.8`/`L28`) <T tag="hydrolysis" />
 
 ![Acyl chloride hydrolysis to carboxylic acid.](./assets/rxns/acyl-chloride-hydrolysis.png)
 
@@ -511,7 +555,7 @@
 
 </Collapse>
 
-#### <Rxn /> Nitrile <RA /> carboxylic acid (`klein, 20.4`)
+#### <Rxn /> Nitrile <RA /> carboxylic acid (`klein, 20.4`) <T tag="hydrolysis" />
 
 - **_reagents_**
   - strong acid (<C chem="\ce{H2SO4}" />)
@@ -563,19 +607,13 @@
 
 ## To esters
 
-### Carboxylic acid <RA /> ester
-
-#### <Rxn /> Esters via <SN2 /> reactions
-
-#### <Rxn /> Fischer esterification (`klein, 20.10`/`L28,6`)
+### <Rxn /> Fischer esterification (`klein, 20.10`/`L28,6`) <T tag="from carboxylic acid to ester" />
 
 ![Fischer esterification.](./assets/rxns/fischer-esterification.png)
 
 ![Fischer esterification mechanism.](./assets/rxns/fischer-esterification-mxn.png)
 
-### Acid chloride <RA /> ester
-
-#### <Rxn /> Esters from acid chlorides (`klein, 20.8`)
+### <Rxn /> Esters from acid chlorides (`klein, 20.8`) <T tag="from acid chloride to ester" />
 
 - **_reagents_**
   - <C chem="\ce{ROH}" />

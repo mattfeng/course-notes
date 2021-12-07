@@ -10,9 +10,34 @@ $sans: "Outfit", sans-serif;
     font-family: $sans;
     font-weight: 200;
 
-    h1, h2, h3 {
+    h1, h2 {
         font-weight: 700;
     }
+}
+
+h1, h2 {
+    font-family: "Playfair Display", serif;
+    font-style: italic;
+}
+
+h2 {
+    background-color: yellow;
+    padding: 6px;
+    margin: 0.5em 0;
+    display: inline-block;
+}
+
+h3 { 
+    margin: 0.5em 0;
+}
+
+ol, ul {
+    margin: 0;
+}
+
+h3 {
+    font-size: 1.4em;
+    font-weight: 700;
 }
 
 li {

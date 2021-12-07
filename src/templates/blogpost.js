@@ -5,6 +5,7 @@ import { MDXRenderer } from "gatsby-plugin-mdx"
 import Chem from "../components/chem"
 import Tag from "../components/tag"
 import Collapse from "../components/collapse"
+import Box from "../components/box"
 import { StaticImage } from "gatsby-plugin-image"
 import { Link } from "gatsby"
 import { defineCustomElements as deckDeckGoHighlightElement } from "@deckdeckgo/highlight-code/dist/loader"
@@ -58,7 +59,7 @@ const Reaction = () => {
 }
 
 const NoMechanism = () => {
-  return <span className={styles.nomech}>&#x26D4;</span>
+  return <Tag color="#d43759" tag="no mxn" />
 }
 
 const shortcodes = {
@@ -74,6 +75,7 @@ const shortcodes = {
   Collapse,
   Rxn: Reaction,
   Nmxn: NoMechanism,
+  Box
 }
 
 export default function BlogPost({ data }) {
