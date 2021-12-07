@@ -1,15 +1,9 @@
-# 20.110 review
+# 20.110 Review
 
-## nernst equation
+## Questions
+- UL26, chemical potential derivation for osmotic pressure
 
-$$
-\Delta \Psi = \Psi_i - \Psi_o = \frac{RT}{zF}\ln \frac{[X]_o}{[X]_i}
-$$
-
-- when calculating membrane potentials, the convention is $\Psi_{\text{membrane}} = \Psi_{\text{inside}} - \Psi_{\text{outside}}$.
-- $F = N_A \times e = 96485 \mathrm{\ C/mol}$. **Faraday's constant** is Avogadro's number multiplied by the unit charge of an electron.
-
-## constants
+## Constants
 
 <table>
   <tr>
@@ -26,10 +20,142 @@ $$
   </tr>
   <tr>
     <td>
-      charge of proton, fundamental charge (<C chem="e" />)
+      charge of proton, electron, fundamental charge (<C chem="e" />)
     </td>
     <td>
       <C chem="\pu{1.6e-19 C}" />
     </td>
   </tr>
+  <tr>
+    <td>
+      Faraday's constant (<C chem="F" />) (Avogadro's number multiplied by the unit charge of an electron)
+    </td>
+    <td>
+      <C chem="\pu{96485 C/mol}" />
+    </td>
+  </tr>
+  <tr>
+    <td>
+      permittivity of free space (<C chem="\varepsilon_0" />)
+    </td>
+    <td>
+      <C chem="\pu{8.85e-12 C^2/N mol}" />
+    </td>
+  </tr>
 </table>
+
+## Variables
+
+<table>
+  <tr>
+    <th>Symbol</th>
+    <th>Meaning</th>
+    <th>Definition</th>
+  </tr>
+
+  <tr>
+    <td style="text-align: center">
+      <C chem="\gamma" />
+    </td>
+    <td>
+      interfacial tension <T tag="L25" /> <T tag="dill, 15" />
+    </td>
+    <td>the free energy cost of increasing the interfacial area between phases A and B</td>
+  </tr>
+
+  <tr>
+    <td style="text-align: center">
+      <C chem="\mathcal{A}" />
+    </td>
+    <td>
+      total surface area in lattice units <T tag="L25" /> <T tag="dill, 15" />
+    </td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td style="text-align: center">
+      <C chem="a" />
+    </td>
+    <td>
+      area per molecule
+    </td>
+    <td></td>
+  </tr>
+</table>
+
+## Topics
+
+<Box>
+
+### Nernst equation <T tag="L27" /> <T tag="dill, 22" />
+
+$$
+\Delta \Psi = \Psi_i - \Psi_o = \frac{RT}{zF}\ln \frac{[X]_o}{[X]_i}
+$$
+
+- when calculating membrane potentials, the convention is $\Psi_{\text{membrane}} = \Psi_{\text{inside}} - \Psi_{\text{outside}}$.
+
+</Box>
+
+<!-- -->
+
+<Box>
+
+### Apparent <PKA /> <T tag="L28" />
+
+</Box>
+
+<!-- -->
+
+<Box>
+
+### Micellization and self-assembly <T tag="L30" /> <T tag="dill, 28; 570" />
+
+- micelles _form a set size and shape_, and not a distribution
+- effectively a hill equation
+
+<Collapse title="Energetic and entropic factors favoring micellization">
+
+<table>
+  <tr>
+    <th>
+      favor individual molecules
+    </th>
+    <th>
+      favor micelles
+    </th>
+  </tr>
+
+  <tr>
+    <td>
+    - Entropically disfavored for having waters coordinated around its hydrophobic tail
+(recall our discussion of the hydrophobic effect with protein folding)
+- Entropically favored for being able to move around in solution (the translational
+entropy for 60 components instead of one larger one)
+- Energetically disfavored (water-hydrophobic tail interactions instead of
+water/water and hydrophobic/hydrophobic interactions)
+    </td>
+    <td>
+    - Entropy gain from the hydrophobic effect
+- Translational entropy loss for 1 micelle vs. 60 (or whatever number) individual
+molecules
+- Energy gain for buying hydrophobics into a core
+- Size and shape controlled by size and shape of detergent
+    </td>
+  </tr>
+</table>
+
+</Collapse>
+
+#### Shapes of micelles
+
+- Determined by shape of individual monomers
+
+</Box>
+
+<Box>
+
+### Polymers <T tag="L31" />
+
+</Box>

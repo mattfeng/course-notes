@@ -27,7 +27,7 @@ h2 {
     display: inline-block;
 }
 
-h3 { 
+h3, h4 { 
     margin: 0.5em 0;
 }
 
@@ -40,14 +40,20 @@ h3 {
     font-weight: 700;
 }
 
+h4 {
+    font-size: 1.2em;
+    font-weight: 700;
+}
+
 li {
     margin-top: 0.125em;
     margin-bottom: 0.125em;
 }
 
 table {
-    width: 100%;
+    width: 80%;
     border-collapse: collapse;
+    margin: 0 auto;
 }
 
 td, th {
