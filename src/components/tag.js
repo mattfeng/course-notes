@@ -7,12 +7,14 @@ class Tag extends Component {
     const { tag, color } = this.props
     const style = {
       borderColor: color,
-      color
+      color,
     }
 
-    return <span className={styles.span} style={style}>
-        { `@${tag}` }
-    </span>
+    return (
+      <span className={styles.span} style={style}>
+        {`@${tag}`}
+      </span>
+    )
   }
 }
 
