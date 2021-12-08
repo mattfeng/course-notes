@@ -59,7 +59,7 @@ const Reaction = () => {
 }
 
 const NoMechanism = () => {
-  return <Tag color="#d43759" tag="no mxn" />
+  return <Tag color="#7ea8ed" tag="no mxn" />
 }
 
 const shortcodes = {
