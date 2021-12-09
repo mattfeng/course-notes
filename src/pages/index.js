@@ -57,6 +57,9 @@ const IndexPage = () => (
       <li>
         <Link to="/20.110/statmech">part 2: statistical mechanics</Link>
       </li>
+      <li>
+        <Link to="/20.110/review">review (cheat sheet)</Link>
+      </li>
     </ul>
 
     <h2>17.395 innovation systems</h2>
