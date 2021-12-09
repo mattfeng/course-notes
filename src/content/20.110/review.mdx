@@ -162,7 +162,7 @@
 
 <Box>
 
-### Nernst equation <T tag="L27" /> <T tag="dill, 22" />
+#### Nernst equation <T tag="L27" /> <T tag="dill, 22" />
 
 $$
 \Delta \Psi = \Psi_i - \Psi_o = \frac{RT}{zF}\ln \frac{[X]_o}{[X]_i}
@@ -176,7 +176,7 @@ $$
 
 <Box>
 
-### Apparent <PKA /> <T tag="L28" />
+#### Apparent <PKA /> <T tag="L28" />
 
 </Box>
 
@@ -184,17 +184,17 @@ $$
 
 <Box>
 
-### Colligative properties
+#### Colligative properties
 
-#### Boiling point elevation, freezing point depression
+##### Boiling point elevation, freezing point depression
 
-#### Osmotic pressure
+##### Osmotic pressure
 
 </Box>
 
 <Box>
 
-### Micellization and self-assembly <T tag="L30" /> <T tag="dill, 28; 570" />
+#### Micellization and self-assembly <T tag="L30" /> <T tag="dill, 28; 570" />
 
 - micelles _form a set size and shape_, and not a distribution
 - effectively a hill equation
@@ -232,14 +232,48 @@ molecules
 
 </Collapse>
 
-#### Shapes of micelles
-
+##### Shapes of micelles
 - Determined by shape of individual monomers
 
 </Box>
 
 <Box>
 
-### Polymers <T tag="L31" />
+#### Polymers
+
+##### Counting microstates <T tag="L31" />
+
+##### Free energy of mixing <T tag="L31" />
+
+- **exchange factor $\chi_{AB}$.**
+
+##### (Helmholtz) free energy of a polymer solution <T tag="L31" />
+
+##### Freely jointed chain, a.k.a. random walk model or random flight model <T tag="L32" />
+- random walk refers to two dimensions, while random flight refers to three <T tag="dill, 33" />
+- $N$ monomers
+- length $b$ between monomers is constant
+- angle $\theta$ between monomers is random
+- **contour length ($L_c$)**. the largest possible length for the polymer.
+  - $L_c = Nb$
+- **average (RMS) end-to-end distance.** $\langle r^2 \rangle = b \sqrt{N}$
+- **radius of gyration ($R_g$).** length of polymer's end from its center of mass.
+  - $R_g = \dfrac{b\sqrt{N}}{\sqrt{6}}$
+- real polymers are **stiffer** than freely jointed chains
+  - ${\langle r^2 \rangle}_{\mathrm{nonideal}} = C_NNb^2$
+  - $C_N$ is the **characteristic ratio**, typically greater than 1.
+- **important takeaway:** end-to-end distance grows proportionally to the **square root of the chain length**
+
+##### Kuhn length ($b_k$) <T tag="L32" />
+- The **Kuhn length** $b_k$ is the length needed to be able to consider our polymer as a freely jointed chain.
+- $C_N N b^2 = N_k b_k^2 = \dfrac{Nb}{b_k} b_k^2 \implies \boxed{b_k = \dfrac{C_N b}{\cos \psi}}$.
+
+##### Persistence length ($l_p$) <T tag="L32" />
+- The **persistence length** ($l_p$) is the length scale in which a polymer remains roughly straight.
+  - $l_p = b_k / 2$
+
+##### Energy of bending (e.g. DNA compaction) <T tag="L33" />
+
+##### Solvent effects on folding <T tag="L33" />
 
 </Box>
