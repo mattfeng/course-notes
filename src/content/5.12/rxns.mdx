@@ -184,68 +184,35 @@
 
 </Collapse>
 
-## To alkynes
+## Unit 2 reactions (alkenes, alkynes)
+
+### Alkenes
 
 <Box>
 
-#### Elimination of geminal halides or vicinal halides (`klein, 9`)
+#### Preparation of epoxides with peroxyacids (mCPBA) (`klein, 13.8`)
+
+- **stereospecific**
+
+![Epoxidation.](./assets/rxns/epoxidation.png)
 
 </Box>
 
-## From alkynes
+<!-- -->
 
 <Box>
 
-#### Hydrohalogenation (1 eq)
-
-</Box>
-
-<Box>
-
-#### Hydrohalogenation (2 eq)
-
-</Box>
-
-<Box>
-
-#### Acid catalyzed hydration
-
-</Box>
-
-## Radical reactions
-
-<Box>
-
-#### Allylic bromination with NBS (`klein, 10.7`) <T tag="NBS" />
-
-- **NBS** helps avoid competition with alkene bromination
-  - concentrations of <C chem="HBr" /> and <C chem="Br2" /> are kept to a minimum
+#### Catalytic hydrogenation <T tag="from alkene to alkane" />
+- **_syn_-addition**
 
 </Box>
 
 <Box>
 
-#### Benzylic bromination with NBS <T tag="NBS" /> (`L33,3`)
-
-- **_reagents_**
-  - bromine source: <C chem="\ce{NBS}" />
-  - benzoyl peroxide, radical initator <C chem="\ce{(PhCO2)2}" />
+#### Halohydrin formation <T tag="unit2" />
+- **_anti_-addition** via bromonium ion intermediate
 
 </Box>
-
-## To alkenes
-
-<Box>
-
-#### Dehydration with <C chem="\ce{POCl3}" /> and pyridine (`smith5e, 9.10`/`L24`) <T tag="from alcohol to alkene" />
-
-- Used because **some organic compounds decompose in the prescence of strong acid** (see _alcohol dehydration_)
-
-![Alcohol to alkene without strong acid.](./assets/rxns/pocl3_alcohol-to-alkene.png)
-
-</Box>
-
-## From alkenes
 
 <Box>
 
@@ -277,9 +244,9 @@
 
 <Box>
 
-#### _Syn_-dihydroxylation (`klein, 8.9`) <T tag="from alkene to alcohol" />
+#### _syn_-dihydroxylation (`klein, 8.9`) <T tag="from alkene to alcohol" />
 
-- **reagents**
+- **_reagents_**
   - step 1
     - <C chem="\ce{OsO4}" />
   - step 2
@@ -290,7 +257,115 @@
 
 <Box>
 
-#### _Anti_-dihydroxylation (`klein, 8.10`) <T tag="from alkene to alcohol" />
+#### _anti_-dihydroxylation (`klein, 8.10`) <T tag="from alkene to alcohol" />
+
+- **_reagents_**
+  - step 1
+    - mCPBA
+  - step 2
+    - <C chem="\ce{NaOH, H2O}" />
+
+![anti-dihydroxylation mechanism.](./assets/rxns/anti-dihydroxylation-mxn.png)
+
+</Box>
+
+### Alkynes
+
+<Box>
+
+#### Hydrohalogenation (1 eq)
+
+#### Hydrohalogenation (2 eq)
+
+</Box>
+
+<Box>
+
+#### Acid catalyzed hydration
+
+</Box>
+
+<!-- -->
+
+<Box>
+
+#### Hydroboration-oxidation: anti-mknv addition of <C chem="\ce{OH}" /> yielding _aldehydes_ from terminal alkynes
+
+- internal alkynes: regiochemistry doesn't matter
+
+![Alkyne hydroboration-oxidation.](./assets/rxns/alkyne-hydroboration.png)
+
+![Base-catalyzed tautomerization.](./assets/rxns/base-cat-tautomerization.png)
+
+</Box>
+
+<!-- -->
+
+<Box>
+
+#### Reduction of alkynes to _cis_ alkenes with Lindlar's catalyst <T tag="unit2" />
+
+#### Reduction of alkynes to _trans_ alkenes with _dissolving metal reduction_ <T tag="unit2" />
+
+![Dissolving metal reaction.](./assets/rxns/dissolving-metal.png)
+
+![Dissolving metal reaction mechanism.](./assets/rxns/dissolving-metal-mxn.png)
+
+</Box>
+
+<!-- -->
+
+<Box>
+
+#### Acetylide ion formation (`L17`) <T tag="carbon-carbon" />
+
+![Acetylide ion formation.](./assets/rxns/acetylide-ion.png)
+
+</Box>
+
+
+### Radical reactions
+
+<Box>
+
+#### Allylic bromination with NBS (`klein, 10.7`) <T tag="NBS" />
+
+- **NBS** helps avoid competition with alkene bromination
+  - concentrations of <C chem="\ce{HBr}" /> and <C chem="\ce{Br2}" /> are kept to a minimum
+
+</Box>
+
+<Box>
+
+#### Benzylic bromination with NBS <T tag="NBS" /> (`L33,3`)
+
+- **_reagents_**
+  - bromine source: <C chem="\ce{NBS}" />
+  - benzoyl peroxide, radical initator <C chem="\ce{(PhCO2)2}" />
+
+</Box>
+
+## To alkenes
+
+<Box>
+
+#### Dehydration with <C chem="\ce{POCl3}" /> and pyridine (`smith5e, 9.10`/`L24`) <T tag="from alcohol to alkene" />
+
+- Used because **some organic compounds decompose in the prescence of strong acid** (see _alcohol dehydration_)
+
+![Alcohol to alkene without strong acid.](./assets/rxns/pocl3_alcohol-to-alkene.png)
+
+</Box>
+
+## From alkenes
+
+<br />
+
+## To alkynes
+
+<Box>
+
+#### Elimination of geminal halides or vicinal halides (`klein, 9`)
 
 </Box>
 
@@ -611,7 +686,12 @@
 
 <Box>
 
-#### With tosyl chloride (<C chem="\ce{TsCl}" />) (`L23`) <T tag="from alcohol to alkyl halide" />
+#### With tosyl chloride and pyridine (<C chem="\ce{TsCl, py}" />) (`L23`) <T tag="from alcohol to alkyl halide" />
+
+- can be used to add almost any <C chem="\ce{X}" />
+- **retention of configuration**
+
+![Formation of better leaving group with TsCl and NaX.](./assets/rxns/roh-tscl-mxn.png)
 
 </Box>
 
@@ -1699,5 +1779,12 @@
 - sodium ethoxide (<C chem="\ce{NaOEt}" />) can deprotonate 1,3-dicarbonyls
   - only tiny amounts of carbonyls on the **more substituted side**
 - LDA is deprotonates alpha hydrogens on the **less substituted side**
+
+</Box>
+
+<Box>
+
+#### <T tag="klein, 7.8" /> Zaitsev's rule
+- more substituted alkene is more likely to form in E2 reactions unless the **base is sterically hindered**
 
 </Box>
