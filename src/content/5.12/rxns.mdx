@@ -375,6 +375,12 @@
 
 </Box>
 
+<Box>
+
+#### Catalytic hydrogenation of aryl ketones <T tag="aryl" /> <T tag="from ket" /> (`L33,3`)
+
+</Box>
+
 <!-- -->
 
 <Box>
@@ -585,13 +591,21 @@
 
 #### With phosphorous tribromide (<C chem="\ce{PBr3}" />) (`L23`) <T tag="from alcohol to alkyl halide" />
 
+- **inversion of configuration**
+
+![Formation of better leaving group](./assets/rxns/roh-pbr3-mxn.png)
+
 </Box>
 
 <!-- -->
 
 <Box>
 
-#### With thionyl chloride (<C chem="\ce{SOCl2}" />), pyridine (`L23`) <T tag="from alcohol to alkyl halide" />
+#### With thionyl chloride (<C chem="\ce{SOCl2}" />), pyridine (`L23`) <T tag="from alcohol to alkyl halide" /> <T tag="better LG" />
+
+- **inversion of configuration**
+
+![Formation of better leaving group with SOCl2 and pyridine.](./assets/rxns/roh-socl2-mxn.png)
 
 </Box>
 
@@ -790,7 +804,7 @@
 
 <Box>
 
-#### Via DCC (dicyclohexylcarbodiimide) (`L29`) <T tag="from carboxylic acid to amide" />
+#### Via DCC (dicyclohexylcarbodiimide) (aka peptide bond synthesis) (`L29`) <T tag="from carboxylic acid to amide" />
 
 ![Carboxylic acids to amides via DCC.](./assets/rxns/dcc-carboxylic-acid-to-amide.jpg)
 
@@ -842,7 +856,7 @@
 
 <Box>
 
-#### Reverse of Fischer esterification (acat hydrolysis) (`klein, 20.11`/`L28,6`)
+#### Reverse of Fischer esterification (acat hydrolysis) (`klein, 20.11`/`L28,6`) <T tag="from ester to carboxylic acid" />
 
 ![](./assets/rxns/hydrolysis-of-esters.png)
 
@@ -875,9 +889,13 @@
 
 <Box>
 
-#### Via thionyl chloride (<C chem="\ce{SOCl2}" />) (`klein, 20.8`/`L28`) <T tag="from carboxylic acid to acyl chloride" />
+#### Preparation of acyl chlorides via thionyl chloride (<C chem="\ce{SOCl2}" />) (`klein, 20.8`/`L28`) <T tag="from carboxylic acid to acyl chloride" />
 
 - formation of <C chem="\ce{SO2}" /> gas drives reaction to completion
+
+![Carboxylic acid becomes acid chloride via SOCl2.](./assets/rxns/socl2-acid-chloride.png)
+
+![Mechanism for acid chloride formation.](./assets/rxns/cooh-socl2-mxn.png)
 
 </Box>
 
@@ -912,7 +930,7 @@
 #### Aminolysis (`klein, 20.8`) <T tag="from acyl chloride to amide" />
 - two equivalents of <C chem="\ce{R^1R^2NH}" /> are used.
   - the second equivalent neutralizes the <C chem="\ce{HCl}" /> formed
-  - or just use **pyridine**
+  - or just use **pyridine** or <C chem="\ce{Et3N}" />
 
 ![Aminolysis of acyl chloride.](./assets/rxns/aminolysis-acyl-chloride.png)
 
@@ -962,17 +980,7 @@
 
 </Box>
 
-## To amides
-
-<br />
-
-## From amides
-
-<br />
-
 ## To amines
-
-<br />
 
 ### Nitro <RA /> amines
 
@@ -986,7 +994,7 @@
 - works for nitrobenzene to aniline
 - works for aliphatic nitro compounds
 - **limitations**
-  - **aryl bromines** will be removed
+  - **aryl bromines** will be removed (`51c`)
   - **alkenes** will be reduced
 
 </Box>
@@ -1388,7 +1396,15 @@
 
 #### Crossed aldol reactions
 
-
+- **key**: need an **aldehyde** without $\alpha$-hydrogens
+  - **aldehyde** used so that it is attacked quickly
+- enolate doesn't attack the **ketone** because its slower (sterics)
+- common **aldehydes**
+  - formaldehyde
+  - [pivaldehyde](https://en.wikipedia.org/wiki/Pivaldehyde)
+  - benzyaldehyde
+  - enone
+- 1,3-dicarbonyls are highly effective in crossed aldol reactions as the **enolate**
 
 </Box>
 
@@ -1474,14 +1490,15 @@
 #### Friedel-Crafts acylation <T tag="carbon-carbon" /> (`51c,l2,23:31`)
 
 - **_reagents_**
-  - acyl chloride
+  - acyl chloride; **requires R group to at least be methyl** (`PS8`)
+    - carbocation is too unstable without hyperconjugation
   - <C chem="\ce{AlCl3}" />
 - **limitations**
   - cannot be done on **anything meta directed**
     - too **deactivated**
   - cannot be done with <C chem="\ce{-NR2}" /> activators
     - lone pairs react with Lewis acid
-- electrophile: acylium ion; formed when <C chem="\ce{AlCl4}" /> leaves
+- electrophile: acylium ion; formed when <C chem="\ce{AlCl4-}" /> leaves
 
 ![Acylium ion.](./assets/rxns/acylium.png)
 
