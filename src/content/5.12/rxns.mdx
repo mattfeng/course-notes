@@ -210,6 +210,27 @@
 
 </Box>
 
+## Radical reactions
+
+<Box>
+
+#### Allylic bromination with NBS (`klein, 10.7`) <T tag="NBS" />
+
+- **NBS** helps avoid competition with alkene bromination
+  - concentrations of <C chem="HBr" /> and <C chem="Br2" /> are kept to a minimum
+
+</Box>
+
+<Box>
+
+#### Benzylic bromination with NBS <T tag="NBS" /> (`L33,3`)
+
+- **_reagents_**
+  - bromine source: <C chem="\ce{NBS}" />
+  - benzoyl peroxide, radical initator <C chem="\ce{(PhCO2)2}" />
+
+</Box>
+
 ## To alkenes
 
 <Box>
@@ -924,6 +945,21 @@
 
 <br />
 
+### Nitro <RA /> amines
+
+<Box>
+
+#### Reduction of nitro groups to amines (`51c,l2,16:27`) <T tag="from nitro to amine" />
+
+- **_reagents_**
+  - <C chem="\ce{H2}" />
+  - <C chem="\ce{Pd/C}" />
+- works for nitrobenzene to aniline
+- works for aliphatic nitro compounds
+
+</Box>
+
+
 ### Amides <RA /> amines
 
 <Box>
@@ -1278,55 +1314,177 @@
     1. formation of resonance-stabilized arenium ion
     2. loss of proton to regain aromaticity
   - acids are formed as the reactions progress (byproduct is <C chem="\ce{H-A}" /> (`51cL1.40:00`)
+- reagents used
+  - stronger lewis acid: <C chem="\ce{AlCl3}" />
+  - slightly weaker lewis acid: <C chem="\ce{FeBr3/FeCl3}" />
 - only difference is identity of **electrophile**
+
+![General EAS mechanism.](./assets/rxns/general-eas.png)
 
 <Box>
 
-#### Halogenation (replace H with X)
+#### Bromination and chlorination (replace H with Br, Cl)
 
 - **_reagents_**
-  - <C chem="\ce{FeBr3}" />
+  - <C chem="\ce{Br2}" />
+  - catalytic <C chem="\ce{FeBr3}" />
+- the <C chem="\ce{Br2.FeBr3}" /> complex makes <C chem="\ce{Br2}" /> act like <C chem="\ce{Br+}" />, making it the **super electrophile**
+  - super electrophile needed to react with relatively stable benzene nucleophile
+- **limitations**
+  - phenols over-halogenate _unless_ you leave out <C chem="\ce{FeX3}" /> catalyst
+  - anilines always over-halogenate
+
+<Collapse title="Bromination mechanism">
+
+![Mechanism for bromination of benzene.](./assets/rxns/bromination-benzene.png)
+
+</Collapse>
 
 </Box>
 
+<!-- -->
+
 <Box>
 
-#### Nitration (replace H with NO2)
+#### Nitration (replace H with <C chem="\ce{NO2}" />) (`51c,l2,17:00`)
 
 - **_reagents_**
   - <C chem="\ce{HNO3}" />
   - <C chem="\ce{H2SO4}" />
+- nitro groups are reduced to amino groups
+- **nitronium ion** as the _super electrophile_
+
+<Collapse title="Nitration mechanism">
+
+![Mechanism for nitration of benzene.](./assets/rxns/nitration-benzene.png)
+
+</Collapse>
 
 </Box>
 
 <Box>
 
-#### Adding carbonyl groups (form carbon-carbon bond)
-
-- **_reagents_**
-  - acyl chloride
-  - <C chem="\ce{AlCl3}" />
-
-</Box>
-
-<Box>
-
-#### Sulfonation (form carbon-sulfur bond) (less useful)
+#### Sulfonation (form carbon-sulfur bond) <T tag="less useful" /> (`51c,l2.22:00`,`smith5e, 18.4`)
 
 - **_reagents_**
   - <C chem="\ce{SO3}" />
   - <C chem="\ce{H2SO4}" />
+- **limitations**
+  - cannot be done on **anything meta directed**
+    - too **deactivated**
+  - cannot be done with <C chem="\ce{-NR2}" /> activators
+    - lone pairs react with Lewis acid
+- sulfuric acid protonates **sulfur trioxide, making it a powerful electrophile**
+  - makes the _sulfur_ more electrophilic
+
+![Formation of HSO3+ electrophile.](./assets/rxns/sulfonation-eph.png)
+- used to prepare <C chem="\ce{p-TsOH}" />
+
+![Structure of sulfur trioxide.](./assets/rxns/so3.png)
 
 </Box>
 
 <Box>
 
-#### Alkylation (form carbon-carbon bond) (less useful)
+#### Friedel-Crafts acylation <T tag="carbon-carbon" /> (`51c,l2,23:31`)
+
 - **_reagents_**
-  - <C chem="\ce{R-X}" />
+  - acyl chloride
   - <C chem="\ce{AlCl3}" />
+- **limitations**
+  - cannot be done on **anything meta directed**
+    - too **deactivated**
+  - cannot be done with <C chem="\ce{-NR2}" /> activators
+    - lone pairs react with Lewis acid
+- electrophile: acylium ion; formed when <C chem="\ce{AlCl4}" /> leaves
+
+![Acylium ion.](./assets/rxns/acylium.png)
+
+![Formation of acylium ion mechanism.](./assets/rxns/acylium-mxn.png)
+
+![Friedel-Crafts acylation mechanism.](./assets/rxns/acylation-mxn.png)
 
 </Box>
+
+<Box>
+
+#### Friedel-Crafts alkylation <T tag="less useful" /> <T tag="carbon-carbon" /> (`51c,l2,32:29`, `smith5e, 18.5`)
+- **_reagents_**
+  - **xs** benzene (solvent)
+  - <C chem="\ce{R-X}" />
+  - <C chem="\ce{AlCl3}" />
+- electrophile
+  - **carbocation** (for 2º and 3º alkyl halides)
+  - **lewis acid-base complex** for 1º alkyl halides
+- **limitations**
+  - alkyl groups activate, leading to **polyalkylation
+
+![Lewis acid-base complex as electrophile.](./assets/rxns/alkyl-complex.png)
+
+- can also be performed without <C chem="\ce{AlCl3}" /> (`51c,l2,40:28`)
+  - protonate alkene to form carbocation
+
+![Friedel-Crafts alkylation mechanism.](./assets/rxns/fc-alkylation-mxn.png)
+
+</Box>
+
+## EAS: _activation_ (rate) and _direction_ (regiochemistry)
+- _ipso_, _ortho_, _meta_, _para_
+
+<table>
+
+<tr>
+  <th>substitutent</th>
+  <th>direction</th>
+  <th>EWG/EDG</th>
+  <th>activation</th>
+</tr>
+
+<tr>
+  <td>methoxy</td>
+  <td>ortho, para</td>
+  <td>EDG</td>
+  <td>activating</td>
+</tr>
+
+<tr>
+  <td>methyl</td>
+  <td>ortho, para</td>
+  <td>EDG</td>
+  <td>activating</td>
+</tr>
+
+<tr>
+  <td>halogen</td>
+  <td>ortho, para; lone pairs resonance stabilize, but inductive effect deactivates</td>
+  <td>EWG</td>
+  <td>deactivating</td>
+</tr>
+
+<tr>
+  <td>nitro</td>
+  <td>meta</td>
+  <td>EWG</td>
+  <td>deactivating</td>
+</tr>
+
+<tr>
+  <td>carbonyl</td>
+  <td>meta</td>
+  <td>EWG</td>
+  <td>deactivating</td>
+</tr>
+
+</table>
+
+- notice: **any kind of donating** <RA /> **ortho, para directing**; stabilized via resonance
+  - donation _via resonance_ beats withdrawal via inductive effect
+- notice: **only withdrawing** <RA /> **meta directing**; unstable withdrawing of electrons in _ortho_ and _para_ positions
+- **strongest activating group** controls direction
+
+![Summary of EAS activation and direction.](./assets/rxns/eas-activation-direction.png)
+
+![Graphical summary of EAS activation and direction.](./assets/rxns/eas-activating-summary.png)
 
 ## About carbonyls
 - **Thermodynamic driving force** for carbonyl reactions is the formation of the <C chem="\ce{C-Nu}" /> $\sigma$-bond which is stronger than the lost $\pi$-bond.
