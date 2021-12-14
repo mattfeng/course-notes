@@ -8,6 +8,8 @@
 ## Notes on conventions
 - In `Klein`, brackets around reagents (e.g. <C chem="\ce{[H+]}" />) indicate **catalytic amounts**
 - [What does <C chem="\ce{H3O+}" /> really mean in a reaction?](https://www.masterorganicchemistry.com/2011/08/22/instructors-kludges-of-organic-chemistry/)
+- Van Vranken
+  - roman numerals: no purification between steps
 
 ## Lectures
 - [Spreadsheet of lectures](https://docs.google.com/spreadsheets/d/1VcTZjrExC1peAVu_-uCuUR-UJIYW2eo_7z-w6JTAAR8/edit#gid=0)
@@ -336,6 +338,15 @@
 
 #### Wolff-Kishner reaction: reduce ald/ket to alkane (`L27`/`klein, 19.6`) <T tag="hydrazone" /> <T tag="from ald to alkane" /> <T tag="from ket to alkane" />
 
+- basic conditions
+  - use for acid-sensitive (i.e. will undergo other reactions in acidic conditions) functional groups
+    - e.g. alkenes
+- not for **esters** or **amides**
+- **_reagents_**
+  - <C chem="\ce{H2NNH2}" />
+  - strong base: <C chem="\ce{NaOH}" />, <C chem="\ce{KOH}" />
+  - heat
+
 ![Wolff-Kishner reaction; convert ald/ket to alkane through hydrazone intermediate.](./assets/rxns/wolff-kishner.png)
 
 <Collapse title="Wolff-Kishner reaction mechanism">
@@ -346,7 +357,25 @@
 
 </Box>
 
+<Box>
 
+#### Clemmensen reduction: counterpart of Wolff-Kishner <T tag="from ald to alkane" /> (`smith5e,18.15B`, `klein, 18.6`, `51c,l4,23:43`)
+
+- **_reagents_**
+  - zinc-mercury amalgam: <C chem="\ce{Zn(Hg)}" />
+  - <C chem="\ce{HCl}" />
+  - heat
+- acidic conditions
+  - use for base-sensitive functional groups
+    - e.g. E2 reactions
+  - generally, more functional groups are acid-sensitive than base-sensitive
+- not for **esters** or **amides**
+
+![Clemmensen reduction in acidic conditions.](./assets/rxns/clemmensen.png)
+
+</Box>
+
+<!-- -->
 
 <Box>
 
@@ -362,7 +391,7 @@
 
 </Box>
 
-
+<!-- -->
 
 <Box>
 
@@ -949,13 +978,26 @@
 
 <Box>
 
-#### Reduction of nitro groups to amines (`51c,l2,16:27`) <T tag="from nitro to amine" />
+#### Reduction of nitro groups to amines via hydrogenation (`51c,l2,16:27`) <T tag="from nitro to amine" /> <T tag="reduction" />
 
 - **_reagents_**
   - <C chem="\ce{H2}" />
-  - <C chem="\ce{Pd/C}" />
+  - catalytic <C chem="\ce{Pd/C}" />
 - works for nitrobenzene to aniline
 - works for aliphatic nitro compounds
+- **limitations**
+  - **aryl bromines** will be removed
+  - **alkenes** will be reduced
+
+</Box>
+
+<Box>
+
+#### Reduction of nitro groups to amines with tin (<C chem="\ce{Sn}" />) (`51c,l4,34:06`) <T tag="from nitro to amine" /> <T tag="reduction" />
+
+- **_reagents_**
+  - i) <C chem="\ce{Sn, HCl}" />
+  - ii) workup with <C chem="\ce{NaOH}" />
 
 </Box>
 
@@ -964,7 +1006,7 @@
 
 <Box>
 
-#### Reduction of amides to amines (`smith5e, 20.7B`/`L29.3`)
+#### Reduction of amides to amines (`smith5e, 20.7B`/`L29.3`) <T tag="from amide to amine" /> <T tag="reduction" />
 
 ![Amide reduction to amines.](./assets/rxns/amide-reduction-to-amines.png)
 
@@ -974,7 +1016,7 @@
 
 <Box>
 
-#### Reduction of nitriles to amines
+#### Reduction of nitriles to amines <T tag="from nitrile to amine" /> <T tag="reduction" />
 
 - **_reagents_**
   - <C chem="\ce{LiAl4}" />
@@ -1046,12 +1088,6 @@
   - if <C chem="\ce{NH2}" /> <RA /> **hydrazone**
 
 ![Oximes and hydrazones.](./assets/rxns/oxime-hydrazone.png)
-
-<Box>
-
-#### Wolff-Kishner reaction: reduce ald/ket to alkane (`L27`/`klein, 19.6`)
-
-</Box>
 
 ## To nitriles
 
@@ -1485,6 +1521,11 @@
 ![Summary of EAS activation and direction.](./assets/rxns/eas-activation-direction.png)
 
 ![Graphical summary of EAS activation and direction.](./assets/rxns/eas-activating-summary.png)
+
+- mixtures of ortho/para can often be separated efficiently with **silica-gel chromatography** (`51c,l4,39:20`)
+
+### Disubstituted benzenes
+- no substitution **between meta substituents** (sterics)
 
 ## About carbonyls
 - **Thermodynamic driving force** for carbonyl reactions is the formation of the <C chem="\ce{C-Nu}" /> $\sigma$-bond which is stronger than the lost $\pi$-bond.
