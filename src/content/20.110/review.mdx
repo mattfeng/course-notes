@@ -208,6 +208,44 @@ $$
 p_{\text{bound}} = \Phi_b \text{ (fraction bound)} = \frac{[L]}{[L] + K_D}
 $$
 
+- **Keq.** $K_{eq} = 1 / K_D$ (dissociation constant)
+- **slope of bound/free vs. bound concentration (Scatchard plot)**. $-1/K_D$
+- $$\Delta G = -RT \ln K_{\text{eq}}$$
+
+</Box>
+
+<Box>
+
+#### Cooperativity
+
+<div style="width: 400px; margin: 0 auto;">
+
+![Average occupancy for hemoglobin.](./assets/hemoglobin-avg-occupancy.png)
+
+</div>
+
+</Box>
+
+<!-- -->
+
+<Box>
+
+#### Debye length <T tag="l27" />
+
+<div style="width: 400px; margin: 0 auto;">
+
+![Debye length formula.](./assets/debye.png)
+
+</div>
+
+<div style="width: 300px; margin: 0 auto;">
+
+![Ionic strength.](./assets/ionic-strength.png)
+
+</div>
+
+- When calculating ionic strength, use concentration of ions in **solution** (not within a cell, etc.).
+
 </Box>
 
 <Box>
@@ -220,6 +258,15 @@ $$
 
 - when calculating membrane potentials, the convention is $\Psi_{\text{membrane}} = \Psi_{\text{inside}} - \Psi_{\text{outside}}$.
 
+<div style="width: 150px; margin: 0 auto;">
+
+![](./assets/exponential-form-nernst.png)
+
+</div>
+
+- **coulomb potential energy.** $U = \frac{q_1q_2}{4\pi\varepsilon_0 r}$
+- **coulomb potential.** $V = \frac{q}{4\pi\varepsilon_0 r}$
+
 </Box>
 
 <!-- -->
@@ -228,17 +275,29 @@ $$
 
 #### Apparent <PKA /> <T tag="L28" />
 
+$$
+k_{\text{acid,app}} = k_{\text{acid}} e^{\frac{e\Phi}{k_B T}}
+$$
+
+$$
+\mathrm{p}K_{\text{a,app}} = \mathrm{p}{K_a} - 0.4343\frac{e\Phi}{k_B T}
+$$
+
+- $\Phi$ is electric potential
+- negative electric potential <RA /> apparent pKa is higher than Ka (weaker acid, stronger base)
+  - negative charge can better accomodate positive charge (proton)
+- positive electric potential <RA /> apparent pKa is lower than the Ka (stronger acid, weaker base)
+  - positive charge can better accomodate negative charge (deprotonation)
+
 </Box>
 
 <!-- -->
 
 <Box>
 
-#### Colligative properties
-
-##### Boiling point elevation, freezing point depression
-
-##### Osmotic pressure
+#### Pure liquids
+- **free energy of pure liquid.** $$\frac{Nz}{2}w_{AA}$$
+- **entropy**. 0
 
 </Box>
 
@@ -251,46 +310,28 @@ $$
 
 <Box>
 
+#### Colligative properties
+
+- **Boiling point elevation, freezing point depression.** $\Delta T = K_B m_A$
+  - $m_A$ is the molal (mols/kg solution) concentration of A
+- **Osmotic pressure**. $$\pi = \frac{k_B T x_A}{v_B} = C_ART$$
+  - $x_A$ is mole fraction of A
+
+</Box>
+
+<Box>
+
 #### Micellization and self-assembly <T tag="L30" /> <T tag="dill, 28; 570" />
 
 - micelles _form a set size and shape_, and not a distribution
 - effectively a hill equation
 
-<Collapse title="Energetic and entropic factors favoring micellization">
-
-<table>
-  <tr>
-    <th>
-      favor individual molecules
-    </th>
-    <th>
-      favor micelles
-    </th>
-  </tr>
-
-  <tr>
-    <td>
-    - Entropically disfavored for having waters coordinated around its hydrophobic tail
-(recall our discussion of the hydrophobic effect with protein folding)
-- Entropically favored for being able to move around in solution (the translational
-entropy for 60 components instead of one larger one)
-- Energetically disfavored (water-hydrophobic tail interactions instead of
-water/water and hydrophobic/hydrophobic interactions)
-    </td>
-    <td>
-    - Entropy gain from the hydrophobic effect
-- Translational entropy loss for 1 micelle vs. 60 (or whatever number) individual
-molecules
-- Energy gain for buying hydrophobics into a core
-- Size and shape controlled by size and shape of detergent
-    </td>
-  </tr>
-</table>
-
-</Collapse>
-
-##### Shapes of micelles
-- Determined by shape of individual monomers
+$$
+\Delta \mu^\circ_n = \Delta \mu^\circ(a) = \gamma a + \frac{c}{a}
+$$
+- minimized at $a^* = \sqrt{c/\gamma}$
+- substitute $c$ back into first equation
+  - $$K = \exp \frac{-(2\gamma a^* + \frac{\gamma}{a}(a - a^*)^2)}{k_B T}$$, a Gaussian distribution
 
 </Box>
 
@@ -302,7 +343,7 @@ molecules
 
 ##### Free energy of mixing <T tag="L31" />
 
-- **exchange factor $\chi_{AB}$.**
+- if negative, mixes spontaneously
 - $$\dfrac{\Delta F_{\text{mix}}}{M k_B T} = \dfrac{\phi_A}{N_A}\ln {\phi_A} + \dfrac{\phi_B}{N_B} \ln {\phi_B}$$
   - By convention in this class, $N_A$ is solute, while $N_B$ is the solvent.
 
