@@ -11,7 +11,11 @@ const IndexPage = () => (
         <h2>questions</h2>
       </Link>
 
-      <h2>5.12 organic chemistry 1</h2>
+      <br />
+
+      <Link to="/5.12">
+        <h2>5.12 organic chemistry 1</h2>
+      </Link>
       <ul>
         <li>
           <Link to="/5.12/unit1">
