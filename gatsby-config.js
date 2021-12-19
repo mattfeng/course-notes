@@ -38,7 +38,8 @@ module.exports = {
             options: {
               maxWidth: 600,
               showCaptions: true,
-              wrapperStyle: fluidResult => `flex:${_.round(fluidResult.aspectRatio, 2)};`,
+              wrapperStyle: fluidResult =>
+                `flex:${_.round(fluidResult.aspectRatio, 2)};`,
             },
           },
           `gatsby-remark-copy-linked-files`,
@@ -46,7 +47,7 @@ module.exports = {
             resolve: `gatsby-remark-highlight-code`,
             options: {
               theme: `solarized-light`,
-            }
+            },
           },
         ],
         remarkPlugins: [
@@ -55,15 +56,20 @@ module.exports = {
             {
               strict: `ignore`,
               macros: {
-                "\\K#1": "\\text{K}_{#1}"
-              }
-            }
+                "\\K#1": "\\text{K}_{#1}",
+              },
+            },
           ],
         ],
         rehypePlugins: [
-          require(`rehype-katex`)
-        ]
-      }
-    }
+          [
+            require(`rehype-katex`),
+            {
+              macros: {},
+            },
+          ],
+        ],
+      },
+    },
   ],
 }

@@ -1,6 +1,7 @@
 @import "fonts.scss";
 
 $sans: "Outfit", sans-serif;
+$header-prefix-width: 50px;
 
 .mainContainer {
     max-width: 80ch;
@@ -15,20 +16,34 @@ $sans: "Outfit", sans-serif;
     }
 }
 
-h1, h2 {
+h1 {
     font-family: "Playfair Display", serif;
-    font-style: italic;
 }
 
 h2 {
-    background-color: yellow;
-    padding: 6px;
+    font-size: 1.8em;
     margin: 0.5em 0;
+    display: inline-block;
+}
+
+h2::before {
+    content: "#";
+    margin: -$header-prefix-width;
+    width: 2 * $header-prefix-width;
+    color: #ccc;
     display: inline-block;
 }
 
 h3, h4 { 
     margin: 0.5em 0;
+}
+
+h3::before {
+    content: "##";
+    margin: -$header-prefix-width;
+    width: 2 * $header-prefix-width;
+    color: #ccc;
+    display: inline-block;
 }
 
 ol, ul {

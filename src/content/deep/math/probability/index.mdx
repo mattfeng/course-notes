@@ -1,0 +1,16 @@
+$\global\def\E#1#2 {\mathbb{E}_{#1}[#2]}$
+
+# Probability
+
+## Expectations
+
+- **LOCUS (Law of the Unconscious Statistician).**
+    - also known as: **Law of the Lazy Statistician**
+
+### Conditional expectation
+
+- **Definition of conditional expectation (DCE).**
+    - $$\E{X}{X | Y = y} = f(y) = hi$$
+    - $$\E{X}{X|Y}$$ is the random variable corresponding to when we don't know the value of $Y$, i.e. $f(Y)$
+- **Rule of Iterated Expectations (RIE).**
+    - $$\E{X,Y}{f(X, Y)} = \E{X}{\E{Y|X}{f(X, Y) | X}}$$
