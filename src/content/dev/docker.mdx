@@ -1,0 +1,27 @@
+# Docker
+
+## `docker-compose`
+
+### MongoDB
+```yaml
+version: "3.9"
+services:
+  mongodb:
+    image: mongo:4.4.10
+    container_name: mongodb
+    ports:
+      - 27017:27017
+    volumes:
+      - ./db:/data/db
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: password
+      MONGO_INITDB_DATABASE: db
+```
+
+Test connection with:
+
+```bash
+# brew install mongosh
+mongosh "mongodb://root:password@localhost:27017/db?authSource=admin"
+```
