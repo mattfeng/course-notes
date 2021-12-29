@@ -1,0 +1,21 @@
+# ssh
+
+## scp
+
+```bash
+scp -i <key> [-rp] <local file> <remote file>
+```
+
+- `-r`. recursive (for directories)
+- `-p`. preserve modification times and modes
+
+## rsync
+
+```bash
+rsync -av -e ssh --exclude="*.out" <source> <user>@<host>:<dest>
+```
+
+- [source](https://www.cyberciti.biz/faq/scp-exclude-files-when-using-command-recursively-on-unix-linux/)
+- `-a`. recursive
+- `-v`. verbose
+- `-e`. use SSH

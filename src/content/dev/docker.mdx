@@ -1,6 +1,54 @@
 # Docker
 
+## Dockerfile
+
+### Flask app
+```bash
+# get requirements
+pip freeze > requirements.txt
+```
+
+Dockerfile:
+
+```docker
+FROM python:3.8.12-buster
+
+WORKDIR /app
+
+# We copy just the requirements.txt first to leverage Docker cache
+COPY ./requirements.txt /app/requirements.txt
+RUN pip install -r requirements.txt
+
+COPY . /app
+ENTRYPOINT ["gunicorn"]
+CMD ["--bind", "0.0.0.0:4000", "main:create_app()"]
+```
+
+Build and test the Docker image:
+
+```bash
+# build
+docker build -t <image_name>:<tag> .
+
+# run
+docker run -d -p <host>:<container> <image_name>
+```
+
+## Debugging
+
+### [`docker exec`](https://docs.docker.com/engine/reference/commandline/exec/)
+```bash
+docker exec -it <container> <command> [args]
+```
+
 ## `docker-compose`
+
+### Only run specific containers (useful for development)
+Suppose you're developing a Flask application, and you want to run the database in Docker while still developing the application locally. Your `docker-compose.yml` file will eventually contain the containerized Flask app, but you don't want to build the Docker image everytime you make a change. Thus, you only want to run the database, but you don't want to remove the configuration for the Flask app.
+
+```bash
+docker-compose up -d <container>
+```
 
 ### MongoDB
 ```yaml

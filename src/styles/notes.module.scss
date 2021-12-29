@@ -1,10 +1,11 @@
 @import "fonts.scss";
 
 $sans: "Outfit", sans-serif;
-$header-prefix-width: 50px;
+$header-prefix-width: 45px;
 
 .mainContainer {
-    max-width: 80ch;
+    max-width: min(80%, 80ch);
+    max-width: min(80%, 80ch);
     margin: 0 auto;
     padding: 0 20px;
 
@@ -30,8 +31,8 @@ h2 {
 
 h2::before {
     content: "#";
-    margin: -$header-prefix-width;
-    width: 2 * $header-prefix-width;
+    margin: 0;
+    width: $header-prefix-width;
     color: #ccc;
     display: inline-block;
 }
@@ -42,8 +43,8 @@ h3, h4 {
 
 h3::before {
     content: "##";
-    margin: -$header-prefix-width;
-    width: 2 * $header-prefix-width;
+    margin: 0;
+    width: $header-prefix-width;
     color: #ccc;
     display: inline-block;
 }
