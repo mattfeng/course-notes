@@ -5,6 +5,12 @@
 ```bash
 sudo apt-get install nginx
 sudo apt-get install python3-pip
+sudo apt-get install unzip
+
+# install google chrome
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+sudo dpkg -i google-chrome-stable_current_amd64.deb
+sudo apt-get --fix-broken install
 ```
 
 ## [Reverse proxy with nginx](https://www.digitalocean.com/community/tutorials/how-to-serve-flask-applications-with-gunicorn-and-nginx-on-ubuntu-18-04)
@@ -26,4 +32,41 @@ server {
 sudo ln -s /etc/nginx/sites-available/mywebsite /etc/nginx/sites-enabled
 sudo nginx -t
 sudo systemctl restart nginx
+```
+
+## [Set up SSL/TLS](https://archive.is/tMfJR)
+
+```bash
+sudo apt install certbot python3-certbot-nginx
+sudo certbot --nginx -d example.com -d www.example.com
+```
+
+```
+# /etc/nginx/sites-available/mywebsite.conf
+
+server {
+    server_name <domain>;
+
+    location / {
+        include proxy_params;
+        proxy_pass http://localhost:4000;
+    }
+
+    # managed by Certbot
+    listen 443 ssl;
+    ssl_certificate /etc/letsencrypt/live/<domain>/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/<domain>/privkey.pem;
+    include /etc/letsencrypt/options-ssl-nginx.conf;
+    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem;
+}
+
+server {
+    if ($host = <domain>) {
+        return 301 https://$host$request_uri;
+    } # managed by Certbot
+
+    listen 80;
+    server_name <domain>;
+    return 404; # managed by Certbot
+}
 ```

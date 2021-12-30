@@ -12,7 +12,7 @@ scp -i <key> [-rp] <local file> <remote file>
 ## rsync
 
 ```bash
-rsync -av -e ssh --exclude="*.out" <source> <user>@<host>:<dest>
+rsync -av -e "ssh -i <key>" --exclude="*.out" <source> <user>@<host>:<dest>
 ```
 
 - [source](https://www.cyberciti.biz/faq/scp-exclude-files-when-using-command-recursively-on-unix-linux/)

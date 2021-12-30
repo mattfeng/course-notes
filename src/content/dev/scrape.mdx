@@ -1,0 +1,18 @@
+# Web scraping
+
+## Selenium
+
+### Set up options (headless, user-agent)
+```python
+from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
+
+chrome_options = Options()
+chrome_options.add_argument("--headless")
+chrome_options.add_argument("--lang=en_US") 
+chrome_options.add_argument("user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 12_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36")
+driver = webdriver.Chrome(options=chrome_options)
+```
+
+### Get inner HTML
+- `.decode_contents()`
