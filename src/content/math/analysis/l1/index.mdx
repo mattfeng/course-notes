@@ -1,5 +1,8 @@
 $\gdef\p#1#2{#1 \times #2}$
 $\gdef\rel#1#2{#1 \mathrm{R} #2}$
+$\gdef\Z{\mathbb{Z}}$
+$\gdef\Q{\mathbb{Q}}$
+$\gdef\and{\text{\; and\;}}$
 
 # Lecture 1. Constructing the Rational Numbers
 
@@ -8,7 +11,7 @@ $\gdef\rel#1#2{#1 \mathrm{R} #2}$
 - Kronecker was a finitist: mathematics should only deal with objects obtained from finite numbers in a finite number of operations.
     - Opposed the use of irrational numbers
     - Doubted the significance of non-constructive existence proofs
-- **There are lots of things we take for granted that weren't always so _obvious_.**
+- **There are lots of things we take for granted that weren't always so _obvious_.** Real analysis is about examining some of those "obvious" things.
 
 ## Analysis: wrestling with the infinite
 - What does it mean for a series of numbers to converge?
@@ -29,9 +32,21 @@ $\gdef\rel#1#2{#1 \mathrm{R} #2}$
     - e.g. $S = \{x : P(x) = \mathrm{true}\}$.
 
 ### Set operations
-- product
+- **Union**
+- **Intersection**
+- **Difference**
+- **Product**
     - $A \times B = \{ (a, b) : a \in A \text{ and } b \in B\}$
 
 ### Relations
 - A **(binary) relation** $R$ is a subset of $\p{A}{B}$.
     - If $(a, b) \in R$, write $\rel{a}{b}$.
+    - e.g. $A = \text{"is an ancestor of"}$ is a relation on $\p{P}{P}$ ($P$ is the set of people).
+- An **equivalence relation** $R$ on a set $S$ is a relation on $\p{S}{S}$ such that:
+    1. **reflexivity.** $\rel{a}{a}$
+    2. **symmetry.** $\rel{a}{b} = \rel{b}{a}$
+    3. **transitivity.** $\rel{a}{b} \and \rel{b}{c} \implies \rel{a}{c}$
+    - Used to denote that objects are "same" in some sense, e.g. $=$, "all the sophomores"
+- _Aside_: A **function** $F$ from $A$ to $B$ is a relation.
+
+## Construction of $\Q$
