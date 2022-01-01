@@ -1,0 +1,75 @@
+$\gdef\p#1#2{#1 \times #2}$
+$\gdef\rel#1#2{#1 \mathrm{R} #2}$
+$\gdef\Z{\mathbb{Z}}$
+$\gdef\Q{\mathbb{Q}}$
+$\gdef\and{\text{\; and\;}}$
+$\gdef\ifft{\text{\; iff\;}}$
+
+# Lecture 2. Properties of $\Q$
+
+- Questions
+    - How do we define **arithmetic structure** ($\{+, \cdot \}$) on $\Q$?
+    - In what sense does $\Q$ extend $\Z$?
+
+## Arithmetic: addition and multiplication
+
+<Box>
+
+**Checking that a definition is well-defined**
+- Assume
+    - $a \sim a'$
+    - $b \sim b'$
+- Must check that
+    - $f(a, b) \sim f(a', b')$
+- The answer **should not depend on the representatives chosen**.
+
+</Box>
+
+- **Define** $\dfrac{a}{b} + \dfrac{c}{d} = \dfrac{ad+bc}{bd}$.
+- **Define** $\dfrac{a}{b} \cdot \dfrac{c}{d} = \dfrac{ac}{bd}$.
+- $\Q$ extends $\Z$ via the **isomorphism** $n \mapsto \dfrac{n}{1}$.
+
+## Properties
+
+### $\Q$ has order
+
+- **Definition (Order).** An **order** on a set $S$ is a relation $<$ satisfying
+    1. **trichotomy.** if $x, y \in S$, exactly one of the following is true: $x < y$, $x = y$, $y < x$.
+    2. **transitivity.** for $x, y, z \in S$, if $x < y$ and $y < z$, then $x < z$.
+    - $(S, <)$ is called an **ordered set**.
+- e.g. in $\Z$, say $m < n$ if $n - m \in \{1, 2, 3, ...\}$.
+- e.g. in $\Q$,
+    - Define $\dfrac{m}{n}$ as **positive** if $mn > 0$.
+    - so $\dfrac{a}{b} < \dfrac{c}{d}$ if $\dfrac{c}{d} + \dfrac{-a}{b}$ is positive.
+- We write $y > x$ for $x < y$.
+- We write $x \leq y$ for $x < y$ or $x = y$.
+
+### $\Q$ is a field
+- Note: $\Z$ is a **ring**.
+- **Definition (Field)**. A **field** $(F, + , \cdot)$ satisfies the following axioms:
+    1. **closure.**
+    2. **commutative.**
+    3. **associative.**
+    4. **identities.** The additive identity is denoted $0$; the multiplicative identity is denoted $1$.
+    5. **inverse.** Every element has an **additive inverse**. Every element except $0$ has a **multiplicative inverse**.
+    6. **distributive.** $\cdot$ distributes over $+$.
+
+### $\Q$ is an ordered field
+- **Definition (Ordered field).** An **ordered field** is a field with order where the order is _preserved_ by the field operations:
+    1. $y < z \implies x + y < x + z$.
+    2. $y < z, x > 0 \implies xy < xz$.
+
+---
+
+$\Q$ helps us solve equations $\Z$ could not, but $\Q$ is still not big enough.
+
+**Theorem**. $x^2 = 2$ has no solution in $\Q$.
+
+**Proof (by contradiction, extremal principle)**.
+- Assume $x^2 = 2$ has a solution $\dfrac{p}{q} \in \Q$, and $p, q$ have no common factors (extremal principle).
+- So $\left(\dfrac{p}{q}\right)^2 = 2$. Then $p^2 = 2q^2$.
+- $p$ must be even in order for $p^2$ to have a factor of 2. So $p$ is even.
+- So $p = 2k$ for some $k \in \Z$.
+- So $4k^2 = 2q^2$, or $2k^2 = q^2$. So $q$ is even.
+- But if $p, q$ are both even, contradicting the assumption that $p, q$ have no common factor.
+- Thus there is no solution to $x^2 = 2$ in $\Q$.
