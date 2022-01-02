@@ -1,1 +1,51 @@
-# infrastructure
+# Infrastructure
+
+## Reverse SSH Tunnel
+```bash
+# create the reverse tunnel
+ssh -f -N -T -i <key> -R<bridge port to access SSH>:localhost:22 <bridge user>@<bridge>
+
+# create forward tunnel
+ssh -f -N -T -i <key> -L<local port to access SSH>:localhost:<bridge port to access SSH> <bridge user>@<bridge>
+
+# connect via the tunnel
+ssh -p <local port to access SSH> [-L forward any ports as desired] <remote user>@<localhost>
+```
+
+### [with `autossh`](https://archive.is/dv6mQ)
+```
+autossh -M 0 -f -o "ExitOnForwardFailure=yes" \
+                -o "ServerAliveInterval 30" \
+                -o "ServerAliveCountMax 3" \
+                -NR <remote port>:localhost:<local port> i <ssh_key> user@host
+```
+
+## Systemd services (`systemctl`)
+```
+[Unit]
+Description=Keep a tunnel to bridge for SSH open
+After=network.target
+
+[Service]
+User=<username>
+ExecStart=/usr/bin/autossh -M 0 -o "ExitOnForwardFailure=yes" \
+                                -o "ServerAliveInterval 30" \
+                                -o "ServerAliveCountMax 3" \
+                                -NR [remote forward] \
+                                -i [key] \
+                                user@host
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
+```
+
+### Viewing logs (`journalctl`)
+```bash
+# all logs
+journalctl -u <service-name>.service
+
+# current boot
+journalctl -b -u <service-name>.service
+```
