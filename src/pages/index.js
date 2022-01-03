@@ -8,7 +8,18 @@ const IndexPage = () => (
     <div>
       <h1>software development</h1>
       <ul>
-        <li><Link to="/dev">index</Link></li>
+        <li>
+          <Link to="/dev">index</Link>
+        </li>
+      </ul>
+
+      <h1>bioinformatics</h1>
+      <ul>
+        <li>
+          <Link to="/stat115">
+            STAT115: Introduction to Computational Biology and Bioinformatics
+          </Link>
+        </li>
       </ul>
 
       <h1>classes</h1>
