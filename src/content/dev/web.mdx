@@ -14,8 +14,35 @@ npm install https://github.com/<github repo>
 npm install sass gatsby-plugin-sass
 ```
 
-### Funny bugs
-- `cursor: pointer` doesn't work when Photoshop is open
+### [Markdown Extended (MDX)](https://www.gatsbyjs.com/plugins/gatsby-plugin-mdx/)
+```bash
+npm install gatsby-plugin-mdx @mdx-js/mdx @mdx-js/react
+```
+
+```js
+// gatsby-config.js
+module.exports = {
+  plugins: [
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `pages`,
+        path: `${__dirname}/src/pages/`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        defaultLayouts: {},
+        gatsbyRemarkPlugins: [],
+        remarkPlugins: [],
+        rehypePlugins: [],
+      }
+    }
+  ],
+}
+```
+
 
 ### [Katex](https://katex.org/docs/supported.html)
 
@@ -46,6 +73,11 @@ module.exports = {
     pathPrefix: '/reading-group'
 }
 ```
+
+### Bugs
+- `cursor: pointer` doesn't work when Photoshop is open
+
+---
 
 ## NextJS
 
