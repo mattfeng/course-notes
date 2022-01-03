@@ -1,0 +1,47 @@
+# L3. RNAseq read mapping, quantification, normalization
+
+## Splice-aware alignment
+- Some reads can't be aligned using basic BWA/Bowtie because introns are spliced out (in other words, chunks of reads are missing and would otherwise not be aligned).
+- STAR is the most accurate RNAseq aligner (albeit slower)
+    - TopHat (Burrows-Wheeler) 
+    - HISAT (Burrows-Wheeler)
+    - STAR (Suffix Array)
+- Output of HISAT/STAR: **BAM file** (paired ends)
+    - Paired end samples have **odd numbers**
+    - Paired ends will have the same ID
+- [**RSeQC**](http://rseqc.sourceforge.net/) (RNAseq quality control)
+    - _TIN (transcript integrity number)_. calculated for each transcript
+    - _medTIN_. median TIN score across all the transcripts
+
+## RNAseq abundance (expression index)
+- count of fragments aligned to gene $i$ is proportional to
+    - **expression of RNA (our desired result)**
+    - length of gene
+    - sequencing depth
+    - library prep factors (e.g. PCR)
+    - _in silico_ factors (e.g. alignment)
+    - etc...
+- **expression index**
+    - CPM (count per million)
+    - RPKM (reads per kilobase of transcript per million reads of library)
+        - corrects for _coverage (aka read depth)_ and _gene length_
+        - FPKM
+    - TPM (transcripts per million) RSEM
+    - [RPKM, FPKM, TPM explained (StatQuest)](https://www.youtube.com/watch?v=TTUrtCY2k-w)
+    - Definitions
+        - $K_{ij}$. the number of reads for gene $i$ in replicate $j$
+        - $T_j = \sum_i K_{ij}$. the total number of reads for replicate $j$ (a measure of _read depth_)
+    - We can normalize by _read depth_ by dividing each $K_{ij}$ by $T_j$ (often, we multiply the result by 1 million to avoid decimals).
+    - TPM normalized by _gene length_ first, then _read depth_
+        - TPM ensures that all replicates share the _same sum of expression indices_, so we can compare proportions of RNA expression.
+
+## RNAseq read distribution (DEseq2)
+- Factors affecting statistical power of detecting differential expression
+    - Sample size
+    - Expression level
+    - True fold change (the truth we want to learn)
+    - Dispersion/variability (how "bursty" expression of a gene is in a cell)
+    - Sequencing depth
+    - Gene length
+- For differential expression, we want to use _raw counts_
+- **Negative binomial** models sequencing read distrbution better than a **Poisson** distribution.

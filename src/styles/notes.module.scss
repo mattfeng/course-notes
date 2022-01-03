@@ -2,7 +2,7 @@
 
 $sans: "Outfit", sans-serif;
 $serif: "EB Garamond", "Times", serif;
-$header-prefix-width: 45px;
+$header-prefix-width: 30px;
 
 .mainContainer {
     max-width: min(80%, 80ch);
@@ -20,6 +20,10 @@ $header-prefix-width: 45px;
     p, li {
         font-family: $serif;
     }
+
+    ul + p {
+        margin-top: 1em;
+    }
 }
 
 h1 {
@@ -35,7 +39,9 @@ h2 {
 
 h2::before {
     content: "#";
-    margin: 0;
+    text-align: right;
+    margin-left: -$header-prefix-width - 10px;
+    padding-right: 10px;
     width: $header-prefix-width;
     color: #ccc;
     display: inline-block;
@@ -47,7 +53,9 @@ h3, h4 {
 
 h3::before {
     content: "##";
-    margin: 0;
+    text-align: right;
+    margin-left: -$header-prefix-width - 10px;
+    padding-right: 10px;
     width: $header-prefix-width;
     color: #ccc;
     display: inline-block;
