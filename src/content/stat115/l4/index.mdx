@@ -1,8 +1,9 @@
 $\gdef\var#1{\mathbb{V}\left(#1\right)}$
+$\gdef\P#1{\mathbb{P}\left(#1\right)}$
 
 # L4. Differential expression, FDR, GO
 
-## Linear model for differential expression (LIMMA)
+## LIMMA: Linear model for differential expression on log(counts)
 
 We build a separate model for each gene $j$.
 
@@ -24,7 +25,7 @@ $$
 \alpha_{ij} - \alpha_{0j} = 0
 $$
 
-- Use T* tests for tests of significance.
+- Use **t family of tests** for tests of significance.
 
 ### LIMMA Design and Contrast matrices
 
@@ -35,6 +36,8 @@ $$
 - The LIMMA constrast matrix defines the signficance tests to be performed (one test per column).
 
 ![LIMMA contrast matrix.](./limma-contrast.png)
+
+## DESeq2: Differential expression on raw counts
 
 ### Sequencing read distribution
 - sequencing data is over-dispersed (variance > mean)
@@ -84,3 +87,59 @@ Effectively, we are adjusting variance of gene expression (for each gene) toward
 
 ## Multiple Hypotheses Testing and False Discovery Rate
 - a.k.a. _How many differential genes do we report?_
+- We need to control for:
+    - **family-wise error rate**, or
+    - **false discovery rate**
+
+### Family-wise error rate (FWER)
+
+$$
+\text{FWER} = \P{\text{falsely reject at least one hypothesis}}
+$$
+
+$$
+\text{FWER} < \alpha \implies \P{\text{no false rejections}} > 1 - \alpha
+$$
+
+#### Bonferroni correction (BC)
+- For $m$ hypotheses to test, set false rejection rate at $\alpha/m$.
+- BC is too conservative for noisy data.
+
+### False discovery rate (FDR)
+- FDR is also known as **Q-value**, **adjusted P-value**
+- $U$. true negative
+- $V$. false positive (type I)
+- $T$. false negative (type II)
+- $S$. true positive
+
+![](./fdr-matrix.png)
+
+- the **false discovery rate (FDR)** is $\boxed{V / R}$, or false positives divided by all calls (i.e. out of our discoveries, how many were wrong?)
+- BC attempts to make FDR equal to 0; we can be more lenient.
+- The **Benjamini-Hochberg** method is an algorithm for using FDR.
+
+![Intuition behind the FDR.](./fdr-intuition.png)
+
+- Generally, people are comfortable if around a few hundred genes are differentially expressed.
+
+## Gene ontology
+- Categories
+    - Molecular function
+    - Biological process
+    - Cellular component
+- Relations:
+    - **I**. `is_a`
+    - **P**. `part_of`
+
+### Evaluating differentially expressed genes
+
+![Comparing differential expression to the whole genome.](./go-matrix.png)
+
+- Use a **goodness-of-fit test**.
+    - $\chi^2$ or **Fisher's exact test**.
+- Needs multiple hypothesis testing as well.
+
+### GO Tools for Microarray Analysis
+- AmiGO, Gorilla, GREAT
+- DAVID
+    - A good query size: between 50 and 3000.
