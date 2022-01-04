@@ -73,3 +73,19 @@ Test connection with:
 # brew install mongosh
 mongosh "mongodb://root:password@localhost:27017/db?authSource=admin"
 ```
+
+### PostgreSQL
+```yaml
+services:
+  postgres:
+    image: postgres:14.1
+    container_name: postgres
+    environment:
+      POSTGRES_PASSWORD: password
+      POSTGRES_USER: user # default: postgres
+      POSTGRES_DB: db # default: $POSTGRES_USER
+    ports:
+      - 5432:5432
+    volumes:
+      - ./db:/var/lib/postgresql/data
+```

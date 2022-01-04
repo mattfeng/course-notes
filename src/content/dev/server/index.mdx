@@ -70,3 +70,8 @@ server {
     return 404; # managed by Certbot
 }
 ```
+
+## Disable sleep on Ubuntu Server
+```bash
+sudo systemctl mask sleep.target suspend.target hibernate.target hybrid-sleep.target
+```
