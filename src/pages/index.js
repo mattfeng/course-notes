@@ -22,6 +22,13 @@ const IndexPage = () => (
         </li>
       </ul>
 
+      <h1>deep learning</h1>
+      <ul>
+        <li>
+          <Link to="/cs224w">CS224W: Machine Learning for Graphs</Link>
+        </li>
+      </ul>
+
       <h1>classes</h1>
       <Link to="/questions">
         <h2>questions</h2>

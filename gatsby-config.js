@@ -65,7 +65,9 @@ module.exports = {
           [
             require(`rehype-katex`),
             {
-              macros: {},
+              macros: {
+                "\\P": "\\mathbb{P}(#1)",
+              },
             },
           ],
         ],

@@ -1,0 +1,36 @@
+# NextJS
+
+## Libraries
+```bash
+# sass
+npm install sass
+# yaml
+npm install js-yaml
+# payments (stripe)
+npm install stripe
+
+# authentication
+#   built in libraries: crypto
+npm install uuid
+npm install passport passport-local
+npm install next-connect
+npm install @hapi/iron
+```
+
+## Sass
+
+```js
+const path = require("path");
+
+module.exports = {
+  sassOptions: {
+    includePaths: [path.join(__dirname, "styles")],
+  },
+}
+```
+
+## Payments
+```bash
+NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=
+STRIPE_SECRET_KEY=
+```

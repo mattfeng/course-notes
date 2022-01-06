@@ -1,0 +1,38 @@
+$\gdef\A{\mathbf{A}}$
+$\gdef\Z{\mathbf{Z}}$
+$\gdef\z{\mathbf{z}}$
+$\gdef\dp#1#2{#1^\intercal#2}$
+
+# Lecture 3. Node embeddings
+
+## Node embeddings
+- Graph representation learning
+    - Goal: learn a function $f: V \rightarrow \R^d$
+- Motivation
+    - Similarity of embeddings between nodes indicates their similarity in the network.
+        - e.g. nodes may be considered close together if they are connected by an edge.
+    - Node embeddings encode network information
+- Setup
+    - graph $G(V, E)$ with adjacency matrix $\A$
+    - embeddings $\z_v \in \R^d$ for node $v \in V$.
+    - $\text{similarity}(u, v) \approx \dp{\z_u}{\z_v}$
+    - Node labels and node features are **not utilized**.
+
+### Shallow encoding
+- encoder is just an _embedding lookup_
+- learn a matrix $\Z$ of embeddings
+
+### What is node similarity?
+- Key chioce of methods depends on **how they define similarity**.
+- The embedding methods in this lecture define similarity based on **random walks**.
+
+## Random walk approaches for node embeddings
+- Notation
+    - $\P{v | \z_u}$. the (predicted) probability of visiting node $v$ on random walks starting from $u$.
+    - $R$. random walk _strategy_.
+    - $N_R(u)$. neighborhood of $u$ obtained by random walk strategy $R$.
+- $\dp{\z_u}{\z_v}$. approximates the probability that $u$ and $v$ co-occur on a random walk over the graph.
+- Objective
+    - $\max_f \sum_{u \in V} \log \P{N_R(u) | \z_u}$
+
+## Embedding entire graphs

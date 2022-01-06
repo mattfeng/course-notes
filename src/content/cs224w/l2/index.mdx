@@ -1,0 +1,61 @@
+# Lecture 2. Traditional models for ML on graphs
+
+- Two kinds of features of consider:
+    - **Structural features**
+        - what should be the nodes?
+        - what should be the edges?
+    - Features of **nodes**/**edges**
+- Objective
+    - Overview of the **traditional features** used for
+        - Node-level prediction
+        - Link-level prediction
+        - Graph-level prediction
+    - Focus on undirected graphs for simplicity
+
+## Design choices
+- Features: $d$-dimensional vectors
+- Objects:
+    - nodes
+    - edges
+    - sets of nodes
+    - entire graphs
+- Objective function: what task are we trying to solve?
+    - Given $G = (V, E)$
+    - Learn a function: $f: V \rightarrow \R$
+
+## Node-level tasks
+- Types of tasks
+    - Node classification
+
+### Features
+- We need to characterize the **structure** and **position** of a node in the network. We can do that with:
+    - Node degree
+    - Node centrality
+    - Clustering coefficient
+    - Graphlets
+- **Definition (degree).** The degree $k_v$ of node $v$ is the number of edges the node has.
+- **Definition (centrality).** The centrality $c_v$ of a node attempts to account for the importance of a node in a graph (as opposed to node degree, which does not).
+    - There are different kinds of centrality.
+    - **Definition (eigenvector centrality).**
+        - $c_v = \frac{1}{\lambda} \sum_{u \in N(v)} c_u$
+        - Equivalently, $\lambda \mathbf{c} = \mathbf{Ac}$
+            - $\mathbf{A}$. adjacency matrix; $A_{uv} = 1$ if $u \in N(v)$.
+        - The largest eigenvalue $\lambda_{\max}$ is always positive and unique (**Perron-Frobenius theorem**).
+        - The leading eigenvector $\mathbf{c_{\max}}$ is used for centrality.
+    - **Definition (betweenness centrality).**
+        - A node is important if it lies on many shortest paths between other nodes.
+        - $c_v = \sum_{s \neq t \neq v} \dfrac{p_{st,v}}{p_{st}}$
+            - $p_{st}$. number of shortest paths between $s$ and $t$
+            - $p_{st,v}$. number of shortest paths between $s$ and $t$ that include $v$
+    - **Definition (closeness centrality).**
+        - $c_v = \dfrac{1}{\sum_{u \neq v} |p_{uv}|}$
+        - $|p_{uv}|$. the length of the shortest path between $u$ and $v$
+- **Definition (clustering coefficient).**
+    - Measures how connected $v$'s neighbors are.
+    - $e_v = \dfrac{\text{\# edges among neighbors}}{\binom{k_v}{2}}$
+        - $k_v$. degree of $v$
+    - $e_v$ counts triangles.
+- **Definition (graphlet).** **Rooted**, connected, non-isomorphic subgraphs.
+    - There are 3 3-node graphlets (the chain has two possible, non-isomorphic roots).
+    - The **graphlet degree vector (GDV)** is a **count vector** of the number of graphlets rooted at a node.
+    - The **GDV** provides a measure of a node's local network topology.
