@@ -1,0 +1,44 @@
+# Lecture 5. Gene Set Enrichment Analysis, Clustering
+
+## Gene Set Enrichment Analysis (GSEA)
+- **Motivation**
+    - In some experiments comparing two conditions, there might be no or few genes significantly differentially expressed, but the group of genes is slightly differentially expressed.
+    - Check sets of genes with similar annotation and see their expression values.
+- Mootha et al., PNAS 2003
+    - Use a **Kolmogorov-Smirnov (KS) test**.
+    - Need to use multiple hypothesis testing if testing more than one GO code.
+
+## Heatmap and clustering
+
+### Cluster stability
+- Does the clustering give the same results if:
+    - Mask out some data
+    - Introduce little noise into the data
+    - Change some clustering algorithm parameters
+- Reduce noise via selecting subsets of genes for clustering, e.g.
+    - Differentially expressed gene
+    - Genes on certain pathways
+
+### Evaluate performance
+- Evaluate performance by constrasting **within cluster distance** and **between cluster distance**
+
+### K-means
+- Not able to handle outliers because of use of average
+    - **Alternative:** pick one real data point that is closest to all of the other points (called the **medioid**).
+- How to pick $k$?
+    - $B(k)$. sum of squares between cluster means.
+    - $W(k)$. sum of squares within clusters.
+    - Calinski and Harabasz, 1974
+        - $\max C(k) = \frac{B(k)/(k - 1)}{W(k)/(n-k)}$
+    - Hartigan, 1975, stop when $H(k) < 10$
+        - $H(k) = \left(\frac{W(k)}{W(k + 1)} - 1\right)(n - k - 1)$
+    - Just pick $7$.
+
+### Consensus clustering
+- **Tight clustering (Tseng and Wong, 2003)**.
+    - Reconciles clustering information about the same data set coming from different sources or from different runs of the same algorithm
+- **iCluster (Shen R, Bioinfo 2009)**
+
+### What to do with clusters?
+- Qualitative description of gene expression.
+- Gene ontology annotations (goodness-of-fit test) (see Lecture 4).
