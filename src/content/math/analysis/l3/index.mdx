@@ -1,1 +1,82 @@
 # Lecture 3. Construction of the Reals
+
+## Overview
+1. Construct the real numbers (**Dedekind cuts**, 1872)
+    - Need to define in terms of $\Q$.
+
+Consider $A = \{x : x^2 < 2, x \in \Q\}$. There isn't a point at the very rightmost end of $A$.
+
+**Definition (upper bound (ub), lower bound (lb))**.
+- Say $E \sub S$ is an ordered subset of $S$.
+- If $\exists \beta \in S$ s.t. $\forall x \in E$ we have $x \leq \beta$, then we call $\beta$ an **upper bound** for $E$, and we say $E$ is bounded above.
+- If $\exists \beta \in S$ s.t. $\forall x \in E$ we have $x \geq \beta$, then we call $\beta$ an **lower bound** for $E$, and we say $E$ is bounded below.
+
+<Box>
+
+**Technique: Proving $\beta$ is an upper bound**.
+- Proof by contradiction. If not, $\exists x \in E$ s.t. $x > \beta$. Use the properties of $E$ to show that this is not possible.
+
+</Box>
+
+**Definition (least upper bound, supremum)**.
+- If $\exists \alpha \in S$ s.t.
+    1. $\alpha$ is an ub of $E$, and
+    2. $\forall \gamma < \alpha$, $\gamma$ is not an ub of $E$.
+- Then $\alpha$ is called the **least upper bound** or **supremum** of $E$.
+- Write: $\alpha = \sup E$.
+
+<Box>
+
+**Technique: Proving $\alpha$ is the supremum.**
+- Part 1: Show that $\alpha$ is an upper bound.
+- Part 2: Proof by contradiction. Suppose there is an $\gamma < \alpha$ that is an ub of $E$. Use the properties of $E$ to show that this is not possible.
+
+**Example.** Let $S = \Q$. Let $\Q_-$ be the set of negative rationals. Prove $\sup \Q_- = 0$.
+- Suppose $\gamma < 0, \gamma \in \Q$ is an ub of $\Q_-$. This is not possible because $\gamma / 2 > \gamma$. Thus our assumption is false.
+
+</Box>
+
+<Box>
+
+**Technique: Prove a set $E$ does not have a supremum in $S$.**
+- Show that no matter what ub $\beta$ provided, a smaller ub $\beta - \epsilon$ can always be found.
+
+</Box>
+
+## Constructing $\R$
+
+**Theorem.**
+- $\R$ is an _ordered field_ with the **least upper bound property**, and $\R$ contains $\Q$ as a subfield.
+
+**Definition (least upper bound property)**.
+- A set $S$ has the **least upper bound property** (alternatively, $S$ satisfies the **completeness axiom**) if every nonempty subset of $S$ that has an _upper bound_ also has a _least upper bound_ in $S$.
+
+Trick: think of the **reals** as **some collection of rationals**.
+
+**Definition (cut).**
+- A **cut** $\alpha$ is a subset of $\Q$ such that
+    1. $\alpha \neq \emptyset, \Q$ (non-trivial)
+    2. If $p \in \alpha$, $q \in \Q$, and $q < p$, then $q \in \alpha$ (closed downward)
+    3. If $p \in \alpha$, then $p < r$ for some $r \in \alpha$ (no largest member)
+
+**Definition ($\R$).**
+- $\R = \{x : x \text{ is a cut}\}$.
+- e.g.
+    - the cut that corresponds to $1$ is $x = \{r : r < 1\}$.
+    - the cut that corresponds to $\sqrt{2}$ is $x = \{r : r^2 < 2\}$.
+
+**Giving $\R$ order and arithmetic**.
+- Define $\alpha < \beta$ ($\alpha, \beta \in \R$) to mean $\alpha \sub \beta$.
+    - Check: trichotomy, transitive
+- Define $\alpha + \beta = \{r + s : r \in \alpha, s \in \beta \}$
+    - Check: field axioms
+        - A1 (closure). $\alpha + \beta$ is a cut.
+        - A2 (commutative).
+        - A3 (associative).
+        - A4 (identity). $0^* = \{x : x < 0\}$.
+        - A5 (additive inverse). $\beta = \{p : \exists r > 0 \text{ s.t. } -p-r \notin \alpha\}$.
+            - Look at $p \in \beta$; see how $-p$ always has a right side gap beyond $\alpha$.
+- Define $\alpha \cdot \beta$ first for positive cuts $\{\alpha : \alpha > 0^*\} = \R^+$
+
+### Least upper bound property
+- Given a set of cuts $A$, the **supremum** $\sup A = \bigcup_{\alpha \in A} \alpha$.

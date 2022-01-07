@@ -1,0 +1,69 @@
+$\gdef\U{\m{U}}$
+$\gdef\D{\m{D}}$
+$\gdef\V{\m{V}}$
+
+# Lecture 6. Unsupervised learning, dimension reduction, batch effect removal
+
+## Clustering
+- Clustering is a kind of _unsupervised learning_.
+- What to try if clustering doesn't fit existing knowledge:
+    - Change linkage
+    - Select subset of genes (semi-supervised)
+
+## $k$-nearest neighbors
+- (Semi)-supervised classification technique after clusters are determined.
+
+## Dimension reduction
+
+### Multidimensional scaling (MDS)
+- Project the data in lower dimensions, to optimize the pairwise distance relationship as much as possible in the lower dimension.
+- **Not necessarily a linear projection** (i.e. not equivalent to PCA).
+- For RNAseq, often the distances are pairwise correlation of samples based on the $\log \text{TPM}$ counts for genes.
+    - e.g. samples are breast cancer biopsies, 20K genes expression levels are the data points to calculate expression level correlation
+
+### Principal Component Analysis (PCA)
+- _Linear transformation_
+- PCA finds the best projections
+- Find the largest variation, orthogonal to the current axes
+- Computed via the **singular value decomposition (SVD)**
+    - $\m{X} = \U\D\tr{\V}$
+    - $\U\D$ contains the relative projection (the coefficient) of the points onto each dimension
+        - shape: `(n_samples, n_pca_dim)`
+    - Each row of $\tr{\V}$ is a projection direction
+        - shape: `(n_pca_dim, n_pca_dim)`
+    
+### MDS vs. PCA
+- PCA preserves covariance of data
+- MDS preserves distance between data points
+- PCA is only powerful if the biological question is related to the _highest variance in the dataset_
+
+## Normalization
+- Salmon, Rsem (for RNAseq data) often already normalize the data for you
+- Kinds of normalization
+    - **Median scaling**
+        - ensure different samples have the same median value and dynamic range
+        - A kind of _linear scaling_. $X' = (X - c_1) \times c_2$
+    - **Locally weighted scatterplot smoothing (LOESS).**
+        - Fits a smooth curve
+        - Effectively applies different scaling factors at different intensity levels
+    - **Quantile normalization (Bolstad et al., Bioinformatics 2003)**
+        - _Frequently used normalization method_
+        - **Big assumption**: Assume most of the measurements don't change between samples.
+        - Pro: no need to pick a _reference sample_.
+
+## Batch Effect Removal
+- **batch effect**. non-biological variation
+    - common factors:
+        - different day/month of the experiments
+        - different reagents (enzymes, buffers)
+        - different mice (from different companies)
+        - different sequencers
+        - different lab protocol or experimenter
+- Intuitively, consider batch as another kind of _treatment effect_
+- Algorithms
+    - **COMBAT (Johnson et al., Biostatistics 2007)** for simple batches
+        - Can handle non-linear batch effects
+    - LIMMA for complex (e.g. nested) batches
+    - Output: corrected $\log \text{TPM}$ values
+- _PCA can be used to detect batch effects_
+    - i.e. Early PCs separate samples by batch

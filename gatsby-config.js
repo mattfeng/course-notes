@@ -67,6 +67,11 @@ module.exports = {
             {
               macros: {
                 "\\P": "\\mathbb{P}(#1)",
+                "\\v": "\\mathbf{#1}",
+                "\\m": "\\mathbf{#1}",
+                "\\tr": "#1^\\intercal",
+                "\\Q": "\\mathbb{Q}",
+                "\\Z": "\\mathbb{Z}",
               },
             },
           ],
