@@ -72,6 +72,7 @@ module.exports = {
                 "\\tr": "#1^\\intercal",
                 "\\Q": "\\mathbb{Q}",
                 "\\Z": "\\mathbb{Z}",
+                "\\L": "\\mathcal{L}",
               },
             },
           ],
