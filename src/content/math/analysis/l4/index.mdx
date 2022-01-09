@@ -1,0 +1,74 @@
+# Lecture 4. The Least Upper Bound Property
+
+## Review
+- **Definition (least upper bound property)**. A set $S$ has the **least upper bound property** (alternatively, $S$ satisfies the **completeness axiom**) if every nonempty subset of $S$ that has an _upper bound_ also has a _least upper bound_ in $S$.
+- The idea behind a **Dedekind cut** is that we consider the set of rational numbers leading up to the real number we want to define.
+
+## $\R$ contains $\Q$ as a subfield
+Associate to each rational $q \in \Q$: $q \mapsto \alpha = \{r \in \Q : r < q\}$.
+
+## $\R$ has the least upper bound property
+Proof.
+- if $A$ is a collection of cuts with u.b. $\beta$, let $\gamma = \bigcup \{\alpha : \alpha \in A\}$
+- Claim: $\gamma$ is a cut, and $\gamma = \sup A$.
+- Two parts:
+    1. $\gamma$ is a cut
+        1. $\gamma$ is non-trivial (not empty, and not $\Q$)
+        2. $\gamma$ is closed downward
+        3. $\gamma$ has no largest member
+    2. $\gamma$ is the least upper bound
+        1. $\gamma$ is an upper bound
+        2. no $\omega < \gamma$ exists such that $\omega$ is an u.b.
+            - $\omega < \gamma$ implies $\omega$ is a subset of $\gamma$, but because $\gamma$ is the union of $\alpha$, some $\alpha^*$ has a $p \in \alpha^*$ such that $p \notin \omega$, and thus $\omega$ is not an upper bound.
+
+## General roots exists
+- Define $a^{1/n} = \sup \{r : r^n < a\}$, where $a > 0$ if $n$ is even.
+
+## Consequences of the least upper bound property
+### Archimedean property
+Roughly, the property of having no infinitely large or infinitely small elements.
+
+**Theorem (Archimedean property of $\R$).**
+- For $x, y \in \R, x > 0$, there exists a positive integer $n$ s.t. $nx > y$.
+
+**Proof.**
+- Let $A = \{nx : n \in \N \}$.
+- Suppose there is no integer $n$ s.t. $nx > y$.
+- Then $y$ is an ub for $A$.
+- So $A$ has a least upper bound $\alpha$ (lub property).
+- So $\alpha - x$ is not an ub.
+- Therefore $\alpha - x < mx$ for some $m \in \N$.
+- Thus $\alpha < (m + 1)x$, contradicting $\alpha$ as an ub.
+
+### Dense
+**Theorem ($\Q$ is dense in $\R$).**
+- For any $x, y \in \R$, $x < y$, $\exists q \in \Q$ s.t. $x < q < y$.
+
+**Proof.**
+- Note that $y - x > 0$, so by the Archimedean property, $n(y - x) > 1$ for some $n \in \N$.
+- First choose $m$ s.t. $m - 1 \leq nx < m$ (this is always possible, $nx$ is just a real number).
+- Then $x < \dfrac{m}{n}$.
+- And $\dfrac{m}{n} < y$ since $ny > nx + 1 \geq m$.
+
+## Properties of $\sup$
+1. $\gamma$ is an upper bound of $A$ iff $\sup A \leq \gamma$.
+2. If $\forall a \in A$, $a \leq \gamma$, then $\sup A \leq \gamma$.
+3. If $\forall a \in A$, $a < \gamma$, then $\sup A \leq \gamma$ (still $\leq$).
+    - the supremum can be the bound.
+    - e.g. $\Q_-$, $\sqrt{2}$.
+4. If $\gamma < \sup A$, then $\exists a \in A$ s.t. $\gamma < a \leq \sup A$.
+5. If $A \sub B$, then $\sup A \leq \sup B$.
+    - $\sup B$ is an upper bound for $A$, which means that $\sup A \leq \sup B$.
+6. $\sup(A + B) = \sup A + \sup B$.
+7. If $A, B \sub \R_+$, then $\sup(A \cdot B) = \sup A \cdot \sup B$.
+
+<Box>
+
+**Technique: Show $\sup A = \sup B$.**
+- Show $\sup A \leq \sup B$.
+    - Show that $\sup B$ is an upper bound of $A$.
+        - One way: show that $b \in B$ is an upper bound of $A$.
+- Show $\sup B \leq \sup A$.
+    - Show that $\sup A$ is an upper bound of $B$.
+
+</Box>

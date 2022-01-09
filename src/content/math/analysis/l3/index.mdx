@@ -30,6 +30,7 @@ Consider $A = \{x : x^2 < 2, x \in \Q\}$. There isn't a point at the very rightm
 **Technique: Proving $\alpha$ is the supremum.**
 - Part 1: Show that $\alpha$ is an upper bound.
 - Part 2: Proof by contradiction. Suppose there is an $\gamma < \alpha$ that is an ub of $E$. Use the properties of $E$ to show that this is not possible.
+- Part 2 (alt): Show that any ub $b$ satisfies $b < \alpha$.
 
 **Example.** Let $S = \Q$. Let $\Q_-$ be the set of negative rationals. Prove $\sup \Q_- = 0$.
 - Suppose $\gamma < 0, \gamma \in \Q$ is an ub of $\Q_-$. This is not possible because $\gamma / 2 > \gamma$. Thus our assumption is false.
@@ -63,7 +64,7 @@ Trick: think of the **reals** as **some collection of rationals**.
 - $\R = \{x : x \text{ is a cut}\}$.
 - e.g.
     - the cut that corresponds to $1$ is $x = \{r : r < 1\}$.
-    - the cut that corresponds to $\sqrt{2}$ is $x = \{r : r^2 < 2\}$.
+    - the cut that corresponds to $\sqrt{2}$ is $x = \{r : r^2 < 2 \text{ or } r < 0 \}$.
 
 **Giving $\R$ order and arithmetic**.
 - Define $\alpha < \beta$ ($\alpha, \beta \in \R$) to mean $\alpha \sub \beta$.
