@@ -1,0 +1,36 @@
+# NetworkX
+
+## Glossary
+- `AGraph`. a generic graph (could be directed/undirected, or simple/multigraph)
+-
+
+## Basic functions
+
+## `XGraph`
+- `G.neighbors(node_id)`
+- `G.degree[node_id]`
+
+## Drawing
+```python
+import networkx as nx
+import matplotlib.pyplot as plt
+
+plt.figure(figsize=(7, 7))
+nx.draw_networkx(G, pos=nx.spring_layout(G, seed=42), with_labels=False,
+                         node_color=color, cmap="Set2")
+plt.show()
+```
+
+### GraphViz Layouts
+```python
+nx.draw(G, pos=nx.nx_agraph.graphviz_layout(G, prog="neato"))
+```
+
+- [`networkx.drawing.nx_agraph.graphviz_layout(G, prog="neato")`](https://networkx.org/documentation/stable/reference/generated/networkx.drawing.nx_agraph.graphviz_layout.html)
+    - Other programs
+        - `dot`. hierarchical drawings of directed graphs
+        - `neato`. spring model, reduces total energy
+        - `fdp`. spring model, reduces forces, not as good
+        - `sfdp`. spring model, reduces forces, not as good, scales for large graphs
+        - `twopi`. radial
+        - `circo`.

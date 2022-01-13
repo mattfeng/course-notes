@@ -1,7 +1,8 @@
 # google colab
 
-## setting up colab
+## Setting up colab
 
+### Conda
 ```bash
 !pip install -q condacolab
 ```
@@ -16,6 +17,7 @@ import condacolab
 condacolab.check()
 ```
 
+### Chemistry
 ```bash
 # dependencies: rdkit
 !conda install -q -y -c conda-forge rdkit
@@ -35,7 +37,13 @@ import sys
 sys.path.append('/usr/local/lib/python3.9/site-packages/')
 ```
 
-## keyboard shortcuts
+### Graphs
+```bash
+!apt install libgraphviz-dev
+!pip install pygraphviz
+```
+
+## Keyboard shortcuts
 
 - **`cmd+M+A`**. add cell above
 - **`cmd+M+B`**. add cell below

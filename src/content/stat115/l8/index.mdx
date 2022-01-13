@@ -1,0 +1,32 @@
+# Single Cell RNA-seq (scRNA-seq)
+
+## Introduction
+
+### Why scRNA-seq?
+- cell populations are hetereogenous (e.g. blood, developmental tissue)
+- bulk analysis can lead to Simpson's paradox
+    - individual cells can express genes differently from average
+    - bulk coexpression matrix can hide true coexpression
+
+### SMART-based methods
+- uses **transposases** to insert primers
+- often does not use **UMI (unique molecular identifier)**
+    - used to detect PCR bias (PCR duplicated RNA)
+
+### Droplet-based methods
+- 10X Genomics
+- maximum of 10,000 cells
+- has 3' or 5' bias (in order to setup cell barcodes)
+
+### Other techniques
+- **single-cell combinatorial indexing RNA sequencing (SCI-RNA-seq)**
+    - can do up to 15 million cells
+- **microwell scRNA-seq**
+
+## Processing and QC of scRNA-seq
+
+### Preprocessing
+- Map RNA-seq reads to the genome
+    - STARsolo
+    - pseudoaligners (Kallisto, Salmon)
+        - these are fine because often single-cell analysis is not concerned with discovering new genes

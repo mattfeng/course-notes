@@ -19,3 +19,18 @@ rsync -av -e "ssh -i <key>" --exclude="*.out" <source> <user>@<host>:<dest>
 - `-a`. recursive
 - `-v`. verbose
 - `-e`. use SSH
+
+## tmux
+
+### clipboard
+```bash
+sudo apt-get install xclip
+
+# when connecting, use X11 forwarding
+ssh -Y ...
+
+# ~/.tmux.conf
+# set -g mouse on
+# set-window-option -g mode-keys vi
+# bind -T copy-mode-vi y send-keys -X copy-pipe 'xclip -in -selection clipboard'
+```

@@ -1,0 +1,19 @@
+# PyTorch Geometric
+
+## [`torch_geometric.data.Data`](https://pytorch-geometric.readthedocs.io/en/latest/modules/data.html#torch_geometric.data.Data)
+- `edge_index` (source, destination) (`(2, num_edges)`)
+- `x` (node features) (`(num_nodes, num_node_features`))
+- `y` (node labels) (`(num_nodes,)`)
+- `train_mask` (which nodes available for training; dtype `bool`) (`(num_nodes,)`)
+
+### Example: Karate Club dataset
+```python
+>>> data.train_mask
+tensor([ True, False, False, False,  True, False, False, False,  True, False,
+        False, False, False, False, False, False, False, False, False, False,
+        False, False, False, False,  True, False, False, False, False, False,
+        False, False, False, False])
+```
+
+## Exchanging formats
+- [`torch_geometric.utils.to_networkx`](https://pytorch-geometric.readthedocs.io/en/latest/modules/utils.html#torch_geometric.utils.to_networkx)
