@@ -1,0 +1,27 @@
+$\gdef\overbar#1{\mkern 1.5mu\overline{\mkern-1.5mu#1\mkern-1.5mu}\mkern 1.5mu}$
+
+# Lecture 5. Complex Numbers
+
+## Structures built around $\R$
+
+### Extended reals ($\overbar{\R}$)
+
+**Definition (extended reals).** The **extended reals**, denoted $\overbar{\R}$, is $\R \cup \{-\infty, \infty\}$.
+
+- **Order**: $\forall x \in \R, -\infty < x < \infty$.
+- **Arithmetic**. It is **NOT a field**.
+    - $x + (\infty) = \infty$
+    - $x + (-\infty) = -\infty$
+    - If $x > 0$, $x \cdot (\infty) = \infty$
+    - If $x < 0$, $x \cdot (\infty) = -\infty$
+    - The following are undefined:
+        - $-\infty + \infty$
+        - $0 \cdot \pm \infty$
+- Why care?
+    - Every subset of $\overbar{\R}$ has a $\sup$, possibly $\infty$, not just those with upper bounds (LUB property for $\R$).
+
+### Euclidean space ($\R^k$)
+
+**Definition (Euclidean space).** $\R^k := \{(x_1, x_2, ..., x_k) : \forall i, x_i \in \R \}$
+- **Arithmetic**.
+    - Element-wise addition.

@@ -73,6 +73,8 @@ module.exports = {
                 "\\Q": "\\mathbb{Q}",
                 "\\Z": "\\mathbb{Z}",
                 "\\L": "\\mathcal{L}",
+                "\\overbar":
+                  "\\mkern 1.5mu\\overline{\\mkern-1.5mu#1\\mkern-1.5mu}\\mkern 1.5mu",
               },
             },
           ],
