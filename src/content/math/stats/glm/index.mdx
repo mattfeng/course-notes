@@ -1,0 +1,26 @@
+# Generalized Linear Model (GLM)
+
+## The main ideas
+1. Use least-squares to fit a line to the data
+2. Calculate $R^2$
+3. Calculate a $p$-value for $R^2$
+
+## 1. Fit a line to the data
+
+## 2. Calculating $R^2$
+
+### Adjusted $R^2$
+- Scale $R^2$ by the number of parameters
+- Used to normalize the effect of having too many parameters improving performance by chance
+
+## 3. Calculate a $p$-value for $R^2$
+
+$$F = the variation explained by factors / the variation not explained by factors$$
+
+$$F = \frac{SS(mean) - SS(fit) / (p_fit - p_mean)}{SS(fit) / (n - p_fit)}$$
+
+- $p_fit$. number of parameters in the fit line
+- $p_mean$. number of parameters in the mean line
+- $n - p_fit$. more data = more likely that $F$ is accurate
+    - $p_fit$ data points aren't really data; they will fit anything
+- $F$ distribution.
