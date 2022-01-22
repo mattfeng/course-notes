@@ -20,8 +20,28 @@ $\gdef\overbar#1{\mkern 1.5mu\overline{\mkern-1.5mu#1\mkern-1.5mu}\mkern 1.5mu}$
 - Why care?
     - Every subset of $\overbar{\R}$ has a $\sup$, possibly $\infty$, not just those with upper bounds (LUB property for $\R$).
 
-### Euclidean space ($\R^k$)
+### Euclidean space ($\R^k$) _(normed vector space)_
 
 **Definition (Euclidean space).** $\R^k := \{(x_1, x_2, ..., x_k) : \forall i, x_i \in \R \}$
 - **Arithmetic**.
     - Element-wise addition.
+- **Scalar multiplication.**
+    - $\alpha (x_1, x_2, ...) = (\alpha x_1, \alpha x_2, ...)$
+- $\R^k$ is a **vector space**.
+- $\R^k$ has an **inner product**.
+    - Allows for the notion of a **norm**: $|\v{v}| = (\v{v} \cdot \v{v})^2$
+
+### Complex numbers ($\C$) _(field)_
+- $\C$ extends $\R$: $\{(x, 0): x \in \R \}$ is isomorphic to $\R$.
+- Suggests that in $\C^k$, **inner product** $\ip{a}{b} = \sum_i a_i\overbar{b}_i$.
+
+#### Properties
+- $2\mathrm{Re}(z) = z + \overbar{z}$
+- $|z|^2 = z\overbar{z}$
+- $|\overbar{z}| = |z|$
+- $|zw| = |z||w|$
+    - based on $(ac - bd)^2 + (ad + bc)^2 = (a^2 + b^2)(c^2 + d^2)$
+- $|z + w| \leq |z| + |w|$
+
+## Cauchy-Schwarz inequality
+**Theorem.** If $\v{a}, \v{b} \in \C^k$, then $\ip{a}{b} \overbar{\ip{a}{b}} = \ip{a}{b} \ip{b}{a} = |\ip{a}{b}|^2 \leq \ip{a}{a} \ip{b}{b} \implies |\dot{a}{b}| \leq \|\v{a}\|\|\v{b}\|$.

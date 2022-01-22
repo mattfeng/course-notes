@@ -70,9 +70,13 @@ module.exports = {
                 "\\v": "\\mathbf{#1}",
                 "\\m": "\\mathbf{#1}",
                 "\\tr": "#1^\\intercal",
+                "\\hr": "#1^\\mathsf{H}",
                 "\\Q": "\\mathbb{Q}",
                 "\\Z": "\\mathbb{Z}",
+                "\\C": "\\mathbb{C}",
                 "\\L": "\\mathcal{L}",
+                "\\ip": "\\lang \\v{#1}, \\v{#2}\\rang",
+                "\\dot": "\\v{#1} \\cdot \\v{#2}",
                 "\\overbar":
                   "\\mkern 1.5mu\\overline{\\mkern-1.5mu#1\\mkern-1.5mu}\\mkern 1.5mu",
               },
