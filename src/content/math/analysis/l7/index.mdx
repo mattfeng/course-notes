@@ -1,2 +1,85 @@
 # Lecture 7. Countable and Uncountable Sets
 
+**How do we count?** We construct a function that maps objects to the natural numbers.
+
+## A review of functions
+
+Recall: A function is $f: A \rightarrow B$. It associates $x \mapsto f(x)$.
+
+- $A$ is the **domain** of the function.
+- $B$ is the **codomain** of the function.
+    - The **range** is the subset of $B$ with values that actually get mapped to.
+
+- If $C \subset A, D \subset B$
+    - then $f(C) = \{f(x): x \in C\}$ is the **image** of $C$.
+    - then $f^{-1}(D) = \{x: f(x) \in D\}$ is the **inverse image** of $D$.
+        - the inverse image is not necessarily a function; because multiple values can map to a single value via $f$, $f^{-1}$ may map a single value to multiple values.
+- When **f(A) = B**, say $f$ is **onto** (a **surjection**).
+    - Denote $f: A \twoheadrightarrow B$.
+- When $f(x) = f(y) \implies x = y$, say $f$ to **one-to-one** (an **injection**).
+    - Denote $f: A \hookrightarrow B$.
+- When $f$ is one-to-one and onto, call $f$ a **bijection** and say $A$ and $B$ are in **one-to-one correspondence**.
+    - Denote $f: A \xrightarrow{b} B$.
+    - Denote &ldquo;$A$ and $B$ are in one-to-one correspondence&rdquo; as $A \sim B$.
+
+## Counting
+
+**Definition (elementary counting).** Create a bijection between the set we want to count and $J_n = \{1, 2, ..., n\}$.
+
+**Definition (finite).** A set $A$ is **finite** if $A \sim J_n$ for some $n \in \N$. Otherwise $A$ is **infinite**.
+
+**Definition (countable).** A set $A$ is **countable** if $A \sim \N$.
+
+- **(S1).** $\N$ is countable: use $f: \N \xrightarrow{b} \N$ where $f(n) = n$.
+- **(S2).** A sequence $S = x_1, x_2, x_3, ...$ of distinct terms is countable. Use $f: \N \xrightarrow{b} S$ where $f(n) = x_n$.
+    - **Moral.** A set that can be **listed in a sequence is countable**!
+
+**Theorem.** $\N$ is infinite.
+
+**Proof (sketch, by induction).** Induct on $n$ and show $\N \nsim J_n$.
+- **Base case.** Suppose $\exists f_1: J_1 \xrightarrow{b} \N$, consider $\N \smallsetminus f_1(1)$. It's not empty, and thus $f_1$ is not bijective.
+- **Inductive case (by contradiction).** We'll show $J_k \nsim \N \implies J_{k+1} \nsim \N$.
+    - Suppose $J_{k+1} \overset{f}{\sim} \N$. Then $J_k \sim \N' = \N \smallsetminus \{f^{-1}(k+1)\}$, but $\N' \sim \N$. Therefore $J_k \sim \N$, a contradiction.
+
+The interesting idea is that we define size (cardinality) by a **bijection**, rather than a **number**.
+
+<br />
+
+**Theorem.** Every infinite subset $E$ of a countable set $A$ is countable.
+
+**Proof (sketch).**
+- We want to count the elements of $E$ that are a subset of $A = \{x_1, x_2, x_3, ...\}$.
+    - The elements in $E$ can be associated with the subscript $i$ that indexes them in $A$.
+- Let $n_1 = \inf \{i : x_i \in E\}$ (least element exists by the WOP, because the indices are natural numbers).
+- Let $n_2 = \inf \{i : x_i \in E, i > n_1\}$, etc.
+- Let $n_k = \inf \{i : x_i \in E, i > n_{k-1}\}$, etc.
+- Then $E = \{x_{n_1}, x_{n_2}, ...\}$ is countable. $\blacksquare$
+
+**Corollary.** $\Q$ is countable.
+
+**Proof.** Traverse through the ordered pairs in a diagonal fashion. That shows the ordered pairs is countable. We can select only the subset of unique rationals, and because every infinite subset of a countable set is countable, $\Q$ is countable.
+
+## Is $\R$ countable?
+
+**Theorem.** $\R$ is not countable.
+
+**Proof (by contradiction).**
+
+Suppose there is a bijection, e.g.
+
+```
+1 -> 0.(1)23456789012...
+2 -> 0.3(1)4159265358...
+3 -> 0.14(1)421351111...
+4 -> 0.777(7)77771234...
+5 -> 0.4132(4)1089923...
+```
+
+- We will show that the listing is bijection is not **onto**, i.e. produce a number that doesn't appear anywhere else in the list.
+- We will do so by producing a number that disagrees with every number in the list at **at least** one decimal location.
+    - Create $x$ that has a different value than every parenthesized value above.
+- This proof **doesn't work for the rationals** because the produced number $x$ is not necessarily rational.
+
+<br />
+
+**Theorem.** For any $A$, $A \nsim \mathcal{P}(A)$ (the power set of $A$).
