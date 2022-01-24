@@ -1,1 +1,64 @@
-# Lecture 6. Principle of Induction
+# Lecture 6. The Principle of Induction
+
+**Axiom (well ordering principle of $\N$, WOP).** $\N$ is well-ordered: every non-empty subset of $\N$ has a **least element**.
+
+## Principle of Induction
+**Definition (the principle of induction, POI).** Let $S$ be a subset of $\N$ such that
+
+1. $1 \in S$.
+2. if $k \in S$, then $k + 1 \in S$.
+
+Then $\boxed{S = \N}$.
+
+<br/>
+
+**Theorem.** WOP $\iff$ POI.
+
+**Proof (WOP $\implies$ POI, by contradiction).** 
+
+- Suppose we have a set $S$ with the properties in POI, but $S \neq \N$.
+- Then $A = \N \smallsetminus S$ has a least element $x$ (by the WOP).
+- It is not $1$ (by property 1 that $1 \in S$).
+- Its predecessor is in $S$ (not in $A$) as it is smaller than the least element in $A$. But that means $x$ is in $S$ by property 2 of POI.
+- We have a contradiction: $x \in S$ and $x \in A$.
+- Therefore, $S = \N$. $\blacksquare$
+
+### Proofs by induction
+Use the POI to prove a collection of statements that are indexed by the natural numbers.
+
+- Let $P(n)$ be statements ordered by $n \in \N$.
+- To show that $P(n)$ is true for all $n \in \N$, show
+    1. **(base case)** $P(1)$ is true. 
+    2. **(inductive step)** If $P(k)$ is true, then $P(k + 1)$ is true.
+        - Assuming $P(k)$ is true is called the **inductive hypothesis**.
+
+We're showing that the set $S = \{n : P(n)\ \text{is true}\}$ actually is $S = \N$.
+
+### Strong induction
+Modify the inductive hypothesis to assume $P(1), P(2), ..., P(k)$ are all true.
+
+### Examples
+
+**(S1) Theorem.**  Every $2^n \times 2^n$ chessboard with one square removed can be tiled by L shaped tiles.
+
+**Proof (by induction).**
+- **Base case.** $n = 1$. The $2 \times 2$ chessboard clearly can be tiled.
+- **Inductive step.** Divide the $2^{k + 1} \times 2^{k + 1}$ board into four $2^k \times 2^k$ boards. Since any $2^k \times 2^k$ board with one square removed can be tiled, we can specifically remove one tile in a way to leave space for an L shaped tile.
+
+**Note:** start with the $k + 1$ case and find the subproblems $k$. Going the other direction is problematic: We don't know that putting together $k$ subproblems will be general enough for all $k + 1$ cases.
+
+<br />
+
+**(E1) Theorem.** Any finite set of numbers contains its supremum.
+
+**Proof (by induction).** Let's induct on the number of elements in $S$.
+- **Base case ($|S| = 1$).** Clearly, the supremum is the only element in $S$.
+- **Inductive step.** Suppose we have a set $S$ with $k + 1$ elements. Remove any element $a$ from $S$ to form $S' = S \smallsetminus \{a\}$. $S'$ has a supremum $\alpha'$. If $a > \alpha'$, then $a$ is the supremum of $S$. If $a \leq \alpha'$, then $\alpha'$ is the supremum of $S$. $\blacksquare$
+
+<br />
+
+**(S2) Theorem.** $S_n = 1 + 3 + 5 + ... + (2n + 1)$ is a perfect square.
+
+**Proof (by induction).** We show a stronger proof, that $S_n = n^2$ (this lets us assume more in the inductive hypothesis).
+- **Base case.** Holds since $S_1 = 1 = 1^2$ is a perfect square.
+- **Inductive step.** $S_{n + 1} = S_n + 2n + 1 = n^2 + 2n + 1 = (n + 1)^2$. $\blacksquare$
