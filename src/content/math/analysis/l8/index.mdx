@@ -1,1 +1,33 @@
 # Lecture 8. Cantor Diagonalization and Metric Spaces
+
+**Theorem (Schroder-Bernstein theorem).** If $A$, $B$ are sets such that $\exists f: A \hookrightarrow B$ and $\exists g: B \hookrightarrow A$, then $A \sim B$.
+
+<br />
+
+**Notation.** Use
+- $\bigcup_{\alpha\in J}A_\alpha$ for a union over a potentially uncountable set.
+- $\bigcup_{i = 1}^{\infty} A_i$ for a union over a countable set.
+
+**Theorem.** A countable union of countable sets is countable.
+
+**(S1).** The set of all computer programs is the countable union of all $1$ character programs, $2$ character programs, $3$ character programs, etc. This means the set of all computer programs is countable (cannot be finite because there are countable number of program lengths). This means that some real numbers are **uncomputable**, or unable to be output by a program.
+
+<br />
+
+**Definition (uncountable).** A set is **uncountable** if it is infinite and not countable.
+
+## Cantor's Diagonalization Theorem
+
+**Theorem.** For any $A$, $A \nsim \mathcal{P}(A)$ (the power set of $A$).
+
+**Proof (sketch, by contradiction).** 
+- Suppose there is a one-to-one correspondence.
+- Associate every element $\alpha$ of $A$ with a subsets of $A$.
+- We can construct a subset that is different from every other subset in the following way: for each $\alpha$, if $\alpha$ is in its associated subset, don't include it; otherwise, include it. Then, we will have constructed a subset that is different from all the other subsets.
+
+**S2.** $2^A \sim \{\text{all } f: A \rightarrow \{0, 1\}\}$ by the membership relation (every function defines one subset of $A$).
+
+<br />
+
+**The continuum hypothesis.** The cardinality of $\R$, denoted $c$, is $\aleph_1$.
+- The hypothesis is **provably undecidable**; independent of the ZF axioms.
