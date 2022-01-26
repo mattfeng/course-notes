@@ -31,3 +31,22 @@
 
 **The continuum hypothesis.** The cardinality of $\R$, denoted $c$, is $\aleph_1$.
 - The hypothesis is **provably undecidable**; independent of the ZF axioms.
+
+## Metric Spaces
+**Definition.** A set $X$ is a **metric space** if $\exists$ a **metric** $d: X \times X \rightarrow \R$ such that $\forall p, q \in X$
+1. $d(p, q) \geq 0$ with $d(p, q) = 0 \iff p = q$.
+2. $d(p, q) = d(q, p)$.
+3. $d(p, r) + d(r, q) \leq d(p, q) \forall r \in X$.
+
+### Examples
+
+**S3.** Let $X = \{\text{continuous functions } f: \R \rightarrow \R\}$
+- **L<sup>1</sup>-metric**. $\int_\R |f(x) - g(x)| dx$
+- **sup metric**. $d(f, g) = \sup_{x \in \R} |f(x) - g(x)|$
+    - It is possible the set doesn't have a maximum.
+
+## The topology of $\R^n$: What does close mean?
+
+**Definition (neighborhood, open ball).** The **neighborhood (nbhd)** around $x$, $N_r(x)$, is the **open ball** $B(x, r) = \{y: d(x, y) < r\}$ with radius $r$.
+
+**Definition (limit point).** A point $p \in X$ is a **limit point** of $E$ if every open ball around $p$ contains a point $q$ in $E$, with $q \neq p$.
