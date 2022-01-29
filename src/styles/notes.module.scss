@@ -76,6 +76,12 @@ h4 {
     font-weight: 700;
 }
 
+h5 {
+    font-size: 1em;
+    font-style: italic;
+    margin: 0;
+}
+
 p, li {
     margin-top: 0.125em;
     margin-bottom: 0.125em;
@@ -90,6 +96,7 @@ table {
 td, th {
     border: 1px solid #ccc;
     padding: 4px 6px;
+    font-family: $serif;
 }
 
 .reaction {

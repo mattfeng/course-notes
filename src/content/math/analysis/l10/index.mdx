@@ -1,1 +1,50 @@
 # Lecture 10. The Relationship between Open and Closed Sets
+
+## Motivations
+- Why do we care about open sets?
+  - It means we can perturb points in $E$ and still have them stay in $E$.
+
+## Recall
+- A set $E$ in metric space $X$ is **open** if every point is an interior point.
+- A set $K$ is **closed** if $K$ contains all its limit points.
+- The **closure** of set $A$ is $\bar{A} = A \cup A'$.
+  - $A'$ is the set of limit points of $A$.
+
+**Lemma.** Neighborhoods are open.
+
+**Proof.** Let $p$ be a point, and $N(p, r)$ be the open ball of radius $r$ around $p$. Let $q$ be any point in $N(p, r)$. Let $a = d(p, q) < r$. Let $r' = r - a$. $N(q, r') \subset N(p, r)$ by the triangle inequality.
+
+**Theorem.** $\bar{A}$ is a closed set.
+
+**Proof.**
+- We need to show that if $p$ is a limit point of $\bar{A}$, then $p \in \bar{A}$.
+  - This means that we need to show that $p \in A$, or $p$ is a limit point of $A$.
+    - That is, if $p$ isn't already in $A$, then any neighborhood around $p$ contains a point in $A$.
+- Consider $p$, a limit point of $\bar{A}$.
+  - If $p \in A$, then we are done.
+  - If $p \not\in A$:
+    - Any neighborhood $N(p)$ of $p$ contains a point $q$ of $\bar{A}$.
+    - Suppose $q \in A'$ but not $q \in A$.
+    - Then any $N(q)$ contains a $q' \in A$.
+      - Consider $N(q)$ that is contained entirely in $N(p)$.
+        - Such an $N(q)$ must exist because neighborhoods are open, meaning $q$ is an interior point of $N(p)$ (by definition of an open set), which means that it has a neighborhood completely contained in $N(p)$.
+      - Then $q' \in N(q) \subset N(p) \implies q' \in N(p)$ which means $p$ is a limit point of $A$ (not just $\bar{A}$). Thus, $p$ is in $A'$ and therefore $\bar{A}$, and we are done. $\blacksquare$
+
+<br />
+
+**Theorem.** $E$ closed $\iff$ $E = \bar{E}$.
+
+**Proof.**
+- Forward direction
+  - $E$ closed $\implies E' \subset E$ so $E \cup E' = \bar{E} \subset E$.
+  - $E \subset \bar{E}$ by definition.
+  - Thus, $E = \bar{E}$.
+- Reverse direction
+  - If $E = \bar{E}$, then by definition $E$ contains all its limit points.
+
+<br />
+
+**Theorem.** If $E$ is a subset of closed set $F$, then $\bar{E} \subset F$.
+- $\bar{E}$ is the smallest **closed set** containing $E$.
+
+**Proof.**
