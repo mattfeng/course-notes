@@ -10,6 +10,8 @@
 - The **closure** of set $A$ is $\bar{A} = A \cup A'$.
   - $A'$ is the set of limit points of $A$.
 
+## Closures
+
 **Lemma.** Neighborhoods are open.
 
 **Proof.** Let $p$ be a point, and $N(p, r)$ be the open ball of radius $r$ around $p$. Let $q$ be any point in $N(p, r)$. Let $a = d(p, q) < r$. Let $r' = r - a$. $N(q, r') \subset N(p, r)$ by the triangle inequality.
@@ -45,6 +47,63 @@
 <br />
 
 **Theorem.** If $E$ is a subset of closed set $F$, then $\bar{E} \subset F$.
-- $\bar{E}$ is the smallest **closed set** containing $E$.
+- Moral: $\bar{E}$ is the smallest **closed set** containing $E$.
 
 **Proof.**
+- $F$ is closed, and thus contains all its limit points.
+- If $p$ is a limit point of $E$, then $p$ is a limit point of $F$.
+  - Limit points mean that any neighborhood around $p$ contains a point of $E$. Since $F$ is a superset of $E$, any neighborhood must also contain a point of $F$.
+- $E$ is a subset of $F$, so $F$ contains all the limit points of $E$. $\blacksquare$
+
+## The relationship between open and closed sets
+
+**Theorem.** In metric space $(X, d)$, $E$ is open iff $E^c$ is closed.
+- $E^c$ is the **complement** of $E$, defined to be $E^c = X \setminus E$.
+
+**Proof.**
+- Intuitively, if a set has its "boundary," then its complement does not, and vice versa.
+- Since we only use definitions, everything in the proof is _bidirectional_.
+- $E$ open means any point $x \in E$ is an interior point.
+- That means for any $x \in E$, there exists neighborhood $N(x)$ contained entirely in $E$.
+- Because $N(x) \subset E$, $N(x)$ is disjoint from $E^c$. Thus $x \in E$ cannot be a limit point of $E^c$.
+- If no $x \in E$ is a limit point of $E^c$, then $E^c$ must contain all its limit points. $\blacksquare$
+
+## Properties of open and closed sets
+
+### Unions and intersections
+
+- The union of infinitely many closed sets is not necessarily closed.
+  - e.g. $K_a = [-1 + \frac{1}{a}, 1 - \frac{1}{a}]$
+    - $\bigcup K_a = (-1, 1)$
+
+**Lemma (DeMorgan's Laws).** Let $\{E_\alpha\}$ be a collection of sets. Then $(\bigcup_\alpha E_\alpha)^c = \bigcap_\alpha E_\alpha^c$.
+
+**Proof.**
+- $x \in \text{LHS} \iff x \in E_\alpha^c$ for all $\alpha \in A \iff x \in \text{RHS}$.
+
+**Theorem.**
+1. The arbitrary union of open sets is open.
+2. The arbitrary intersection of closed sets is closed.
+3. The finite intersection of open sets is open.
+4. The finite union of closed sets is closed.
+
+**Proof.**
+1. Let $x \in \bigcup_\alpha U_\alpha$, each $U_\alpha$ is open.
+    - For some $U_\alpha$, $x$ has a neighborhood $N(x)$ such that $N(x) \subset U_\alpha \subset \bigcup_\alpha U_\alpha$.
+2. The arbitrary intersection of closed sets is closed.
+    - Suppose $B_\alpha$ are all closed. Then $B_\alpha^c$ are open. Therefore $\bigcup B_\alpha^c = (\bigcap B_\alpha)^c$ is open, and thus $\bigcap B_\alpha$ is closed.
+3. The finite intersection of open sets is open.
+    - Take the minimum radius neighborhood; the neighborhood thus will be contained in the intersection.
+4. The finite union of closed sets is closed.
+  - Use DeMorgan's laws.
+
+**Definition (dense).** $E$ is **dense** in metric space $X$ if
+- every point of $X$ is a limit point of $E$ or in $E$, or
+- $\bar{E} = X$, or
+- every open set in $X$ contains a point in $E$
+  - $\bar{E}$ means that $\bar{E}$ contains all its limit points, or every neighborhood around any point in $\bar{E}$ has a point in $\bar{E}$.
+  - an open set is made up of one or more neighborhoods
+
+**S1.** $\Q$ is dense in $\R$.
+**S2.** Essentially, we are asking if we can approximate any point in $X$ with points in $E$.
+- e.g. Fourier series: is the set of all linear combinations of sines and cosines dense in the space of all functions?
