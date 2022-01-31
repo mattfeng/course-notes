@@ -68,7 +68,7 @@ module.exports = {
               macros: {
                 // chemistry
                 "\\PH": "\\mathrm{pH}",
-                "\\p": "\\mathrm{p}#1",
+                "\\PK": "\\mathrm{p}K_{#1}",
                 // math
                 "\\P": "\\mathbb{P}(#1)",
                 "\\v": "\\mathbf{#1}",

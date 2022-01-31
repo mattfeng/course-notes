@@ -9,13 +9,14 @@ import Box from "../components/box"
 import { StaticImage } from "gatsby-plugin-image"
 import { Link } from "gatsby"
 import { defineCustomElements as deckDeckGoHighlightElement } from "@deckdeckgo/highlight-code/dist/loader"
-import katex from "katex"
 
 import "../styles/katex.css"
 import "../styles/main.scss"
 import * as styles from "../styles/notes.module.scss"
 
+import katex from "katex"
 require("katex/dist/katex.min.css")
+
 deckDeckGoHighlightElement()
 
 const SN2 = () => {

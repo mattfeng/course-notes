@@ -62,6 +62,14 @@ npm install remark-math@3 rehype-katex@3 katex
 
 - create a `macros` option in `rehype-katex` to use **gdef**
 
+- how to hack in mhchem
+```js
+// rehype-katex/index.js
+let katex = require('katex')
+require("katex/dist/contrib/mhchem.js")
+katex = katex.renderToString
+```
+
 ### Github pages
 
 ```bash
