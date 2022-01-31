@@ -66,6 +66,10 @@ module.exports = {
             require(`rehype-katex`),
             {
               macros: {
+                // chemistry
+                "\\PH": "\\mathrm{pH}",
+                "\\p": "\\mathrm{p}#1",
+                // math
                 "\\P": "\\mathbb{P}(#1)",
                 "\\v": "\\mathbf{#1}",
                 "\\m": "\\mathbf{#1}",

@@ -15,6 +15,9 @@ class Chem extends Component {
         "\\DG": "\\Delta G",
         "\\DH": "\\Delta H",
         "\\DS": "\\Delta S",
+        // chemistry
+        "\\PH": "\\mathrm{pH}",
+        "\\p": "\\mathrm{p}#1",
       },
     })
 

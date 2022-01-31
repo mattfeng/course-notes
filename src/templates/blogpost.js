@@ -46,6 +46,14 @@ const PKA = () => {
   return <span dangerouslySetInnerHTML={{ __html: s }}></span>
 }
 
+const PH = () => {
+  const s = katex.renderToString("\\mathrm{p}H", {
+    throwOnError: false,
+    displayMode: false,
+  })
+  return <span dangerouslySetInnerHTML={{ __html: s }}></span>
+}
+
 const PKB = () => {
   const s = katex.renderToString("\\mathrm{p}K_b", {
     throwOnError: false,
@@ -72,6 +80,7 @@ const shortcodes = {
   RA,
   PKA,
   PKB,
+  PH,
   Collapse,
   Rxn: Reaction,
   Nmxn: NoMechanism,
