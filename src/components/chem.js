@@ -11,6 +11,7 @@ class Chem extends Component {
       throwOnError: false,
       displayMode: block,
       macros: {
+        "\\Cel": "\\degree\\mathrm{C}",
         "\\Keq": "\\text{K}_{eq}",
         "\\DG": "\\Delta G",
         "\\DH": "\\Delta H",
