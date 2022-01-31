@@ -1,1 +1,26 @@
 # Lecture 11. Compact Sets
+
+## Compact sets
+- "the next best thing to being finite"
+  - both finite sets and compact sets
+    - contain their $\sup$
+    - are bounded (bdd)
+    - are closed
+    - processes on such sets "end"
+
+**Definition (open cover).** An **open cover** of $E$ in metric space $X$ is a collection of open sets $\{G_\alpha\}$ whose union contains $E$.
+- The term **cover** itself refers to an **open cover**.
+
+**Definition (subcover).** A **subcover** of $\{G_\alpha\}$ is a subcollection $\{G_{\alpha_\gamma}\}$ that still covers $E$.
+
+**S1.** In $\R$, $[\frac{1}{2}, 1)$ has
+- a cover $\{V_n\}_{n=3}^{\infty}$ where $V_n = (\frac{1}{n}, 1-\frac{1}{n})$.
+- a cover $\{W_x\}_{x \in [\frac{1}{2}, 1)}$ where $W_x = N(x, \frac{1}{10})$.
+
+**S2.** $[0, 1]$ in $\R$.
+- covered by $\{V_n\} \cup \{W_0, W_1\}$.
+- has a **finite subcover**.
+
+<br />
+
+**Definition (compact).** A set $K$ in metric space $X$ is compact (in $X$) if every open cover of $K$ has a finite subcover.

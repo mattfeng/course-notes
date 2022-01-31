@@ -6,13 +6,14 @@ $header-prefix-width: 30px;
 
 .mainContainer {
     max-width: min(80%, 80ch);
-    max-width: min(80%, 80ch);
+    min-width: min(80%, 80ch);
     margin: 0 auto;
     padding: 0 20px;
     padding-bottom: 40px;
 
     font-family: $sans;
     font-weight: 200;
+    font-size: 14pt;
 
     h1, h2 {
         font-weight: 700;
@@ -85,6 +86,7 @@ h5 {
 p, li {
     margin-top: 0.125em;
     margin-bottom: 0.125em;
+    text-align: justify;
 }
 
 table {

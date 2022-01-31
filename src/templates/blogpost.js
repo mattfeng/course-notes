@@ -75,7 +75,7 @@ const shortcodes = {
   Collapse,
   Rxn: Reaction,
   Nmxn: NoMechanism,
-  Box
+  Box,
 }
 
 export default function BlogPost({ data }) {
