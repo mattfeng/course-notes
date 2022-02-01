@@ -5,8 +5,7 @@ $serif: "EB Garamond", "Times", serif;
 $header-prefix-width: 30px;
 
 .mainContainer {
-    max-width: min(80%, 80ch);
-    min-width: min(80%, 80ch);
+    width: min(80%, 80ch);
     margin: 0 auto;
     padding: 0 20px;
     padding-bottom: 40px;
