@@ -71,6 +71,18 @@ const NoMechanism = () => {
   return <Tag color="#7ea8ed" tag="no mxn" />
 }
 
+const SPACE = () => {
+  return <span>&ensp;</span>
+}
+
+const L = () => {
+  return <span className={styles.smallChem}>L</span>
+}
+
+const D = () => {
+  return <span className={styles.smallChem}>D</span>
+}
+
 const shortcodes = {
   C: Chem,
   T: Tag,
@@ -82,6 +94,9 @@ const shortcodes = {
   PKA,
   PKB,
   PH,
+  SPACE,
+  L,
+  D,
   Collapse,
   Rxn: Reaction,
   Nmxn: NoMechanism,
