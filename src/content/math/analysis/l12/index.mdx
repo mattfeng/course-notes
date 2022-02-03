@@ -1,1 +1,39 @@
 # Lecture 12. Relationship of Compact Sets to Closed Sets
+
+#### Recall
+
+- A set $K$ in metric space $(X, d)$ is **compact** if _every open cover_ of $K$ has a _finite subcover_.
+
+**Theorem 1.** Suppose $K \subset Y \subset X$. Then $K$ compact in $Y$ $\iff$ $K$ compact in $X$.
+- Moral: Compactness is an _intrinsic_ property of a set.
+
+**Proof.**
+- ($\Rightarrow$) Assume $K$ is compact in $Y$. We need to show that for all open covers in of $K$ in $X$, $K$ has a finite subcover in $X$.
+    - Consider an open cover $\{U_\alpha\}$ of $K$ in $X$.
+    - Let $V_\alpha = U_\alpha \cap Y$. Then $\{V_\alpha\}$ cover $K$ in $Y$.
+    - By compactness of $K$ in $Y$, there exists a finite subcover $\{V_{\alpha_i}\}$.
+    - Then $\{U_{\alpha_i}\}$ is a finite subcover of $K$ in $X$. $\blacksquare$
+- ($\Leftarrow$)
+    - Consider an open cover $\{V_\alpha\}$ of $K$ in $Y$.
+    - By **Theorem L11.1**, there exist $U_\alpha \subset X$ such that $U_\alpha \cap Y = V_\alpha$.
+    - $\{U_\alpha\}$ cover $K$ in $X$ and has finite subcover $\{U_{\alpha_i}\}$.
+    - Thus $\{V_{\alpha_i}\}$ form a finite subcover of $K$ in $Y$. $\blacksquare$
+
+<br />
+
+**Theorem 2.** $K$ is compact in $X$ $\implies$ $K$ is closed (compact sets are closed).
+
+**Proof.**
+- We will show that for a compact set $K$, $K^c$ is open (which means $K$ is closed).
+- Take any point $p$ outside of $K$ and show that there is an open ball around it that misses $K$.
+- For every point $q \in K$, let $U_q = N(q, \Delta/2)$ and $V_q = N(p, \Delta/2)$, where $\Delta = d(p, q)$.
+    - open balls around $q$ and $p$, with radius _half_ of the distance between the two points.
+    - these balls exist because $\Delta = 0 \iff p = q$, which is impossible because $q \in K$ and $p \in K^c$.
+- Then $\{U_q\}$ is an open cover of $K$, and a finite subcover $\{U_{q_i}\}$ exists.
+- Let $V = \bigcap V_{q_i}$ (i.e. the "smallest" ball around $p$).
+    - $V \cap K = \emptyset$ because if a point $s \in V$, $s \notin U_{q_i} \forall q_i, \implies s \notin \bigcup U_{q_i}$.
+    - Since $K \subset \bigcup U_{q_i}$ ($K$ is covered by that union), $s \notin K$.
+    - Therefore $V$ is that open ball around $p$ that is completely in $K^c$. $\blacksquare$
+
+This theorem also tells us that **if $K$ is not closed, then it is not compact.**
+

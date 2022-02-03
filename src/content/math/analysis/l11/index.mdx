@@ -50,12 +50,6 @@ To show a set is **not compact**, you need to find _an open cover_ that does not
 - Create open cover with concentric open balls of increasing radius $r_1, r_2, ..., r_\infty$.
 - A finite subcover will exist, which means that some finite radius $r_n$ will be the cover, and thus $K$ is bounded.
 
-<br />
-
-**Theorem.** $K$ is compact in $X$ $\implies$ $K$ is closed.
-
-**Proof.**
-
 ### Relative open sets
 
 - If $Y$ is a subset of some metric space $(X, d)$, then $(Y, d)$ is also a metric space ($Y$ **inherits** metric from $X$).
@@ -70,16 +64,10 @@ To show a set is **not compact**, you need to find _an open cover_ that does not
 
 <Box>
 
-**Theorem.** Suppose $E \subset Y \subset X$. Then $E$ is open in $Y$ iff $E = Y \cap G$ for some open $G$ in $X$.
+**Theorem 1.** Suppose $E \subset Y \subset X$. Then $E$ is open in $Y$ iff $E = Y \cap G$ for some open $G$ in $X$.
 
 **Proof.**
 - ($\Leftarrow$) Use the fact that if $N_X(x, r) \subset G$ in $X$, then $N_X(x, r) \cap Y = N_Y(x, r) \subset E$ in $Y$.
 - ($\Rightarrow$) Let $G$ be the union of all the cutoff neighborhoods in $Y$.
 
 </Box>
-
-<br />
-
-**Theorem.** Compactness is an intrinsic property of a set, **regardless** of the metric space.
-
-<br />
