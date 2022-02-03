@@ -8,6 +8,10 @@
         margin: 0;
     }
 
+    h1:before, h2:before, h3:before {
+        content: none;
+    }
+
     h3 {
         margin: 0.25em 0;
         font-size: 1.4em;
