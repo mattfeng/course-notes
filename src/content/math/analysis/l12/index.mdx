@@ -37,3 +37,33 @@
 
 This theorem also tells us that **if $K$ is not closed, then it is not compact.**
 
+<Box>
+
+**Closed and bounded sets** are not necessarily compact in all metric spaces, but they are compact in $\R$ (**Heine-Borel theorem**, covered in the next lecture).
+
+</Box>
+
+**Theorem 3.** A closed subset $B$ of a compact set $K$ is compact.
+
+**Proof.**
+- Let $\{U_\alpha\}$ be an open cover of $B$.
+- We want to find a finite subcover of $B$.
+- Because $B$ is closed, $\{B^c\} \cup \{U_\alpha\}$ is an open cover of $K$.
+- By compactness, a finite subcover exists, namely $\{B^c\} \cup \{U_{\alpha_i}\}$.
+- Then $\{U_{\alpha_i}\}$ is a finite subcover of $\{U_\alpha\}$, because $B^c$ definitely does not cover any points of $B$. $\blacksquare$
+
+**Corollary.** Given set $F$ closed, set $K$ compact in $X$, $F \cap K$ is compact.
+
+<br />
+
+**Theorem 4.**
+- Nested closed intervals in $\R$ are not empty.
+- Nested closed $k$-cells (closed boxes) in $\R^k$ are not empty.
+
+**Proof.**
+- Let $x = \sup \{a_i\}$, which exists because they are bounded by $b_1$ and we are in $\R$ (completeness).
+- By definition, $x \geq a_i$ for all $a_i$.
+- $x \leq b_n$ for all $b_n$ because $b_n$ is an upper bound for all $a_i$, and $x$ is the _least_ upper bound ($\sup$).
+- So, at least $x$ is in the nested closed intervals.
+
+This theorem can be used to prove that $\R$ is **uncountable**.
