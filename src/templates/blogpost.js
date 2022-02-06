@@ -6,6 +6,7 @@ import Chem from "../components/chem"
 import Tag from "../components/tag"
 import Collapse from "../components/collapse"
 import Box from "../components/box"
+import Video from "../components/video"
 import { StaticImage } from "gatsby-plugin-image"
 import { Link } from "gatsby"
 import { defineCustomElements as deckDeckGoHighlightElement } from "@deckdeckgo/highlight-code/dist/loader"
@@ -101,6 +102,7 @@ const shortcodes = {
   Rxn: Reaction,
   Nmxn: NoMechanism,
   Box,
+  Video,
 }
 
 export default function BlogPost({ data }) {
