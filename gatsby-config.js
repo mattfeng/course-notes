@@ -55,9 +55,7 @@ module.exports = {
             require("remark-math"),
             {
               strict: `ignore`,
-              macros: {
-                "\\K#1": "\\text{K}_{#1}",
-              },
+              macros: {},
             },
           ],
         ],
@@ -69,6 +67,7 @@ module.exports = {
                 // chemistry
                 "\\PH": "\\mathrm{pH}",
                 "\\PK": "\\mathrm{p}K_{#1}",
+                "\\ang": "\\mathring{\\mathrm{A}}",
                 // math
                 "\\P": "\\mathbb{P}(#1)",
                 "\\v": "\\mathbf{#1}",
