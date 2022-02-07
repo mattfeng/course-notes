@@ -1,6 +1,6 @@
 # Lecture 5. Protein Structure 2, Protein Folding
 
-- Readings: _pp. 6-9, 44-60, 169-182_
+- Readings: _pp. 6-9, 49-59, 169-182_
 
 ## Readings
 
@@ -18,8 +18,96 @@
       - energy: $2$ to $4 \pu{kJ/mol}$
   4. **hydrophobic effect**
       - water forms cages around hydrophobic substances
-      - when two hydrophobic substances come together, water is released from cage and can interact with bulk solution $\righarrow$ energetically favorable
+      - when two hydrophobic substances come together, water is released from cage and can interact with bulk solution $\rightarrow$ energetically favorable
 
-### pp. 44-60
+### pp. 49-60
+
+#### 2.6<SPACE />The amino acid sequence of a protein determines its three-dimensional structure
+- some proteins can spontaneously refold; others need **chaperone proteins** to prevent undesirable interactions
+- some proteins do not assume a defined structure until they interact with molecular partners
+- **amino acids have different propensities for forming alpha-helices, beta-sheets, and turns**
+    - what determines whether a particular sequence forms an $\alpha$-helix, $\beta$-strand, or a turn?
+        - $\alpha$ helix
+            - alanine, glutamate, leucine
+        - $\beta$ strand
+            - valine, isoleucine
+        - turns
+            - glycine, asparagine, proline
+        - often depends on **tertiary structure**; the same sequence can form different secondary structures under different circumstances
+- **protein folding is a highly cooperative process**
+    - _all or none_
+    - logical: if one part of a protein is destabilized, it will destabilize the other parts of the protein
+
+![Protein folding is cooperative.](./cooperative.png)
+
+- **proteins fold by progressive stabilization of intermediates rather than by random search**
+    - the essence of protein folding is the tendency to retain _partly correct intermediates_
+    - $\Delta\Delta G$ between folded and unfolded states of a 100-residue protein is $\pu{42 kJ/mol}$.
+        - the means that correct intermediates only provide small stability
+        - less than thermal energy, $\pu{2.5 kJ/mol}$
+    - **nucleation-condensation model**. a conceptual framework where local regions with significant structural preference will tend to adopt their favored structures and interact with other structures, leading to increased stabilization
+- **some proteins are inherently unstructured and can exist in multiple conformations**
+    - example 1: **intrinsically unstructured proteins (IUPs)**
+        - estimated 50% of eukaryotic proteins have at least one unstructured region of $\geq 30$ amino acids in length
+        - unstructured regions are rich in **charged and polar amino acids** with few hydrophobic residues
+        - important in signaling and regulatory pathways
+    - example 2: **metamorphic proteins**
+        - exist in ensemble of structures of approximately equal energy in equilibrium
+        - example: **lymphotactin** (a chemokine)
+
+![Metamorphic protein lymphotactin.](./metamorphic.png)
+
+- **protein misfolding and aggregation are associated with some neurological diseases**
+    - **amyloidoses.** the set of diseases that result in the deposition of protein aggregates
+    - still unknown how aggregates lead to cell death (and whether or not they do).
 
 ### pp. 169-182
+
+- molecular families have features in common
+    - bovine vs. human ribonuclease (8RAT and 2RNF).
+    - angiogenin (2ANG) and ribonuclease are part of the same protein family
+
+#### 6.1<SPACE />Homologs are descended from a common ancestor
+- **paralogs**. homolougs present within one species
+- **orthologs**. homologs present within different species and have similar or identical functions
+
+#### 6.2<SPACE />Statistical analysis of sequence alignments can detect homology
+- homology is detectable by significant similarity in nucleotide/amino acid sequence and almost always manifest in three-dimensional structure
+- find alignment with **reward for each match, and penalty for gaps**
+- use statistics to check if alignment is statistically significant
+- **The statistical significance of alignments can be estimated by shuffling**
+    - shuffle one sequence, and then run the alignment again
+    - if the number of matches is similar, then unlikely to be significant
+- **Distant evolutionary relationships can be detected through the use of substitution matrices**
+    - distance proteins might have residues changed, but similar functionality because residues have similar properties
+    - amino acid similarity can be assessed by
+        - conservative/nonconservatice
+        - number of nucleotide mutations needed
+    - **Blosum-62 (blocks of amino acid substitution matrix)** is commonly used to score amino acid similarity.
+    - application: **leghemoglobin** (from lupine) and **hemoglobin** (humans); statistical significance increases when using Blosum-62.
+    - **rules of thumb**
+        - $>25\%$ sequence similarity; likely statistically significant
+        - $15$ to $25\%$ sequence similarity; requires analysis
+        - $<15\%$ sequence similarity; unlikely statistically significant
+- note: a lack of statistically significant sequence similarity does not rule out homology.
+- **Databases can be searched to identify homologous sequences**
+    - use `blastp` (BLAST for proteins) to search for homologous sequences
+
+#### 6.3<SPACE />Examination of three-dimensional structure enhances our understanding of evolutionary relationships
+- tertiary structure is the level of _function_
+- **Tertiary structure is more conserved than primary structure**
+    - e.g. the _globins_
+    - unsuspected relations
+        - **actin**. major component of the cytoskeleton (1ATN)
+        - **heat shock protein 70 (Hsp70)**. assists in protein folding in the cell (1ATR)
+- **Knowledge of three-dimensional structures can aid in the evaluation of sequence alignments**
+    - critical regions are more conserved than non-critical regions
+    - **sequence template**. a map of conserved residues that are structurally and functionally important and are characteristic of paricular families of proteins.
+- **Repeated motifs can be detected by aligning sequences with themselves**
+    - Align different segments of the same protein with each other to see if they share domains
+- **Convergent evolution illustrates common solutions to biochemical challenges**
+    - e.g. **serine proteases**
+        - cleave peptide bonds by hydrolysis
+        - **serine, histidine, aspartic acid**: catalytic triad
+- **Comparison of RNA sequences can be a source of insight into RNA secondary structures**
+    - Watson-Crick base pairing; where two nucleotides always pair, even if mutated, indicates base pairing
