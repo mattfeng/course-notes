@@ -65,6 +65,10 @@ module.exports = {
             {
               macros: {
                 // chemistry
+                "\\veps": "\\varepsilon",
+                "\\to": "\\rightarrow",
+                "\\pI": "\\mathrm{pI}",
+                "\\pH": "\\mathrm{pH}",
                 "\\PH": "\\mathrm{pH}",
                 "\\PK": "\\mathrm{p}K_{#1}",
                 "\\ang": "\\mathring{\\mathrm{A}}",
