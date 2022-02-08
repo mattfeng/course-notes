@@ -42,6 +42,7 @@ module.exports = {
                 `flex:${_.round(fluidResult.aspectRatio, 2)};`,
             },
           },
+          `gatsby-remark-numbered-footnotes-patched`,
           `gatsby-remark-copy-linked-files`,
           {
             resolve: `gatsby-remark-highlight-code`,
