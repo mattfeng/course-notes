@@ -65,6 +65,7 @@ module.exports = {
             {
               macros: {
                 // chemistry
+                "\\degC": "{^\\circ \\mathrm{C}}",
                 "\\veps": "\\varepsilon",
                 "\\to": "\\rightarrow",
                 "\\pI": "\\mathrm{pI}",

@@ -1,15 +1,116 @@
 # Lecture 3. Project presentations 2
 
-## Development of a low-cost capillary electrophoresis for cancer diagnosis in LMIC
+- Most electric toothbrushes are Class 1 because they make a medical claim of improving oral hygiene.
+- Breast implants are Class 3 because of lawsuits (silicone injections leaking are dangerous).
 
-## Improved Hydrocephalus ETV Procedure
+## P1. Development of a low-cost capillary electrophoresis for cancer diagnosis in LMIC
+- *DxTerity* (Sam Dixon)
+- How do we diagnose cancer now?
+  - Pathology
+    - Running pathology tests are expensive
+  - RNA/DNA sequencing
+  - There are a **high income paradigm**
+- Most cancer patients don't get diagnosed (LMI areas).
+- Without diagnosis, it is hard to determine which treatments to purchase and distribute.
+- **Most income paradigm: just expression profile**
+  - 94% accuracy from nucleic acid data only
+- The need
+  - **A cheaper capillary electrophoresis detection**
+- Capillary electrophoresis
+  - Method for measuring fluorescently-labeled DNA fragments
+  - Fiberglass tube
+  - Apply voltage across capillary
+  - Uniquely sized fluorescent probes complementary to amplicons
+  - Laser causes fluorescence, measure signal intensity with camera
+- Functional requirements
+  - Laser is probably the most expensive part of the instrument
+  - Calibrated detection of the **G5 dye set**
+  - Cost target: $1000
+  - Minimal: Single capillary
+  - Ideal: Multiple capillaries for simultaneous sample run from 8-stripe tubes to 96 well plates
 
-## Self-administration devices for therapeutic foams
+### Questions
+- Capillary electrophoresis is more consistent and reusable than gel electrophoresis.
 
-## Ultra-Low-cost Spark Plug CT Scanner for Intra-op Lumpectomy Specimen Evaluation
+## P3. Improved Hydrocephalus ETV Procedure
+- Current interventions
+  - VPS (ventriculo-peritoneal shunt)
+    - brain to abdomen to drain CSF
+    - infection starts from outside the brain and moves up to the brain
+  - Endoscopic Third Ventriculostomy (ETV)
+    - lower overall complication rate profile
+    - virtually no infection risk
+- Clinical need: **prevent restenosis**
+  - device implantation to hold stoma open
+- _in vivo_ model of hydrocephalus
+  - Soft robotic actuator implanted in the brain ventricles
 
-## Left atrial appendage closure
+### Questions
+- What causes hydrocephalus?
+- How to handle growing brain?
+- How do we accommodate for brain growth?
+- Functional requirements
+  - Diameter: 6mm
+  - Channel length: 3mm (fit in 3mm channel, expand to 9mm)
+  - Hole created: 8-9mm (because of balloon inflated)
 
-## Facilitating a Screen and Treat Approach in Cervical Cancer
+## P2. Self-administration devices for therapeutic foams
+- Leo Otterbein, BIDMC, HMS
+- Physiological differences between patients for CO treatments
+  - Used for **IBD**
+- Currently administered using a **whipping siphon**
+  - Unable to provide discrete, safe dosing in a patient's home
+- Functional requirements
+  - 200 PSI device capable of safe, metered dose delivery of rectal foams for patients with pouchitis
+- Needs to tolerate temperatures between -20 $\degC$ to 40 $\degC$
+- Would be pressurized and filled at a different site (not at home).
+- Dosage: $100$ to $\pu{300 mL}$
 
-## Spacesuit Cooling Unit
+## P7. Ultra-Low-cost Spark Plug CT Scanner for Intra-op Lumpectomy Specimen Evaluation
+- Rajiv Gupta, MD, PhD (Neuroradiology) (MGH, HMS)
+- CT scan currently: $1 million to $3 million
+- Building an xray tube
+  - Electrons hit anode, xrays are emitted
+- $10^{-4}$ to $10^{-6}$ atm vacuum
+- Resolution of images come from **detector**
+- _Very well spoken, knowledgeable_
+- Size: **1 in** diameter lumps
+- What species to test on?
+  - Image on meat from butcher shop
+
+## P12. Left atrial appendage closure
+- Afib
+  - Symptoms: palpitations, chest pain, fatigue
+  - Major complication: stroke
+- 9/10 Afib clots orgiinal in the **left atrial appendage (LAA)**
+- Current treatments
+  - Anti-rhythmic drugs
+  - Blood chemistry drugs
+    - Blood thinners
+    - Anticoagulants
+    - Work _too_ well
+  - Electrophysiology ablation
+    - Doesn't always work; may need repeat procedures
+  - Removal of LAA
+    - Requires open heart surgery
+- **Watchman FLX**
+  - implanted transfemorally
+- competition from **Abbott**
+- Problems that need to be solved
+  - Patients are different sizes
+- Testing with benchtop models
+
+## P6. Facilitating a Screen and Treat Approach in Cervical Cancer
+- Shortcoming of existing solutions
+  - Absence of an exam table with stirrups in the field or in a home
+  - Stigma associated with traditional pelvic exams
+  - Challenges in interpretation, depending on operator's training
+- Functional requirements
+  - Visualize cervix with acetic acid
+    - Comfortable
+    - Address stigma: self-administration
+    - Good enough resolution to enable interpretation on/off site
+  - Ideal
+    - low-cost, reusable
+    - at-home (telehealth)
+- _Well spoken as well_
