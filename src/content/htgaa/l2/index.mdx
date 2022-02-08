@@ -29,8 +29,7 @@
 
 ## Reading, writing, editing DNA
 
-### George Church: Reading, Writing, Editing Life
-- focus on reading and editing DNA
+### George Church: Reading, Writing, Editing Life (reading and editing DNA)
 - **outline**
   - modular design and functional goals
   - components, materials
@@ -139,6 +138,7 @@
 - **polymerases**
   - RT (reverse transcriptase)
   - TdT
+    - Terminal deoxynucleotidyl transferase
   - PolyrU/A/C/G
   - Retrons
 - **epigenetic modifications**
@@ -154,7 +154,52 @@
   - **has it affected the growth rate?**
     - test generation and doubling time
     - _V. natrigens_ grows twice as fast as _E. coli_
+- molecular modeling vs. **ML-ML**
+  - machine learning with mega-libraries
 
-### Joe Jocabson
-- focus on writing DNA
-- 
+### Joe Jacobson: Next Generation Gene Synthesis (writing DNA)
+- cells as computers and logic
+  - ring oscillators from transcriptional-translational logic (Elowitz)
+  - ring oscillators
+    - easily goes out of phase after replication
+    - Jeff Hasty modified program to synchronize
+- **operon.** a unit of DNA containing a cluster of genes that are controlled by a single promoter
+- **Phosphoramidite DNA synthesis cycle**
+  - 5 minute cycles: **500,000 bp per year**
+  - **protection group chemistry**; nucleotides need protection group to stop polymerization after one step
+    - **acid labile** or **photo labile**
+- **Next generation (chip-based) DNA synthesis**
+  - building in parallel
+  - up to ~1M oligos/chip (different sequences!)
+  - CMOS
+    - use CMOS chip to deprotect (charge causes $\ce{H+}$ to form which deprotects the DNA sequence under construction)
+  - InkJet
+    - Twist Biosciences
+    - Droplets on wafer
+- Error correction
+  - 99.5% accurate (500 bp max)
+  - **MutS repair system**
+    - scans for distances between base pairs (pyrimidine-pyrimidine, purine-puring)
+  - error rate now: 1 in 50000
+- assemble oligos into larger sequences
+  - use **Gibson assembly (2009)**
+  - not multiplexed
+- multiplexing assembly
+  - Multiplexed gene synthesis in emulsions for exploring protein functional landscapes: https://www.science.org/doi/10.1126/science.aao5167
+- **multiplexing is (almost) always done with droplets**
+- the assembly increases the price of DNA synthesis dramatically
+
+### Synthesis with enzymes
+- https://www.nature.com/articles/nbt.4173
+- DNAScript
+- Nuclera
+
+### Tools
+- [**NUPACK**](http://www.nupack.org/)
+
+## Questions
+- How is the chemistry of CMOS + hydrogen ion discovered?
+- How are chips synthesized during research?
+
+## Other papers
+- RNA-Catalyzed RNA Polymerization: Accurate and General RNA-Templated Primer Extension
