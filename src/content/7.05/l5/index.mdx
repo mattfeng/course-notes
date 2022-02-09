@@ -113,7 +113,85 @@
     - Watson-Crick base pairing; where two nucleotides always pair, even if mutated, indicates base pairing
 
 ## Lecture notes
-- determination of primary structure
+
+### Primary structure
+- determination of **primary structure**
     1. mass spec fingerprinting
-    2. 
-- 
+        - weigh peptides with **MALDI-TOF**
+        - $\vec{a} = \frac{\vec{E}}{m}$
+    2. MS/MS (tandem mass spec)
+        1. isolate 1 peptide $X$ with first mass spec
+        2. send peptide $X$ to second mass spec
+            - **hard ionization**; breaks peptide into fragments
+            - **b ions**; correspond to N-terminal fragments
+            - **y ions**; correspond to C-terminal fragments
+        3. use difference in weight of **y ions** to sequence
+            - lightest ion must be C-terminus
+            - second lightest must be 2 residues
+
+### Secondary structure
+- 1951: Linus Pauling, Corey
+    - proposed alpha helices, beta strands
+- **$\mathbf{\alpha}$-helix**
+    - pitch (distance after 360 rotation)
+        - 5.4 $\pu{\ang}$
+    - 3.6 amino acids per turn
+    - **rise** between two amino acids: $\frac{5.4 \ang}{3.6 \mathrm{aa}} = 1.5 \ang/\mathrm{aa}$
+- **$\mathbf{\beta}$-strands**; strands next to each other form a **$\mathbf{\beta}$-sheet**
+    - parallel and antiparallel
+    - R groups lie above and below the plane
+    - an **extended structure**
+    - parallel
+        - bonds tilted, equally spaced
+- **reverse turn**
+
+![Antiparallel beta sheet.](./antiparallel.jpg)
+
+#### Dihedral angles
+- planar peptide bonds combined with tetrahedral $\ce{C}_\alpha$ leads to **dihedral angles**
+- use **right hand rule** to determine whether angle is positive or negative
+- **Ramachandran plot**
+    - tutorial: https://proteopedia.org/wiki/index.php/Tutorial:Ramachandran_principle_and_phi_psi_angles
+- fully extended polypeptide
+    - $\phi = \psi = 180^\circ = -180^\circ$
+- only certain $\phi$, $\psi$ angles allowed due to steric hindrance
+- alpha-helices and beta strands
+    - formed from repeating $\phi$ and $\psi$ angles
+
+![Ramachandran plot.](./ramachandran.png)
+
+### Tertiary structure
+- **interactions between side chains stabilize the tertiary structure**
+- **interactions between main chain stabilize the secondary structure**
+
+#### Experimental techniques
+1. Multidimensional NMR
+    - limited to proteins <30 kDa
+2. X-ray crystallography
+3. Cryo-electron microscopy
+
+#### Visualizing protein structure
+- RNAase A
+- **Jane Richardson**: pioneered **cartoon** topology representation of proteins
+    - $\beta$ strand
+        - arrow: N-terminus $\to$ C-terminus
+    - $\alpha$ helix
+        - corkscrew
+
+#### Motifs
+- **4-helix bundle**
+    - hydrophilic side chains point out
+    - hydrophobic side chains point inward
+    - structure shared by proteins
+        - myohemeythrin
+        - cytochrome b<sub>562</sub>
+        - cytochrome c'
+        - tobacco mosaic virus protein
+        - human growth hormone
+- **beta sandwich fold** (immunoglobulin fold)
+    - 4 stranded sheet and 3 stranded sheet
+- there is a **limited number of stable 3D folds**
+
+#### Protein folding problem
+- **Anfinsen's hypothesis.** amino acid sequence alone (given the same environment) dictates folded structure
+

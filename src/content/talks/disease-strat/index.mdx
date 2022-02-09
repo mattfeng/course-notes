@@ -1,0 +1,43 @@
+# Disease stratification
+
+- 02/09/2022
+- Alfonso Valencia
+
+## Notes
+- Multilayer networks
+  - more complicated heterogenous multilayer networks
+  - representation pioneered by **Anais Baudot**
+- participation coefficient measures the importance of a node in the multilayer network
+- Random walk with restarts (RWR) to build **affinity scores**
+  - use Python package `multiXrank`
+- layers:
+  - protein interactions
+  - treatments
+  - genetic mutations/pathways/metabolism
+- use cases
+  - congenital myasthenic syndrome
+    - biological knowledge
+      - metabolome
+      - interactome
+      - reactome
+    - clinical data
+      - compound heterozygous variants
+      - copy number variants
+      - known CMS genes
+  - medulloblastoma (MB)
+    - biological data
+      - protein interactions
+      - drug targets
+      - genetic varints
+      - pathways
+      - metabolic reactions
+    - medical data
+      - proteogenomic data (~14,000 altered genes per patient)
+    - goal: reduce the **set of genes** to find actionable interventions
+      - result: **1,800 altered genes** (10x reduction)
+  - hepatoblastoma (hB)
+    - underlying biology is largely unknown
+    - layers
+      - Reactome
+      - IDD (UToronto)
+      - BIGG models (UCSD)

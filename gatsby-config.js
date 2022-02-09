@@ -73,7 +73,7 @@ module.exports = {
                 "\\pH": "\\mathrm{pH}",
                 "\\PH": "\\mathrm{pH}",
                 "\\PK": "\\mathrm{p}K_{#1}",
-                "\\ang": "\\mathring{\\mathrm{A}}",
+                "\\ang": "\\pu{\\mathring{\\mathrm{A}}}",
                 // math
                 "\\P": "\\mathbb{P}(#1)",
                 "\\v": "\\mathbf{#1}",
