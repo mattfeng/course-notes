@@ -17,3 +17,44 @@
 - _Taq_ vs. _Pfu_ DNA polymerase
   - _Pfu_ has higher fidelity when copying DNA
   - both heat resistant
+
+## Design a genome edit
+- Design a genome edit and describe the rationale
+  - Kind of edit
+    - Knockout
+    - Introduction of STOP codon
+    - Insertion
+    - Point mutation
+  - Which gene?
+  - Which organism?
+- Attach CRISPR gRNA sequence or TALEN
+- Genome editing: studying **causality**
+  - e.g. Live pigs without PERV activity
+- **Ideal genome editor properties**
+  1. efficient and specific
+      - on-target
+      - minimize off-target
+  2. programmability
+      - ability to target any DNA sequence
+  3. ability to introduce any type of mutation
+      - insertion
+      - deletion
+      - point mutation
+  4. practical
+      - easy to design and construct
+
+### Ways to modify DNA
+- Homology directed repair (HDR)
+  - has part of **left cut, right cut, and new sequence**
+- Non-homologous end joining (NHEJ)
+
+#### TALENs
+- sequence binding via an array of TAL effector domains
+  - 1 TAL for 1 nucleotide
+- limitations
+  - target sequence has to start with T
+
+#### CRISPR
+- **PAM**. (`NGG`) protospacer adjacent motif
+  - newer editors can get rid of this requirement
+- Cas9 causes a ds break
