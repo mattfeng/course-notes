@@ -13,6 +13,7 @@
 - first examples of mutations as basis of disease: sickle-cell anemia
 
 #### 7.1<SPACE />Myoglobin and hemoglobin bind oxygen at iron atoms in heme
+
 - **prosthetic group**. a molecule that binds tightly to a protein and is essential for its function
 - $\ce{Fe^2+}$ state is capable of binding oxygen ($\ce{Fe^3+}$ is other form that can exist)
 - myoglobin: **fifth coordination site** occupied by imidazole ring of a histidine residue; the **proximal histidine**
@@ -32,6 +33,7 @@
     - iron-iron distances of $24$ to $\pu{40 \ang}$
 
 #### 7.2<SPACE />Hemoglobin binds oxygen cooperatively
+
 - oxygen-binding curve
   - **fractional saturation (Y)** vs. $\ce{pO2}$
     - $Y$. the fraction of possible binding sites that contain bound oxygen
@@ -58,12 +60,56 @@
 - **2,3-bisphosphoglycerate in red cells is crucial in determining the oxygen affinity of hemoglobin.**
   - T state is actually unstable; hemoglobin naturally will bind too tightly to oxygen (won't release it)
   - 2,3-BPG stabilizes the T state.
+  - present in **same concentration as hemoglobin**: $\pu{2 mM}$
+  - 2,3-BPG binds in center of tetramer in pocket available only in T form
+    - to go from T to R form, bonds between Hb and BPG must be broken
 
 ![2,3-bisphosphoglycerate.](./bpg.png)
 
+- fetal hemoglobin has $\gamma$ chains instead of $\beta$ chains; makes binding BPG weaker, meaning Hb binds oxygen more tightly
+  - this difference enables transfer of oxygen from mother to fetus
+- CO binds Hb 200 times stronger than oxygen, can displace oxygen and also cause bound oxygen to not be released
+  - treated with _hyperbaric oxygen therapy_
+
 #### 7.3<SPACE />Hydrogen ions and carbon dioxide promote the release of oxygen: the Bohr effect
 
+- other cues cause Hb to release its oxygen
+- rapidly metabolizing tissues generate large amounts of hydrogen ions and carbon dioxide
+  - carbon dioxide and hydrogen ions are **allosteric effectors** of Hb
+  - **Bohr effect**. the regulation of oxygen binding by hydrogen ions and carbon dioxide.
+  - Hb binds oxygen less tightly at lower pH
+    - actively metabolizing tissue has pH 7.2; allows for 77% release, not just 66%
+
+![Effect of pH on Hb:O2 binding.](./ph.png)
+
+- addition T state stability comes from pH drops, which protonate histidine (HisB146), allowing it to form salt bridges with AspB94.
+  - staying in T state: oxygen more likely to be released
+- CO2 effect
+  - mechanism 1
+    - CO2 acidifies inside of RBC: drops pH, protonation of HisB146, etc.
+  - mechanism 2: direct chemical interaction
+    - CO2 reacts with terminal amino acids to form _negatively charged_ **carbamate** $\to$ salt bridges $\to$ stabilized T form
+
+![Carbamate.](./carbamate.png)
+
+- RBCs use a **membrane-transport protein** to exchange $\ce{HCO3-}$ for $\ce{Cl-}$.
+
 #### 7.4<SPACE />Mutations in genes encoding hemoglobin subunits can result in disease
+
+- **Sickle-cell anemia results from the aggregation of mutated deoxyhemoglobin molecules.**
+  - beta chain, p.Glu6Val
+- **Thalassemia is caused by an imbalanced production of Hb chains.**
+  - alpha-Thalassemia: shortage of alpha chains $\to$ beta tetramers that bind oxygen too strongly
+  - beta-Thalassemia: shortage of beta chains $\to$ alpha chains form insoluble aggregates $\to$ RBC cell death, anemia
+- **The accumulation of free alpha-hemoglobin chains is prevented.**
+  - 4 alpha alleles, 2 beta alleles; alpha chains should be in excess and precipitate out
+  - there exists a 11-kDa protein (approx 100 aa) called **$\alpha$-hemoglobin stabilizing protein (AHSP)**.
+  - AHSP binds to same interface ($\alpha\beta$ interface), prevents alpha chain from misfolding until a beta chain arrives
+- **Additional globins are encoded in the human genome.**
+  - **neuroglobin**; expressed high levels in brain and retina
+  - **cytoglobin**; expressed throughout the body
+
+##### Hill plot
 
 ### pp. 286-292
 
@@ -74,4 +120,5 @@
 #### 12.5<SPACE />Lipids and many membrane proteins diffuse rapidly in the plane of the membrane
 
 ## Questions
+
 - Why does the distal histidine's hydrogen bond prevent superoxide from leaving (and instead only encourages dioxygen leaving)?
