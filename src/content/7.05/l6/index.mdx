@@ -127,6 +127,127 @@
 
 #### 12.5<SPACE />Lipids and many membrane proteins diffuse rapidly in the plane of the membrane
 
+## Lecture notes
+- **primary structure**. describes the pattern of **all covalent bonds** (includes disulfide bonds!)
+- **secondary structure**. local arrangement of atoms in space
+- **tertiary structure**. 3D fold (global arrange of atoms in space)
+  - **zinc finger motif**.
+    - used in DNA binding transcription factors
+
+### Key points
+1. Levinthal's paradox, Anfinsen's hypothesis
+2. Forces that drive folding
+3. Myoglobin; a molecular store for oxygen in muscle
+4. X-ray crystallography and phase problem
+5. Resolution
+6. Myoglobin structure
+
+### Reagents
+- **urea**
+- **guanidinium chloride**
+- both urea and guanidinium chloride compete for hydrogen bonds
+- **denatured state** = **unfolded state**
+- **RNAse A** has 4 disulfide bonds
+  - experiment 1: both **removing urea** and **oxidizing SH group**
+    - if protein folding happened randomly, 105 possible pairings, about 1% activity
+    - found 100% activity instead
+  - experiment 2: kept **urea** and **oxidizing SH group**
+  - experiment 3: remove **urea** and add **trace beta-ME**
+- **Anfinsen's hypothesis**. all information necessary for proper folding contained in AA sequence and thermodynamically most favored state is the **native state**
+  - wins **Nobel Prize** for protein folding
+- **?foldase contamination**
+  - disproved by Bruce Merrifield
+    - wins **Nobel Prize** for protein synthesis
+  - invented **solid-phase peptide synthesis**
+    - synthesized RNAse A: 100% specific activity
+
+### Levinthal's paradox
+- 100 AA
+  - Assume each AA can only have 3 conformations.
+  - $3^{100} \approx 5 \times 10^{47}$ possibilities
+  - Assume we can sample each conformation on the order of 1 atomic vibration: $\pu{10^{-13} s}$ 
+  - Time to fold: $5 \times 10^{34}$ seconds
+
+#### Current model
+- **proteins fold rapidly into partially correct folded intermediates**
+  - intermediate; state is called a **molten globule**
+    - secondary structure
+    - supersecondary structure
+  - unfolded $\to$ molten globule $\to$ native state
+
+### Protein folding is cooperative
+- plot
+  - _% unfolded protein_ against
+  - _concentration of urea_
+- if we measure **% activity** at the 50% folded state, we see 50% activity; this means 50% of the proteins are completely folded, from which we can conclude protein folding is **cooperative**
+
+### Forces that drive folding
+1. electrostatic forces: not really very important
+    - previously thought to be a major contributor
+      - why? $U = \frac{q_1q_2}{Dr}$, where $D$ is **dielectric constant**
+        - $D = 4$ inside protein
+        - $D = 80$ in water, where most charged side chains are found
+2. hydrogen bonds: more important
+    - result of unequal electron sharing
+    - (NOF)H to (NOF)
+    - very directional
+    - water dilutes the energy of hydrogen bond contributions
+    - does not drive **tertiary structure**
+3. van der Waals interactions
+    - weak and non-specific interactions
+    - VDW radius: $\pu{3.5 \ang}$
+    - due to fluctuating dipoles
+    - strength falls off $\propto \frac{1}{r^6}$
+    - no directionality
+4. hydrophobic interactions: **dominant force in protein folding**
+    - **entropy driven**
+    - stems from fact that nonpolar groups cluster together in water
+    - pure water has lots of **entropy**
+      - in **bulk water**, formation of flickering clusters of water
+    - nonpolar molecules force water to form **highly ordered cages**
+    - nonpolar groups joining together reduces the number of water molecules that have to be in ordered cages (more water in bulk water, increasing entropy)
+    - contributes $\pu{-200 kcal/mol}$
+  - protein folding is opposed by **chain entropy**
+    - contributes ~$\pu{190 kcal/mol}$
+  
+#### Takeaways
+1. $\Delta G_{N-U} \approx \pu{-10 kcal/mol}$
+    - difference between native and folded
+2. Proteins are marginally stable
+    - makes it possible to get rid of problematic proteins
+3. Most proteins fold spontaneously
+    - occassionally, proteins need to fold in a _protected environment_
+    - **molecular chaperones**. two types
+      1. **small chaperones** (aka **heat shock proteins (hsps)**)
+      2. **chaperonins**. e.g. GroEL
+          - **Yaffe** discovered the eukaryotic homologue of chaperonins
+    - Kuru $\leftarrow$ **prion protein (PrP)** $\to$ misfolded protein (PrP<sup>prion</sup>)
+
+### X-ray crystallography
+
+#### Myoglobin
+- $K_D = \frac{\ce{[Mb][O2]}}{\ce{[Mb:O2]}} = P_{50}$
+  - $P_{50}$ is the partial pressure of oxygen needed to have 50% saturation.
+- $y = \frac{p\ce{O2}}{K_d + p\ce{O2}}$
+
+#### Resolution vs. magnification
+- electron microscopy
+  - resolution ~$\pu{10 \ang}$
+- resolution $\sim \frac{\lambda}{2}$
+- X-ray: $\lambda \in \pu{[1, 1.5] \ang}$
+
+#### Steps
+1. crystallize protein: ordered array
+2. expose to xrays
+3. detect scattered xrays
+4. calculate the structure
+
+- XRC works because
+  1. **electrons scatter X-rays**
+  2. scattered waves recombine to create a diffraction pattern
+  3. pattern and **intensity** of spots depends on structure
+
+
 ## Questions
 
 - Why does the distal histidine's hydrogen bond prevent superoxide from leaving (and instead only encourages dioxygen leaving)?
