@@ -141,3 +141,110 @@
 - **HIV protease inhibitors**
   - two carbonyl groups of inhibitor are hydrogen bonded to water molecule, which is hydrogen bonded to peptide NH group in the flaps
   - this interaction does not occur in _cellular proteases_ (specific to HIV protease)
+
+## Lecture notes
+
+### Hb
+- oxyHb is red because of the electron promotion in the crystal splitting
+- $\alpha_1$ and $\beta_2$ touch each other at the **switch region**; the **switch** region and the **heme-binding** region is conserved.
+
+#### Sequential (KNF) model <T tag="test" />
+- based on the idea of induced fit
+- allows intermediate forms between T and R
+- can explain **negative cooperativity**
+  - intermediate states can be worse at binding
+
+#### Concerted (MWC) model <T tag="test" />
+- all or none model
+- _cannot_ explain negative cooperativity
+  - binding cannot make the model any lower affinity (can only shift equilibrium, but equilibrium is already on the T state)
+  - _if we started with the high affinity state, as soon as a molecule bound, it would be released_
+- more data can be explained by the MWC model
+
+#### Hill equation
+- Archibald Hill
+- **Hill equation**
+  - $y_{\ce{Hb}} = \dfrac{p\ce{O2}^n}{K_D^n + p\ce{O2}^n}$
+- Hb: $n = 2.8$
+- Mb: $n = 1$
+- **positive cooperativity**: $n > 1$
+- **negative cooperativity**: $n < 1$
+  - useful application: **metabolic pathways**: negative allostery is often negative cooperativity
+- $n$ must be less than or equal to the number of subunits
+- Hill plot: need to turn exponential plot into a linear plot
+  1. solve for $1 - y$ (%free Hb)
+      - $1 - y = \frac{K_D^n}{K_D^n + {p\ce{O2}}^n}$
+  2. solve for $\frac{y}{1 - y}$
+      - bound/free = $\dfrac{p\ce{O2}^n}{K_D^n}$
+  3. experiment: maasure $y$ as function of $pO2$
+      - plot $\log(\dfrac{y}{1 - y}) = n\log p\ce{O2} - \underbrace{n\log K_D}_{\text{constant}}$; a **log-log plot**
+      - **physically measure _with a ruler_ the rise over run to get the slope in a log-log plot**
+      - slope is $n$
+      - $n$ of the Hill plot is the **steepest slope**  (Hb's curve bends)
+      - $p_{50}$ is where $\frac{y}{1-y} = 1$ (50% bound)
+        - extrapolate slopes from the _first bound_ and _last bound_ oxygens
+        - $p_{50}$ is a measure of how hard it is to bind
+          - $p_{50, \text{last}} = \pu{0.3 mmHg}$
+          - $p_{50, \text{first}} = \pu{30 mmHg}$
+
+#### Evolutionary conservation
+- If a mutation disrupts allostery, then we get a disease
+
+#### Bohr effect
+- driven by **salt bridges**
+- low pH, high CO2 concentration **stabilize the T state**
+- CO2 reacts with the N-termini of the **$\beta$ chain** to form a **carbamate** with a net **negative charge**
+  - the terminus has converted from a **positive to negative charge**
+  - In T state, **Lys82** is stabilized next to carbamate
+- low pH: **allosteric effect**
+  - observation: $\ce{Hb.O2 + 2H+ <=> Hb.2H+ + 4O2}$
+    - reason 1: N-terminus of **$\alpha$ chains** can be protonated
+    - <T tag="see handwritten" />
+- another allosteric effector Hb: **2,3-BPG**
+  - hole is **smaller** in **oxy form**
+  - can only fit in the **T state**
+  - at high altitude, RBC make more **2,3-BPG**
+    - body gets better at _releasing_ oxygen
+  - **fetal Hb**
+    - $\alpha_2\gamma_2$
+    - better at grabbing oxygen (in order to grab it from mother's blood)
+    - His143 $\to$ Ser143: binds less 2,3-BPG $\implies$ binds $\ce{O2}$ better
+
+#### Sickle cell anemia
+- allostery **gone bad**
+
+### Enzyme chemistry
+- enzymes are catalysts
+- **catalyst**. a substance that accelerates a reaction but is not used up or permanently changed <T tag="test" />
+- enzymes act on **substrates (S)** to form **products (P)**
+- it **does not change the equilibrium**
+  - only changes rate constant $k$
+- **properties**
+  1. catalyze a diverse range of reactions
+  2. exquisite substrate specificity w.r.t. size, shape, charge
+  3. high speeds and catalytic efficiency: often increase rate by $10^6$ or more
+- many enzymes need helpers to catalyze reactions: **cofactors**
+  - inorganic ions
+  - derived from **vitamins** (**coenzymes**)
+- **apoenzyme**. enzyme that uses cofactor but without cofactor bound
+- **holoenzyme**. enzyme that uses cofactor with cofactor bound
+- **prosthetic group**. tightly bound cofactor
+
+#### 4 basic catalytic mechanisms
+1. **covalent catalysis**
+    - enzyme active site is temporarily modified
+2. **general acid/base catalysis**
+    - something in enzyme acts as electron donor/acceptor
+3. **metal ion catalysis**
+    - electron donor/acceptor _or_ activating water _or_ shielding charge
+4. **catalysis by approximation**
+    - place orbitals next to each other
+- enzymes can use multiple mechanisms at the same time <T tag="test" />; list all mechanisms
+- **enzymology**. the study of enzymes
+
+#### Chymotrypsin
+- a protease, specifically a **hydrolase**
+  - only if **R<sub>1</sub> is aromatic**
+- made in the **pancreas**
+
+    
