@@ -37,7 +37,19 @@
 
 ### 8.4<SPACE />Michaelis-Menten model accounts for the kinetic properties of many enzymes
 
-TODO
+- **enzyme kinetics**. the study of the rates of enzyme-catalyzed reactions.
+
+#### Kinetics is the study of reaction rates
+- For reaction $\ce{A -> P}$, reaction rate $V = -\frac{dA}{dt} = \frac{dP}{dt}$
+- **pseudo-first-order reactions**. reactions that are second-order, but one of the reactants is present in excess and thus does not contribute to the reaction rate.
+- sometimes, enzyme reactions can approximate **zero-order reactions**
+- we plot $V_0$ on our graph: the **initial reaction velocity**
+- Michaelis-Menten model
+  - $\ce{E + S <=>[k_1][k_{-1}] ES <=>[k_2][k_{-2}] E + P}$
+  - assume: because we are measuring at $t = 0$, there is no product
+  - $\ce{E + S <=>[k_1][k_{-1}] ES ->[k_2] E + P}$
+
+#### The steady-state assumption faciliates a description of enzyme kinetics
 
 ### Chapter 9 Introduction
 - explores 4 kinds of enzymes:
@@ -99,4 +111,33 @@ TODO
 - **scissile bond**. the bond to be cleaved
 - $\mathrm{S_1}$ pocket is the right shape for large, hydrophobic amino acids
 
+![Specificity nomenclature for proteases.](./naming.png)
+
 #### Catalytic triads are found in other hydrolytic enzymes
+- **trypsin** and **elastase** are homologs of chymotrypsin.
+- catalytic triad has emerged non-homologously at least three times $\to$ this catalytic strategy is an especially effective approach to the hydrolysis of peptides and related bonds
+
+#### The catalytic triad has been dissected by site-directed mutagenesis
+- $K_M$ measures binding; unchanged by mutation
+- S221A $\to$ $k_{\text{cat}}$ fell to 1 millionth of its value for wild type enzyme
+- N155G $\to$ reduces $k_{\text{cat}}$ to 0.2% of its value; **oxyanion hole** stabilizing is important.
+
+#### Cysteine, aspartyl, and metalloproteases are other major classes of peptide-cleaving enzymes
+- cysteine: **papain**
+  - mammalian homologs: **cathepsins** (involved in immune system, cellular turnover)
+  - convergent evolution: **caspases** (apoptosis)
+- aspartyl: aspartic acid; **renin**, **pepsin**, **HIV protease**
+  - uses _water (hydroxide)_ as nucleophile
+- metalloprotease: **thermolysin**, **carboxypeptidase A**
+  - metal is almost always a **zinc ion**
+  - also activates a water molecule to act as nucleophile
+- all
+  1. generate a nucleophile to attack the peptide carbonyl group
+  2. polarize the peptide carbonyl group
+  3. stabilize a tetrahedral intermediate
+
+#### Protease inhibitors are important drugs
+- captopril inhibits **angiotensin-converting enzyme (ACE)**
+- **HIV protease inhibitors**
+  - two carbonyl groups of inhibitor are hydrogen bonded to water molecule, which is hydrogen bonded to peptide NH group in the flaps
+  - this interaction does not occur in _cellular proteases_ (specific to HIV protease)
