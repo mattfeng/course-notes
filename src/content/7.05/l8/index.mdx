@@ -1,10 +1,12 @@
+$\gdef\kcat{k_\text{cat}}$
+
 # Lecture 8. Enzyme Chemistry
 
 - Readings
   - pp. 215-218
     - Chapter 8 Introduction
     - 8.1, Enzymes are powerful and highly specific catalysts
-  - pp. 225-242
+  - pp. 225-232
     - 8.4, Michaelis-Menten model accounts for the kinetic properties of many enzymes
   - pp. 251-264
     - Chapter 9 Introduction
@@ -43,13 +45,82 @@
 - For reaction $\ce{A -> P}$, reaction rate $V = -\frac{dA}{dt} = \frac{dP}{dt}$
 - **pseudo-first-order reactions**. reactions that are second-order, but one of the reactants is present in excess and thus does not contribute to the reaction rate.
 - sometimes, enzyme reactions can approximate **zero-order reactions**
+
+#### The steady-state assumption faciliates a description of enzyme kinetics
 - we plot $V_0$ on our graph: the **initial reaction velocity**
 - Michaelis-Menten model
   - $\ce{E + S <=>[k_1][k_{-1}] ES <=>[k_2][k_{-2}] E + P}$
   - assume: because we are measuring at $t = 0$, there is no product
   - $\ce{E + S <=>[k_1][k_{-1}] ES ->[k_2] E + P}$
+  - We know $V_0 = k_2\ce{[ES]}$, but we don't know what $\ce{[ES]}$ is.
+    - assume: **steady-state assumption**
+      - rate of formation of $\ce{ES}$ = rate of breakdown of $\ce{ES}$
+        - rate of formation: $k_1\ce{[E][S]}$
+        - rate of breakdown: $(k_{-1} + k_2)\ce{[ES]}$
+    - $k_1\ce{[E][S]} = (k_{-1} + k_2)\ce{[ES]} \implies \frac{\ce{[E][S]}}{\ce{[ES]}} = \frac{k_{-1} + k_2}{k_1}$
+    - define the **Michaelis constant** as $\frac{k_{-1} + k_2}{k_1} \overset{\Delta}{=} K_M$
+    - so $\ce{[ES]} = \frac{\ce{[E][S]}}{K_M}$
+    - uncombined enzyme is the total enzyme concentration minus the bound enzyme concentration
+      - $\ce{[E]} = \ce{[E]}_T - \ce{[ES]}$
+    - so now $\ce{[ES]} = \frac{\ce{([E]_T - [ES])[S]}}{K_M}$
+    - rearrange to get $\ce{[ES]} = \dfrac{\ce{[E]_T[S]}/K_M}{1 + \ce{[S]}/K_M} = \ce{[E]}_T \dfrac{\ce{[S]}}{\ce{[S]} + K_M}$
+  - Now we know $\ce{[ES]}$,
+    - $V_0 = k_2 \ce{[E]}_T \dfrac{\ce{[S]}}{\ce{[S]} + K_M}$
+  - Maximal rate is when all enzyme is active ($\ce{[ES]} = \ce{[E]}_T$): $V_{\max} = k_2\ce{[E]}_T$
+    - $\boxed{V_0 = V_{\max} \dfrac{\ce{[S]}}{\ce{[S]} + K_M}}$ (**Michaelis-Menten equation**)
+  - $K_M$ is the **half-maximal-rate concentration**
 
-#### The steady-state assumption faciliates a description of enzyme kinetics
+#### Variations in $K_M$ can have physiological consequences
+- alcohol dehydrogenase
+  - low $K_M$ mitochondria form: binds more easily
+  - high $K_M$ cytoplasmic form: binds slowly
+
+#### $K_M$ and $V_{\max}$ values can be determined by several means
+- $V_0 = V_{\max} \dfrac{\ce{[S]}}{\ce{[S]} + K_M}$
+- Take reciprocals
+  - $\dfrac{1}{V_0} = \dfrac{1}{V_{\max}} + \dfrac{K_M}{V_{\max}} \cdot \dfrac{1}{\ce{[S]}}$
+  - **Lineweaver-Burk plot**
+    - y intercept: $\dfrac{1}{V_{\max}}$
+    - x intercept: $-\dfrac{1}{K_M}$
+
+#### $K_M$ and $V_{\max}$ are important enzyme characteristics
+- $K_M$ is approximately equal to the substrate concentration that is available: high level of activity, but also sensitive to environmental conditions
+- **if $k_{-1}$ is much greater than $k_2$, then $K_M$ is the dissociation constant of $\ce{ES}$.**
+- $V_{\max}$ reveals the **turnover number** $k_\text{cat}$ of an enzyme
+- **$k_2$ is also called $k_{\text{cat}}$**
+  - $V_{\max} = k_{\text{cat}}\ce{[E]}_T \implies k_\text{cat} = \dfrac{V_{\max}}{\ce{[E]}_T}$
+- **fraction of active sites filled**
+  - $f_{ES} = \dfrac{V}{V_{\max}} = \dfrac{\ce{[S]}}{\ce{[S]} + K_M}$
+
+#### $k_\text{cat}/K_M$ is a measure of catalytic efficiency
+- $V_0 = k_{\text{cat}} \ce{[ES]}$ and $\ce{[ES]} = \dfrac{\ce{[E][S]}}{K_M}$
+  - $V_0 = \dfrac{k_{\text{cat}}}{K_M}\ce{[E][S]}$
+- **specificity constant $k_\text{cat}/K_M$**. takes into account both the rate of catalysis with a particular substrate and the nature of the enzyme-substrate interaction.
+  - bigger is more efficient
+- limits on **specificity constant**
+  - $\kcat/K_M = \dfrac{\kcat k_1}{k_{-1} + \kcat} = \left(\dfrac{\kcat}{k_{-1} + \kcat}\right)k_1 < k_1$
+  - $k_1$ is the **diffusion rate constant**
+  - enzyme is diffusion rate limited: it doesn't matter how fast the enzyme can make product: it needs to bind to substrate.
+    - $k_1 < \pu{10^9 s-1 M-1}$
+- **Circe effect**. the utilization of attractive forces to lure a substrate into an active site
+
+#### Most biochemical reactions include multiple substrates
+- two classes
+  - sequential reactions
+  - double-displacement reactions
+
+##### Sequential reactions
+- all substrates must bind to enzyme before any product is released
+- many enzymes that have $\ce{NAD+}$ or $\ce{NADH}$ use the sequential mechanism.
+- in **ordered sequential**, coenzyme binds first and product is released first
+  - e.g. lactate dehydrogenase
+- in **random sequential**, order is random
+  - e.g. creatine kinase
+
+##### Double displacement (ping-pong) reactions
+- defined by existence of **substituted enzyme intermediate**; enzyme is temporarily modified
+- e.g. aspartate aminotransferase
+  - swaps amino group and keto group
 
 ### Chapter 9 Introduction
 - explores 4 kinds of enzymes:
