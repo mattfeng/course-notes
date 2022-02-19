@@ -1,0 +1,74 @@
+$\gdef\veof{v_\text{eof}}$
+$\gdef\vtot{v_\text{tot}}$
+$\gdef\vep{v_\text{ep}}$
+
+# Design notes
+
+## TODO
+- Formula for velocity of DNA fragments
+
+## Questions
+- How is fluorescence calibrated?
+- pL scale injection methods?
+  - optical gated injection
+  - flow gated injection
+  - translational spontaneous injection
+
+## Papers
+- microChemLab
+  - https://ip.sandia.gov/technology.do/techID=83
+  - https://pubs.acs.org/doi/10.1021/ac049214f
+- Precursor to Pan 2018
+  - A compact short-capillary based high-speed capillary electrophoresis bioanalyzer (Fang 2016)
+
+## Capillary electrophoresis background
+- https://www.colby.edu/chemistry/CH332/laboratory/Agilent%20CE%20Primer.pdf
+- 25 to 75 µm narrow-bore capillaries
+- output plot: **electropherogram**
+- Separation by electrophoresis is obtained by differential migration of solutes in an electric field. In CE, electrophoresis is performed in narrow-bore capillaries, typically 25 to 75 µm inner diameter (id), which are usually **filled only with buffer**.
+- electric fields of **100 V/cm to 500 V/cm**
+- **plug**. refers to [**plug flow**](https://en.wikipedia.org/wiki/Plug_flow)
+- Since narrow capillaries are themselves anticonvective, gel media are not essential to perform that function. This allows the performance of free-solution (or open tube) electrophoresis, as well as the use of traditional gel media in the capillary.
+- **covalent wall passivation**. coating a material so that it becomes "passive", less readily affected/corroded by the environment.
+
+### Electroosmotic flow[^eof]
+- **electroosmotic flow**. the motion of liquid induced by an applied potential across a fluid conduit.
+  - $\veof = \mu_e E$
+    - $\veof$. ion velocity
+    - $E$. applied electric field
+    - $\mu_e$. electrophoretic mobility
+- **solute's total velocity**: sum of **electrophoretic velocity (ep)** and **electroosmotic flow (eof)**
+  - $\vtot = \vep + \veof$
+
+### Separation efficiency[^plates]
+- column efficiency is a measure of the extent of band broadening
+- **theoretical plates**
+  - $N = \dfrac{L}{H}$
+    - $L$. column length
+    - $H$. height of theoretical plate
+  - more theoretical plates gives better column efficiency
+
+### Sample injection
+- https://link.springer.com/content/pdf/10.1007%2F978-94-009-1561-9_2.pdf
+- electrokinetic injection
+  - quantity of analyte injected depends on its own mobility $\to$ not defined aas a specific sample volume
+
+## Polymers and pumping
+- **polymer is 6% PVP**, not polyacrylamide
+  - mixed with TBE
+  - also known as **POP**
+- 200 µL PCR tube with 1-2mm slot on bottom
+- Different possible polymers
+  - https://web.stanford.edu/group/barronlab/PubPdfs/1993-2000/electrophoresis2000_21_4096.pdf
+- Samples are injected electrokinetically because the gel provides too much resistance for hydrodynamic sampling[^eof].
+
+## Heating requirements
+- https://tools.thermofisher.com/content/sfs/manuals/4401661.pdf
+- Oven: Maintains uniform capillary array temperature.
+- To insure optimal separation and maintain denaturation of the DNA, the capillaries are thermally controlled in the oven and in the detection cell. The oven has a Peltier heat unit and fan-circulated air. The Peltier can heat and cool the oven to maintain sub-ambient temperatures, which are useful for nondenaturing applications such as SSCP (Single-strand conformation polymorphism). 
+- 60C for POP7 and POP4 polymers
+- 50C for POP6 polymer
+
+
+[^plates]: [General theory of electrophoresis (LibreTexts)](https://chem.libretexts.org/Bookshelves/Analytical_Chemistry/Analytical_Chemistry_2.1_(Harvey)/12%3A_Chromatographic_and_Electrophoretic_Methods/12.02%3A_General_Theory_of_Column_Chromatography)
+[^eof]: [Electroosmotic flow (LibreTexts)](https://chem.libretexts.org/Bookshelves/Analytical_Chemistry/Analytical_Chemistry_2.1_(Harvey)/12%3A_Chromatographic_and_Electrophoretic_Methods/12.07%3A_Electrophoresis)
