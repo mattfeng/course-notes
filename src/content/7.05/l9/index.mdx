@@ -2,6 +2,7 @@ $$\gdef\DG{\Delta G_\text{rxn}}$$
 $$\gdef\DGS{\Delta G_\text{rxn}^\circ}$$
 $$\gdef\DGSS{\Delta G_\text{rxn}^{\circ \prime}}$$
 $$\gdef\Keq{K_\text{eq}^{\prime}}$$
+$$\gdef\keq{k_\text{eq}}$$
 
 # Lecture 9. Enzymes as catalysts
 
@@ -36,18 +37,38 @@ $$\gdef\Keq{K_\text{eq}^{\prime}}$$
   - developmental processes: collagenase
   - apoptosis (procaspases)
 
-## Learning sequence: Enzyme chemistry
+## Lecture notes
 
-### alpha-chymotrypsin
+### $\alpha$-chymotrypsin
 - three chains: A, B, C
   - A chain is very small; 15 aa
 - held together with disulfide bonds
 - only 25kDa in size
-- structure solved by
-  - David Blow at MRC
+- structure solved
+  - by David Blow at MRC
+  - **first crystal structure of any enzyme**
 
 ### Assay for chymotrypsin activity
 - chymotrypsin also hydrolyzes _esters_ in vitro
-- use para-nitrophenylacetate
+- use para-nitrophenylacetate (PNPA)
+  - hydrolysis will result in **para-nitrophenol** (easily deprotonated; bright yellow) and acetate
 
-## Lecture notes
+### Why is Ser195 a good nucleophile?
+- clues
+  1. pH = 7.6: **His57**
+  2. chemical modification: **Asp102**
+- **catalytic triad**: **Ser195, His57, Asp102**
+
+### Catalytic mechanism of chymotrypsin
+1. covalent catalysis (Ser-125 temporarily modified)
+2. acid/base catalysis (His-57 acts as acid and base)
+3. approximation (holds substrate in proper orientation for Ser-195)
+4. **most important: "transition state" (tetrahedral intermediate) stabilization**
+    - Pauling: "enzymes bind transition states better than substrates or products"
+  
+### Thermodynamics vs. kinetics
+- $\ce{A + B <=>[\keq^\ddagger] X^\ddagger ->[k'] P}$
+- $\ce{X^\ddagger}$: "least populated intermediate"
+- $\frac{dP}{dt} = k_1AB = k'$
+- **transition state theory**
+  - $$
