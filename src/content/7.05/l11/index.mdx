@@ -1,3 +1,16 @@
+$$\gdef\kcat{k_\text{cat}}$$
+$$\gdef\KM{K_M}$$
+$$\gdef\Kmapp{K_M^{\text{app}}}$$
+$$\gdef\Vmax{V_{\max}}$$
+$$\gdef\Vamax{V_{\max}^\text{app}}$$
+$$\gdef\ET{\ce{[E]}_T}$$
+$$\gdef\E{\ce{[E]}}$$
+$$\gdef\S{\ce{[S]}}$$
+$$\gdef\ESI{\ce{[ESI]}}$$
+$$\gdef\ES{\ce{[ES]}}$$
+$$\gdef\EI{\ce{[EI]}}$$
+$$\gdef\I{\ce{[I]}}$$
+
 # Lecture 11. Protein Modules, Membranes, and Blood Clotting
 
 - Readings
@@ -76,3 +89,29 @@
 ### 9.4<SPACE/>Myosins harness changes in enzyme conformation to couple ATP hydrolysis to mechanical work
 
 ### 14.5<SPACE />Defects in signal-transduction pathways can lead to cancer and other diseases
+
+---
+
+## Lecture
+
+### Catalytic efficiency $\kcat/\KM$
+- $k_2 = \kcat = \dfrac{\Vmax}{\ET}$
+- $V_0 = \kcat\ES$
+- $\ES = \dfrac{\E\S}{\KM}$ (by definition of $\KM$; $k_1\E\S = (k_{-1} + k_2)\ES$)
+- normalize catalytic rate by how good the binding is
+
+### Limits of catalytic efficiency
+- $\dfrac{\kcat}{\KM} = \dfrac{\kcat}{\dfrac{k_{-1} + \kcat}{k_1}} = \left(\dfrac{\kcat}{k_{-1} + \kcat}\right)k_1$
+
+### Reversible inhibitors
+
+#### Competitive
+- $K_M$ increases
+
+#### Non-competitive
+- $K_I = \dfrac{\E\I}{\EI} \underbrace{=\dfrac{\ES\I}{\ESI}}_{\text{only for noncompetitive}}$
+- effectively, **less enzyme is present**
+- $\Vmax$ decreases
+
+### Allosteric regulation of enzymes
+- 
