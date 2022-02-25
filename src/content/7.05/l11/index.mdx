@@ -10,6 +10,9 @@ $$\gdef\ESI{\ce{[ESI]}}$$
 $$\gdef\ES{\ce{[ES]}}$$
 $$\gdef\EI{\ce{[EI]}}$$
 $$\gdef\I{\ce{[I]}}$$
+$$\gdef\Mg{\ce{Mg^2+}}$$
+$$\gdef\Mn{\ce{Mn^2+}}$$
+$$\gdef\PI{\ce{P_i}}$$
 
 # Lecture 11. Protein Modules, Membranes, and Blood Clotting
 
@@ -63,7 +66,7 @@ $$\gdef\I{\ce{[I]}}$$
 - glycerol $\to$ **phosphoglycerides**
 - most basic phosphoglyceride: **phosphatidate**, a key intermediate in biosynthesis of other phosphoglycerides (PPGs)
 
-![](./phosphatidate.png)
+![Structure of phosphatidate.](./phosphatidate.png)
 
 - join phosphate group with **hydroxyl gruop** of different alcohols to form major phosphoglycerides
   - serine
@@ -156,7 +159,7 @@ $$\gdef\I{\ce{[I]}}$$
   - brings prothrombin close to **factor Xa** and **factor Va (stimulatory protein)** that catalyze conversion to thrombin
 - cleaved at Arg-274/Thr-275 and Arg-323/Ile-324
 
-![](./prothrombin.png)
+![Schematic of prothrombin.](./prothrombin.png)
 
 #### Fibrinogen is converted by thrombin into a fibrin clot
 - fibrinogen (Fgn) structure
@@ -199,11 +202,108 @@ $$\gdef\I{\ce{[I]}}$$
 
 ![Heparin.](./heparin.png)
 
+- **how are clots removed?**
+  - **plasmin** degrades **plasmin**
+  - plasmin is formed from **plasminogen**
+  - **tissue-type plasminogen activator (TPA)** converts plasminogen $\to$ plasmin
+
 #### Hemophilia revealed an early step in clotting
+- **factor VIII (anti-hemophilic factor)** of intrinsic pathway is missing or has reduced activity
+  - VIII stimulates activation of X via IXa.
+  - **weakened intrinsic pathway response**
 
 ### 9.4<SPACE/>Myosins harness changes in enzyme conformation to couple ATP hydrolysis to mechanical work
+- catalyzes ATP hydrolysis to drive motion in cells
+
+#### ATP hydrolysis proceeds by the attack of water on the gamma phosphoryl group
+- activated water performs nucleophilic attack on phosphorous of ATP
+- $\Mg$, $\Mn$ binds to NTPs
+  - this complex is the real substrate for ATPases
+  - without the metals, enzymes essentially inactive
+- bound enzyme to NTP-metal is relatively stable
+  - water molecule is unable to be activated because there is no **basic residue** or **nearby metal ion** (the $\Mg$/$\Mn$ is too far away)
+
+#### Formation of the transition state for ATP hydrolysis is associated with a substantial conformational change
+- myosin ATPase should stabilize the transition state
+- expect a **pentacoordinate** transition state
+
+![Myosin ATPase mechanism.](./myosin-atpase-mxn.png)
+
+![Myosin conformational change. Red: ATP bound (no change). Blue: ADP-vanadate transition-state analog bound.](./myosin-change.png)
+
+- can move more than 25 Å
+
+#### The altered conformation of myosin persist for a substantial period of time
+- turn over: once per second
+- the **release of products, particularly inorganic phosphate**, is the rate-limiting step
+- **the persistence of a conformation of myosin with ATP hydrolyzed but still bound to the enzyme is critical for coupling conformational changes**
+- ATP hydrolysis within the active site is reversible
+- equilibrium constant of enzyme bound reaction is about **10**.
+- release of products is rate limiting
+  - we know this because $\PI$ released in solution has more than one oxygen substituted from water
+  - if release was faster than hydrolysis, then only one oxygen would be substituted
+
+#### Scientists can watch single molecules of myosin move
+- myosin moves approximately **74 nm** with every step
+
+#### Myosins are a family of enzymes containing P-loop structures
+- **P-loop** of mostly glycines interacts with **phosphoryl groups on a bound nucleotide**
+
+![Core domain of NMP-kinase (similar to NTPases). Contains alpha helices surrounding a beta sheet, with a P-loop (in green). NMP kinases form two ADPs from ATP and AMP.](./nmp-kinase.png)
+
+- enzymes with **P-loop NTPase domains**
+  - ATP synthase
+  - G proteins (signal transduction protein)
+  - elongation factor **Tu** (essential for translating mRNA into proteins)
+  - DNA and RNA unwinding helicases
 
 ### 14.5<SPACE />Defects in signal-transduction pathways can lead to cancer and other diseases
+
+#### Rous sarcoma virus
+- Rous sarcoma virus carries a gene called **v-src**, encoding for protein tyrosine kinase **v-Src**.
+- **c-Src**, normal protein, contains tyrosine residue that binds to SH2 domain, keeping kinase inactive.
+
+![Structure of c-Src.](./csrc.png)
+
+#### Ras
+- three kinds in mammalian cells: H, K, and N Ras.
+- all cycle between inactive GDP and active GTP forms
+- **loss of ability to hydrolyze GTP** keeps Ras proteins in active state
+
+#### Monoclonal antibodies can be used to inhibit signal-transduction pathways activated in tumors
+- EGFR is overexpressed in some human epithelial cancers
+  - breast
+  - ovarian
+  - colorectal (CRC)
+- **cetuximab** for CRC
+  - competitive inhibition of binding site, but
+  - sterically blocks conformational change of EGFR
+- **trastuzumub** for HER2+ breast cancer
+  - inhibits HER2
+
+#### Protein kinase inhibitors can be effective anti-cancer drugs
+- chronic myelogenous leukemia (CML)
+  - Bcr-Abl kinase is inhibited by **Gleevec**
+  - Bcr-Abl kinase is overexpressed compared to normal c-Abl kinase.
+
+#### Cholera and whooping cough are the result of altered G-protein activity
+- **cholera toxin (choleragen)** 
+  - two functional units
+    - β subunit binding to G<sub>M1</sub> gangliosides of the intestinal epithelium
+    - catalytic A subunit that enters cells
+  - catalytic A subunit covalently attaches an ADP-ribose to an arginine residue of $G_{\alpha s}$ protein
+    - $\to$ **stabilizes GTP form of** $G_{\alpha s}$
+    - $\to$ active G protein continuously activates protein kinase A (PKA)
+    - $\to$ PKA open a chloride channel and inhibits $\ce{Na}$ absorption
+    - $\to$ results in excessive loss of NaCl
+- **pertussis**
+  - $G_{\alpha i}$
+    - inhibits adenylate cyclase
+    - closes $\ce{Ca^2+}$ channels
+    - opens $\ce{K+}$ channels
+  - pertussis toxin adds ADP-ribose to $G_{\alpha i}$
+  - modification traps heterotrimer $G_i$ in off conformation
+
 
 ---
 
