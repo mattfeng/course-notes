@@ -1,13 +1,41 @@
+$$\gdef\Cp{C_p}$$
+$$\gdef\ohm{\Omega\ }$$
+$$\gdef\DT{\Delta T}$$
+
 # Physics Calculations
 
 ## Minimum signal for detector
 
 ## Heating from voltage
+- Variables
+  - $V$. voltage
+    - $V \in \pu{[120, 4000] V}$
+  - $P$. power
+  - $I$. current
+  - $R$. resistance
+  - $\rho$. resistivity
+    - $\rho = \pu{10^{15} \ohm m} = \pu{10^{17} \ohm cm}$
+  - $\Cp$. specific heat
+    - $\Cp = \pu{725 J/kg K} = \pu{0.725 J/g k}$
+  - $D$. density
+    - $D = \pu{2.17 g/cm^3} = \pu{2.17 Mg/m^3}$
+  - $q$. heat
+- $V = IR$
+- $P = IV = V^2/R$
+- $R = \rho \frac{L}{A}$
+  - $L$. length
+  - $A$. cross sectional area
+- $q = m\Cp \DT = Pt$
+  - $t$. migration time
+- Combine all equations to get
+  - $\DT = \dfrac{V^2t}{\rho D L^2 \Cp}$
+
+### References
+- https://www.azom.com/properties.aspx?ArticleID=1387
 
 ## Heating from laser
 
 ## Mobility
-
 - **ion velocity**. $$v = \mu_e E$$
   - $v$. ion velocity
   - $E$. electric field strength
