@@ -7,12 +7,21 @@ $$\gdef\DT{\Delta T}$$
 ## Minimum signal for detector
 
 ## Heating from voltage
+
+### Properties
+- **1x TBE buffer**
+  - $\sigma = \pu{[0.5, 1.5] mS/cm}$
+  - $\rho = \pu{[667, 1000] \ohm cm}$
+  - $D = \pu{1.01 g/cm^3}$
+
+### Calculations
 - Variables
   - $V$. voltage
     - $V \in \pu{[120, 4000] V}$
   - $P$. power
   - $I$. current
   - $R$. resistance
+  - $\sigma$. conductivity
   - $\rho$. resistivity
     - $\rho = \pu{10^{15} \ohm m} = \pu{10^{17} \ohm cm}$
   - $\Cp$. specific heat
@@ -33,7 +42,9 @@ $$\gdef\DT{\Delta T}$$
     - $\DT = \frac{(4000^2)(40 \times 60)}{(10^{17})(2.17)(10)^2(0.725)} = \pu{2.44 \times 10^{-9} K}$, **negligible heating**
 
 ### References
-- https://www.azom.com/properties.aspx?ArticleID=1387
+- Fused silica properties: https://www.azom.com/properties.aspx?ArticleID=1387
+- TBE properties: https://shop.biosolve-chemicals.eu/detail.php?id=2351
+- PVP properties: http://polymerdatabase.com/polymers/polyvinylpyrrolidone.html
 
 ## Heating from laser
 
