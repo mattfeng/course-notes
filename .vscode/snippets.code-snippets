@@ -21,6 +21,12 @@
 			"signal-transduction pathways"
 		]
 	},
+	"signalling pathways": {
+		"prefix": "sigp",
+		"body": [
+			"signalling pathway"
+		]
+	},
 	"signal transduction": {
 		"prefix": "sigt",
 		"body": [
@@ -93,4 +99,28 @@
 			"activit"
 		]
 	},
+	"hydrogen bonds": {
+		"prefix": "hbonds",
+		"body": [
+			"hydrogen bonds"
+		]
+	},
+	"fluorophore": {
+		"prefix": "flf",
+		"body": [
+			"fluorophore"
+		]
+	},
+	"fluorescence": {
+		"prefix": "flr",
+		"body": [
+			"fluorescence"
+		]
+	},
+	"eukaryote": {
+		"prefix": "euk",
+		"body": [
+			"eukaryot"
+		]
+	}
 }
