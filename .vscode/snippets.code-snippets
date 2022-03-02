@@ -122,5 +122,23 @@
 		"body": [
 			"eukaryot"
 		]
+	},
+	"in response to": {
+		"prefix": "irt",
+		"body": [
+			"in response to"
+		]
+	},
+	"messenger": {
+		"prefix": "msgr",
+		"body": [
+			"messenger"
+		]
+	},
+	"physiological": {
+		"prefix": "phys",
+		"body": [
+			"physiological"
+		]
 	}
 }

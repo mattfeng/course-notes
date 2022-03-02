@@ -92,6 +92,14 @@ const PI = () => {
   )
 }
 
+const IP3 = () => {
+  return (
+    <span>
+      IP<sub>3</sub>
+    </span>
+  )
+}
+
 const KEQ = () => {
   return (
     <span>
@@ -121,6 +129,7 @@ const shortcodes = {
   Video,
   PI,
   KEQ,
+  IP3,
 }
 
 export default function BlogPost({ data }) {
