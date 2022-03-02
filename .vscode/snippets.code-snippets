@@ -30,19 +30,19 @@
 	"phosphorylation": {
 		"prefix": "pp",
 		"body": [
-			"phosphorylat$1"
+			"phosphorylat"
 		]
 	},
 	"dephosphorylation": {
 		"prefix": "dpp",
 		"body": [
-			"dephosphorylat$1"
+			"dephosphorylat"
 		]
 	},
 	"acetylation": {
 		"prefix": "ace",
 		"body": [
-			"acetylat$1"
+			"acetylat"
 		]
 	},
 	"acetyltransferase": {
@@ -54,25 +54,43 @@
 	"deacetylation": {
 		"prefix": "dace",
 		"body": [
-			"deacetyla$1"
+			"deacetyla"
 		]
 	},
 	"chromosome": {
 		"prefix": "chr",
 		"body": [
-			"chromosome$1"
+			"chromosome"
 		]
 	},
 	"ubiquitin": {
 		"prefix": "ubi",
 		"body": [
-			"ubiquitin$1"
+			"ubiquitin"
 		]
 	},
 	"phosphatase": {
 		"prefix": "PPT",
 		"body": [
-			"phosphatase$1"
+			"phosphatase"
+		]
+	},
+	"PK": {
+		"prefix": "PK",
+		"body": [
+			"protein kinase"
+		]
+	},
+	"catalyze": {
+		"prefix": "cat",
+		"body": [
+			"cataly"
+		]
+	},
+	"activity": {
+		"prefix": "act",
+		"body": [
+			"activit"
 		]
 	},
 }

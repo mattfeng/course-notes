@@ -84,6 +84,22 @@ const D = () => {
   return <span className={styles.smallChem}>D</span>
 }
 
+const PI = () => {
+  return (
+    <span>
+      P<sub>i</sub>
+    </span>
+  )
+}
+
+const KEQ = () => {
+  return (
+    <span>
+      K<sub>eq</sub>
+    </span>
+  )
+}
+
 const shortcodes = {
   C: Chem,
   T: Tag,
@@ -103,6 +119,8 @@ const shortcodes = {
   Nmxn: NoMechanism,
   Box,
   Video,
+  PI,
+  KEQ,
 }
 
 export default function BlogPost({ data }) {
