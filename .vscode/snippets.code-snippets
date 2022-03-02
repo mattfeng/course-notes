@@ -140,5 +140,17 @@
 		"body": [
 			"physiological"
 		]
+	},
+	"fibrinogen": {
+		"prefix": "fbg",
+		"body": [
+			"fibrinogen"
+		]
+	},
+	"fibrin": {
+		"prefix": "fb",
+		"body": [
+			"fibrin"
+		]
 	}
 }
