@@ -1,0 +1,36 @@
+# Lecture 5. Data-driven small molecule design and synthesis
+
+## Machine learning in Computer-Aided Synthesis Planning (CASP)
+- CASP generally consists of five major components
+  1. template library containing disconnection rules 
+  2. recursive template application engine that generates candidate reactants for target products
+  3. a database containing compounds that do not need to be expanded retrosynthetically
+  4. a strategy to guide the retrosynthetic search toward chemicals in that database
+  5. a method for single-step or pathway-level scoring (e.g. fewer synthetic steps)
+
+### Route planning
+- contemporary strategies
+  1. template library-based
+  2. template-free
+  3. focused template application
+
+#### 1<SPACE/>Template library-based
+- simple heuristics to balance specificity and speed
+  - include atoms adjacent to reaction center if they
+    1. are terminal
+    2. are required for unambiguous specification of chirality
+    3. belong to substructures known to influence reactivity (e.g. adjacency to a carbonyl)
+- `SCScore` is a metric for measuring complexity of _synthesis_, not _structure_
+
+#### 2<SPACE/>Template free
+- downsides of templates/benefits of template free
+  - calculating subgraph isomorphism is expensive
+  - recommendation quality depends on template quality
+  - cannot propose novel disconnections
+- often convert molecules to SMILES strings
+
+#### 3<SPACE/>Focused template application
+- MCTS with NN value network
+- use a nearest neighbor model to find similar reaction templates; greatly outperforms seq2seq model
+
+### Prediction of reaction outcomes
