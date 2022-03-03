@@ -34,3 +34,80 @@
 - use a nearest neighbor model to find similar reaction templates; greatly outperforms seq2seq model
 
 ### Prediction of reaction outcomes
+- use of Weisfeller-Lehman network (WLN) to get molecular representation
+
+## Accelerating high-throughput virtual screening (VS) through molecular pool-based active learning (2021)
+- **QED**. quantitative estimate of drug-likeness
+- MPNN can identify 94% fo the top-50000 ligands in a 100M library after testing only 2.4% (2.4M) candidate ligands
+- CADD techniques fall into two categories
+  - ligand-based (based on experimental data)
+  - structure-based (computational docking and molecular dynamics)
+
+### Introduction
+- VS libraries are too large to exhaustively evaluate against a target, need to sample for best
+- goal: find the top-$k$ hits (best docking energies)
+- goal: examine the effects of surrogate model architecutre
+
+### Results
+
+### Conclusions
+
+### Methods
+
+## Amortized tree generation for bottom-up synthesis planning and synthesizable molecular design (2021)
+- validate our method by
+  - recovering molecules using conditional generation
+  - identifying synthesizable structural analogs
+  - optimizing molecular structures given oracle functions relevant to drug discovery
+- TDC: therapeutic data commons
+- simultaneously address the problems of _design_ and _synthesis_
+- main contributions of paper
+  - formulate the tasks of multi-step synthesis planning and synthesizable molecular design as a single shared task of conditional synthetic tree generation.
+  - formulate a Markov decision process to model the generation of synthetic trees, allowing the generation of multi-step and convergent synthetic pathways.
+  - propose a model that is capable of (1) rapid bottom-up synthesis planning and (2) constrained molecular optimization that can explore a chemical space defined by a discrete action space of reaction templates and purchasable starting materials.
+  - demonstrate encouraging results on the recovery of molecules via conditional generation and on de novo molecular optimization with multiple objective functions relevant to bioactive molecule design and drug discovery.
+
+### Related work
+- synthesizable molecular design
+  - no previous work had high reconstruction accuracy
+- synthesis planning
+  - all retrosynthetic
+
+### Method
+
+#### Problem definition
+$$\gdef\Mp{M_{\text{product}}}$$
+$$\gdef\Mt{M_{\text{target}}}$$
+
+- reaction templates $R$
+  - list of reaction templates (rather than data-driven reaction predictor) makes expanding/contracting the model easy without need to change architecture
+- purchasable compounds $C$
+- goal: generate valid synthetic tree $T$ with root node $\Mp$ equaling $\Mt$
+
+#### Synthetic tree generation as a MDP
+#### Conditional generation for synthesis planning
+#### Genetic algorithm for molecular optimization
+- procedurally simplier than RL to solve MDPs
+
+### Experiments
+
+#### Experiment setup
+- templates from [40](https://www.nature.com/articles/s42256-019-0067-7) and [41](https://pubmed.ncbi.nlm.nih.gov/22077721/)
+- starting reagents: **Enamine Building Blocks**
+- Morgan fingerprints (length=4096, radius=2)
+- optimization oracles:
+  - QED
+  - LogP
+  - JNK3, GSK3$\beta$, DRD2 surrogate models
+- docking: AutoDock Vina
+
+#### Synthesis planning results
+- recovered 51% of synthesizable targets
+- recovered 4.5% of random sample of ChEMBL (assumed to not be reachable)
+
+#### Synthesizable analog recommendation results
+- many recommendations, even if failed, are experimentally useful since they are close or related to the target
+
+#### Synthesizable molecular optimization results
+- binding score predicted by Vina is better than known inhibitor
+- the recommendations are actionable; the proposed molecules are simple
