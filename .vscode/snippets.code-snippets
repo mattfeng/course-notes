@@ -152,5 +152,23 @@
 		"body": [
 			"fibrin"
 		]
+	},
+	"beta adrenergic receptor": {
+		"prefix": "B2AR",
+		"body": [
+			"$\\beta_2$-AR"
+		]
+	},
+	"epinephrine": {
+		"prefix": "epi",
+		"body": [
+			"epinephrine"
+		]
+	},
+	"G protein": {
+		"prefix": "GP",
+		"body": [
+			"G protein"
+		]
 	}
 }
