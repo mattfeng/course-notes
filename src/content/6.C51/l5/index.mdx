@@ -1,0 +1,38 @@
+$$\gdef\Pb{P_{\text{background}}}$$
+$$\gdef\Pm{P_{\text{model}}}$$
+
+# Lecture 5. Applying NNs to DNA Sequences
+
+- How is the genome regulated?
+  - Transcription factors binding to enhancers
+- Raw probabilities are hard to interpret, so we use odds-ratio instead
+- odds ratios = $\dfrac{\Pm}{\Pb}$
+- log odds ratio matrix aka **PWM, PSSM**
+- traditional technique
+  - scan a sequence with a **motif** and find the highest log-odds ratios
+
+## Feature representations
+- one-hot encoding
+- `word2vec` dense representations
+  - converts one-hot to a dense representation
+
+### `word2vec` kmer model for DNA
+- captures information about **context** (doesn't assume independence)
+
+### Results
+- Deeper networks perform _modestly_ better
+- k-mer encoding helps
+
+### Interpretability vs. accuracy tradeoff
+- more complex models are less interpretable
+
+---
+
+## Readings
+
+### Predicting the sequence specificities of DNA- and RNA-binding proteins by deep learning (Alipanahi 2015)
+
+### Comprehensive evaluation of deep learning architectures for prediction of DNA/RNA sequence binding specificities (Trabelsi 2019)
+
+### Convolutional neural network architectures for predicting DNA-protein binding (Zeng 2016)
+

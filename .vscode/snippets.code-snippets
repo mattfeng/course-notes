@@ -153,10 +153,28 @@
 			"fibrin"
 		]
 	},
-	"beta adrenergic receptor": {
+	"beta 2 adrenergic receptor": {
 		"prefix": "B2AR",
 		"body": [
 			"$\\beta_2$-AR"
+		]
+	},
+	"beta 1 adrenergic receptor": {
+		"prefix": "B1AR",
+		"body": [
+			"$\\beta_1$-AR"
+		]
+	},
+	"beta 1": {
+		"prefix": "B1",
+		"body": [
+			"$\\beta_1$"
+		]
+	},
+	"beta 2": {
+		"prefix": "B2",
+		"body": [
+			"$\\beta_2$"
 		]
 	},
 	"epinephrine": {
