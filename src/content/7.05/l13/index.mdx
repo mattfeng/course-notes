@@ -1,5 +1,6 @@
 $$\gdef\Ga{G_\alpha}$$
 $$\gdef\Gas{G_{\alpha s}}$$
+$$\gdef\Gaq{G_{\alpha q}}$$
 
 # Lecture 13
 - Readings
@@ -96,34 +97,61 @@ $$\gdef\Gas{G_{\alpha s}}$$
 
 ![](./epinephrine.png)
 
-#### Ligand binding to 7TM receptors leads to the activation of heterotrimeric G proteins
-- **G proteins**. named because they bind **guanyl nucleotides**
-- conformation change of 7TM activates G protein
-- activated G protein activates **adenylate cyclase**, which converts **ATP to cAMP**
+- **Ligand binding to 7TM receptors leads to the activation of heterotrimeric G proteins**
+  - **G proteins**. named because they bind **guanyl nucleotides**
+  - conformation change of 7TM activates G protein
+  - activated G protein activates **adenylate cyclase**, which converts **ATP to cAMP**
+  - $\beta_2$-AR catalyzes GDP to GTP on the G protein
 
 ![Epinephrine signal transduction pathway.](./epi-pathway.png)
 
-- $\beta_2$-AR catalyzes GDP to GTP on the G protein
-
-#### Structure of G-proteins
-- three chains: $\alpha$, $\beta$, $\gamma$
-  - $\Ga \in$ **P-loop NTPase family** (nucleotide binding)
-- $\alpha$ and $\gamma$ are usually anchored to the membrane by covalently attached fatty acids
+- **Structure of G-proteins**
+  - three chains: $\alpha$, $\beta$, $\gamma$
+    - $\Ga \in$ **P-loop NTPase family** (nucleotide binding)
+  - $\alpha$ and $\gamma$ are usually anchored to the membrane by covalently attached fatty acids
+  - $\Ga$ opens up upon binding to allow GTP to access GDP's original spot
 
 ![Structure of a G protein.](./g-protein.png)
 
 ![Complex of adrenergic receptor and G protein.](./BAR-Gprotein-complex.png)
 
-- $\Ga$ opens up upon binding to allow GTP to access
-- **a single $\beta_2$-AR can activate many G proteins**
+- **A single $\beta_2$-AR can activate many G proteins**
 
-#### Activated G proteins transmit signals by binding to other proteins
-- $\Gas$ doesn't have high affinity for $G_{\beta \gamma}$
-- $\Gas$ has high affinity for **adenylate cyclase**
+- **Activated G proteins transmit signals by binding to other proteins**
+  - $\Gas$ doesn't have high affinity for $G_{\beta \gamma}$
+  - $\Gas$ has high affinity for **adenylate cyclase**
+  - **Structure of adenylate cyclase**
+    - **12 membrane-spanning helices**
+    - two large cytoplasmic domains
 
-##### Structure of adenylate cyclase
-- **12 membrane-spanning helices**
-- two large cytoplasmic domains
+- **Cyclic AMP stimulates the phosphorylation of many target proteins by activating protein kinase A**
+  - PKA stimulates expression of specific genes by phosphorylating a transcriptional activator called the **cAMP response element binding (CREB)** protein
+
+#### G proteins spontaneously reset themselves through GTP hydrolysis
+- $\Ga$ subunits have intrinsic GTPase activity
+  - slow: requires **seconds** to **minutes**
+  - acts as built-in block that will reset itself
+- also need to **reset GPCR**
+  - GPCR is phosphorylated by **GRK2** (G protein receptor kinase 2)
+  - $\beta$-arrestin binds to phosphorylated receptor, preventing it from activating G proteins
+
+#### Other 7TM receptors: activating the phosphoinositide cascade
+- second messenger: <PIP2/>
+  - example of pathway using <PIP2/>: angiotensin II receptor (ATR) pathway
+- enzyme **phospholipase C** cleaves <PIP2/> into <IP3/> and diacylglycerol (DAG) 
+- angiotensin II $\to$ ATR $\to$ $\Gaq$ $\to$ phospholipase C $\to$ <IP3/> and DAG
+  - IP3 diffuses into the cytosol
+  - DAG stays in membrane
+- second messenger <IP3/> causes rapid release of $\ce{Ca^2+}$ from **ER to cytoplasm**
+  - $\ce{Ca^2+}$ activates calmodulin and protein kinase C$
+- **DAG activates protein kinase C**
+  - protein kinase C needs calcium to bind DAG
+
+#### Calcium ion is a widely used secondary messenger
+- **cytoplasmic concentration of $\ce{Ca^2+}$ is 100 nM**
+- why is calcium used a lot as a signaling molecule?
+  1. changes are readily detected
+  2. can bind tightly to proteins and cause conformational changes
 
 #### cAMP stimulates the phosphorylation of many target proteins by activating protein kinase A
 - most effects of cAMP are accomplished via protein kinase A
@@ -193,4 +221,3 @@ $$\gdef\Gas{G_{\alpha s}}$$
     - $\uparrow$ fatty acid metabolism
   - **all these effects are due to the activation of protein kinase A**
 - protein kinase A
-  - 

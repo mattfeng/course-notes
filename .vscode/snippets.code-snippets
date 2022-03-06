@@ -188,5 +188,11 @@
 		"body": [
 			"G protein"
 		]
+	},
+	"phosphoinositide": {
+		"prefix": "ppi",
+		"body": [
+			"phosphoinositide"
+		]
 	}
 }

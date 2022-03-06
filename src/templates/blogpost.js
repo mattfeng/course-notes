@@ -7,6 +7,7 @@ import Tag from "../components/tag"
 import Collapse from "../components/collapse"
 import Box from "../components/box"
 import Video from "../components/video"
+import Hover from "../components/hover"
 import { StaticImage } from "gatsby-plugin-image"
 import { Link } from "gatsby"
 import { defineCustomElements as deckDeckGoHighlightElement } from "@deckdeckgo/highlight-code/dist/loader"
@@ -92,11 +93,27 @@ const PI = () => {
   )
 }
 
+const PIP2 = () => {
+  return (
+    <Hover>
+      <>
+        PIP<sub>2</sub>
+      </>
+      <b>phosphotidulinostiol 4,5-bisphosphate</b>
+    </Hover>
+  )
+}
+
 const IP3 = () => {
   return (
-    <span>
-      IP<sub>3</sub>
-    </span>
+    <Hover>
+      <>
+        IP<sub>3</sub>
+      </>
+      <>
+        <b>inositol 1,4,5-trisphosphate</b>
+      </>
+    </Hover>
   )
 }
 
@@ -130,6 +147,8 @@ const shortcodes = {
   PI,
   KEQ,
   IP3,
+  PIP2,
+  Hover,
 }
 
 export default function BlogPost({ data }) {

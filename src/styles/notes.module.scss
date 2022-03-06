@@ -12,7 +12,7 @@ $header-prefix-width: 30px;
 
     font-family: $sans;
     font-weight: 200;
-    font-size: 14pt;
+    font-size: 12pt;
 
     h1, h2 {
         font-weight: 700;
@@ -28,18 +28,17 @@ $header-prefix-width: 30px;
 }
 
 h1 {
-    font-family: "Playfair Display", serif;
-    font-size: 2em;
-    margin: 0.5em 0;
-}
-
-h2 {
     font-size: 1.5em;
     margin: 0.5em 0;
 }
 
+h2 {
+    font-size: 1.2em;
+    margin: 0.5em 0;
+}
+
 h2::before {
-    content: "#";
+    content: "α";
     text-align: right;
     margin-left: -$header-prefix-width - 10px;
     padding-right: 10px;
@@ -53,7 +52,7 @@ h3, h4 {
 }
 
 h3::before {
-    content: "##";
+    content: "β";
     text-align: right;
     margin-left: -$header-prefix-width - 10px;
     padding-right: 10px;
@@ -67,17 +66,27 @@ ol, ul {
 }
 
 h3 {
-    font-size: 1.25em;
-    font-weight: 700;
-}
-
-h4 {
     font-size: 1.1em;
     font-weight: 700;
 }
 
+h4::before {
+    content: "γ";
+    text-align: right;
+    margin-left: -$header-prefix-width - 10px;
+    padding-right: 10px;
+    width: $header-prefix-width;
+    color: #ccc;
+    display: inline-block;
+}
+
+h4 {
+    font-size: 0.95em;
+    font-weight: 700;
+}
+
 h5 {
-    font-size: 1em;
+    font-size: 0.95em;
     font-style: italic;
     margin: 0;
 }
