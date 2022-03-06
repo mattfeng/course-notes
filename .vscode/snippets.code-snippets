@@ -194,5 +194,29 @@
 		"body": [
 			"phosphoinositide"
 		]
-	}
+	},
+	"nucleic acid": {
+		"prefix": "na",
+		"body": [
+			"nucleic acid"
+		]
+	},
+	"complementary": {
+		"prefix": "com",
+		"body": [
+			"complementary"
+		]
+	},
+	"phosphodiester": {
+		"prefix": "ppd",
+		"body": [
+			"phosphodiester"
+		]
+	},
+	"pyrimidine": {
+		"prefix": "py",
+		"body": [
+			"pyrimidine"
+		]
+	},
 }
