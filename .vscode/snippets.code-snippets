@@ -219,4 +219,10 @@
 			"pyrimidine"
 		]
 	},
+	"angstrom": {
+		"prefix": "ang",
+		"body": [
+			"Å"
+		]
+	},
 }
