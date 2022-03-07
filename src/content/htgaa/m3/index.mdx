@@ -1,4 +1,4 @@
-# Module 3: 
+# Module 3. Cloning: primer design, Gibson assembly, transformation, robotic patterning
 
 ## Chromoproteins
 - amilCP
@@ -6,3 +6,49 @@
 - carefully introduce mutations
   - mixed-bases PCR
 - Melting temperatuure $T_m$ should be within 5ºC of each other
+
+## Overview
+- pUC19 forms **backbone**: **origin of replication** and **drug resistance gene**
+- [mUAV](https://www.addgene.org/102680/) contains the sequence for amilCP, which we can amplify using PCR, and then assembly together using Gibson assembly
+- use 15 to 40bp overlaps with $T_m > 48\degC$
+
+## Primer design
+```
+Outer Fwd:
+
+mUAV  5 tcggtctctatatgcaggtg 3    Tm=52.7C GC=50
+pUC19 5 tggccgattcattaatgcag 3    Tm=53C   GC=45
+
+Outer Rev:
+
+mUAV  5 agggtctcaatatgcaggtg 3    Tm=53.4C GC=50
+pUC19 5 tcttcgctattacgccag   3    Tm=51C   GC=50
+
+Inner Fwd:
+
+pre   5 tgggatattttatcaccacag  3  Tm=49.2C GC=38.10 (overhang)
+mut   5 tgtcag                 3                    (purple)
+mut   5 gttgga                 3                    (orange)
+mut   5 gttagt                 3                    (lightpink)
+mut   5 gcatgt                 3                    (pink)
+mut   5 gttcta                 3                    (magenta)
+mut   5 gttaac                 3                    (blue)
+post  5 tacggaagcataccattcacca 3  Tm=55.6C GC=45.45 (bind)
+
+Inner Rev:
+
+mUAV  5 ctgtggtgataaaatatccca  3  Tm=49.2C GC=38.10
+
+---
+
+Outer Fwd: 5 tcggtctctatatgcaggtgtggccgattcattaatgcag 3
+Outer Rev: 5 agggtctcaatatgcaggtgtcttcgctattacgccag   3
+Inner Fwd: 5                                                   3
+  purple     tgggatattttatcaccacagtgtcagtacggaagcataccattcacca
+  orange     tgggatattttatcaccacaggttggatacggaagcataccattcacca
+  lightpink  tgggatattttatcaccacaggttagttacggaagcataccattcacca
+  pink       tgggatattttatcaccacaggcatgttacggaagcataccattcacca
+  magenta    tgggatattttatcaccacaggttctatacggaagcataccattcacca
+  blue       tgggatattttatcaccacaggttaactacggaagcataccattcacca
+Inner Rev: 5 ctgtggtgataaaatatccca 3
+```

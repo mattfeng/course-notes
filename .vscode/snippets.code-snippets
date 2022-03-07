@@ -225,4 +225,16 @@
 			"Å"
 		]
 	},
+	"carbohydrate": {
+		"prefix": "carbh",
+		"body": [
+			"carbohydrate"
+		]
+	},
+	"molecule": {
+		"prefix": "mcl",
+		"body": [
+			"molecule"
+		]
+	},
 }
