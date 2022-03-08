@@ -15,7 +15,11 @@ figcaption {
 
 a {
     color: #555;
-    font-style: italic;
+}
+
+a:hover {
+    background-color: #555;
+    color: #eee;
 }
 
 deckgo-highlight-code {
