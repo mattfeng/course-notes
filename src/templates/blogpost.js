@@ -99,7 +99,18 @@ const PIP2 = () => {
       <>
         PIP<sub>2</sub>
       </>
-      <b>phosphotidulinostiol 4,5-bisphosphate</b>
+      <b>phosphotidylinostiol 4,5-bisphosphate</b>
+    </Hover>
+  )
+}
+
+const PIP3 = () => {
+  return (
+    <Hover>
+      <>
+        PIP<sub>2</sub>
+      </>
+      <b>phosphotidylinostiol 3,4,5-trisphosphate</b>
     </Hover>
   )
 }
@@ -148,6 +159,7 @@ const shortcodes = {
   KEQ,
   IP3,
   PIP2,
+  PIP3,
   Hover,
 }
 
