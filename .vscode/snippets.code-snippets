@@ -237,4 +237,16 @@
 			"molecule"
 		]
 	},
+	"prokaryotes": {
+		"prefix": "prok",
+		"body": [
+			"prokaryot"
+		]
+	},
+	"eukaryotes": {
+		"prefix": "euk",
+		"body": [
+			"eukaryot"
+		]
+	},
 }
