@@ -249,4 +249,10 @@
 			"eukaryot"
 		]
 	},
+	"bacteriophage": {
+		"prefix": "bacp",
+		"body": [
+			"bacteriophage"
+		]
+	}
 }
