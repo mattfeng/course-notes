@@ -254,8 +254,83 @@
 1. Base stacking, hypochromicity, DNA melting
 2. Discovery of DNA Pol I and mechanism
 3. Pol I activities: 5' to 3'polymerase, 3' to 5' exonuclease, 5' to 3' exonuclease
-4. Modern view of Pol III and DNA replicatino
+4. Modern view of Pol III and DNA replication
 5. RNA structure, RNA vs. DNA polymerases
 
-### DNA structure
+### 1<SPACE/>Base stacking, hypochromicity, DNA structure
 - **stabilized by $\pi$-$\pi$ stacking**
+- need energy to separate strands
+  - if >100 bp, need to use **heat**
+- "DNA melting"
+  - bases absorb UV light: $\lambda_{\max} = \pu{260 nm}$
+
+### 2<SPACE/>Discovery of DNA polymerase I and mechanism
+- Arthur Kornberg 1955
+- Assumptions:
+  1. Purine biosynthesis: 5'-NMP, not 3'-NMP
+  2. Pyrophospate (PPi) is a good LG
+- Properties of DNApolI
+  1. 103 kDa
+  2. uses dNTPs
+  3. requires a DNA template
+  4. requires a **primer**
+- PPi is rapid hydrolyzed into 2 $\ce{PO4^2-}$; this hydrolysis provdes the energy to drive reaction forward
+- **Klenow** fragment of DNA polymerase (structure solved at Yale)
+- palm: active site
+  - two $\ce{Mg^2+}$ ion metal centers
+  - MgA interacts with 3' OH primer, $\alpha$ phosphate of dNTP
+  - MgB interacts with $\beta$, $\gamma$ phosphates of dNTP and 2 Asp residues in polymerase
+- **catalytic mechanisms**
+  - acid-base (sort of)
+  - approximation
+  - metal ion
+- what gives specificity?
+  - Watson-Crick base pairing (_hydrogen bonds_)
+  - shape complementarity (steric hindrance in active site)
+    - DNA polymerase is optimized to fit only a purine and pyrimidine
+  - **minor groove interactions**
+    - check that two purines/pyrimidines are not in the same position
+- mismatch rate: **1 in every 10000 nt**
+  - moderately **processive** (how far it goes on the DNA before it falls off): ~20 nt
+- _E. coli_ chromosome: 5 million base pairs
+
+### 3<SPACE/>DNApolI activities
+- All DNA polymerases
+  - catalyze 5' to 3' <T tag="test" />
+  - have 3' to 5' exonuclease activity <T tag="test" />
+- DNApolI activities
+  - **5:3 polymerase**
+    - always reads template 3:5
+  - **3:5 exonuclease**
+    - prefers **non-complementarity**; provides **proofreading**
+    - if mismatch, strand flips (chemically) into active site of exonuclease
+    - increases accuracy **100 to 1000x**
+  - **5:3 exonuclease**
+    - preferred 5' end **properly paired**
+    - **used to remove RNA primer**
+
+### 4
+- DNA pol II, IV, V: DNA repair (not in this class)
+- DNA pol III: holoenzyme does **most of the replication**
+  - complex of more than 10 polypeptides: 830 kDa
+  - 2 polymerases: $\alpha, \epsilon, \theta$ (dimers)
+  - $\beta_2$ sliding clamp
+  - $\gamma_2\delta\delta\chi\phi$ clamp loader
+- **high processivity**: **500,000 nt**
+  - uses a sliding clamp
+- **high catalytic efficiency**
+  - 1000 nt/sec
+- **high fidelity**: low error rate
+  - mis-incorporation rate: 1 in $10^4$
+  - proofreads: 1 in $10^6$ - $10^7$
+  - repair: 1 in $10^{10}$
+
+![DNA pol III.](./dnapol3.png)
+
+- _E. coli_ have $5 \times 10^6$ bp: less than 1/1000 replicated _E. coli_ have a mutation
+
+#### Replication fork
+
+![Replication fork.](./repl-fork.png)
+
+![Trombone model of the replication fork.](./repl-fork-trombone.png)
