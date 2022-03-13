@@ -137,24 +137,108 @@
   - $W = 0.7 \Delta L$ 
 
 #### Topoisomerases prepare the double helix for unwinding
+- **negative supercoils** are most common because they result from **unwinding**, meaning they are useful for when DNA needs to separate
+  - **positive supercoils** also condense DNA, but are more difficult to prep DNA for separation
+- **TOP1** catalyzes relaxation of supercoiled DNA; thermodynamically favorable
+- **TOP2** adds negative supercoils to DNA using **ATP**
 
 #### Type I topoisomerases (TOP1) relax supercoiled structures
+- TOP1 structure
+  - four domains
+  - central cavity with diameter 20 Å (exact size of DNA)
+  - Tyr723 nph attack on DNA backbone
+- enzyme controls speed of unwinding
+- 5'-OH attacks Tyr723 to reconnect DNA
 
 #### Type II topoisomerases (TOP2) can introduce negative supercoils through coupling to ATP hydrolysis
+- supercoiling requires input of energy: has **torsional strain**
+- 30 kJ/mol for 3000bp plasmid
+- **decreases linking number by 2**
+
+![Topoisomerase 2.](./top2.png)
+
+- many antibiotics work by blocking **bacterialial topoisomerase II (DNA gyrase)** activity
+  - **ciprofloxacin**. interferes with breakage and rejoining of DNA chains
+
+![Ciprofloxacin.](./cipro.png)
 
 ### 28.3<SPACE/>DNA replication is highly coordinated
 
 #### DNA replication requires highly processive polymerases
+- **processivity**. the ability of an enzyme to catalyze many consecutive reactions without releasing its substrate
+- 1000 turns of duplex DNA slide through 35 Å hole per second
+
+![β2 subunit of DNApol3 acts as the sliding clamp.](./dnapol3-beta2.png)
 
 #### The leading and lagging strands are synthesized in a coordinated fashion
+- **SSB.** single stranded binding protein.
+- **DnaB**. the hexameric **helicase** that unwinds DNA.
+- **Top2**. introducing negative supercoils to avoid DNA compression
+- holoenzyme
+  - $\alpha$. DNA polymerase
+  - $\epsilon$. 3:5 proofreading exonuclease
+  - $\theta$
+  - $\beta_2$ sliding clamp
+  - linker: $\gamma\tau_2\delta\delta'\chi\phi$
+    - $\gamma\tau_2\delta\delta'$. clamp loader
+    - $\chi$, $\phi$. interact with SSB
+
+![Trombone model of the replication fork.](./repl-fork-trombone.png)
+
+- DNApolI removes RNA primer placed **by the previous Okazaki fragment**
 
 #### DNA replication in _E. coli_ begins at a unique site
 
+![oriC in E. coli.](./ecoli-ori.png)
+
+- steps to prepare for replication
+  1. binding of **DnaA** proteins to DNA
+      - **DnaA** $\in$ P-loop NTPase family
+  2. single DNA strands are exposed in the prepriming complex
+      - SSB bind to AT rich segments
+      - **DnaB** loaded onto single strands by **DnaC**
+      - **DnaG**, the **primase**, can now insert the primer
+  3. polymerase holoenzyme assembles
+      - DnaB (helicase) and sliding clamp connect
+      - DnaA subunits break apart, preventing second initialization
+
 #### DNA synthesis in eukaryotes is initiated at multiple sites
+- humans have ~30,000 origins of replication
+  - each ori is the starting site for a **replication unit (replicon)**
+- humans don't have a distinct ori sequence
+- steps to prepare for replication in eukaryotes
+    1. assembly of **origin of replication complexes (ORCs)** 
+        - human ORC composed of six different proteins, analogous to DnaA
+    2. licensing factors recruit a helicase that exposes single strands of DNA
+        - **licensing factors**: permit the formation of the initiation complex
+          - **Cdc6**. cell division cycle 6
+          - **Cdt1**. chromatin licensing and DNA replication factor 1
+          - **Mcm2-7**. helicase
+        - single strands are stablized by **replication protein A**, a ssDNA binding protein
+    3. two distinct polymerases are needed to copy a eukaryotic replicon
+        - **polymerase $\alpha$** begins replication
+          - **primase** subunit
+          - 20 nt polymerase subunit
+        - replaced by **polymerase $\delta$**: principal replicative polymerase in eukaryotes
+        - process called **polymerase switching**
+          - after $\alpha$ adds 20 nt, **replication factor C (RFC)** displaces $\alpha$.
+          - **RFC** attracts sliding clamp **PCNA (proliferating cell nuclear antigen)**
+        - multiple oris are coordinated with **cyclins** and **cyclin-dependent protein kinases**
+        - **Cdk2** binds to assemblies as origins of replication
+
+![Overview of the main types of polymerases.](./polymerase-overview.png)
 
 #### Telomeres are unique structures at the ends of linear chromosomes
+- **telomeres** have repeating six-nt sequencing
+  - G rich at 3' end: AGGGTT-3'
+- single-stranded region invades the duple to form a large duplex loop, stabilized by telomere-binding proteins
+
+![Proposed model for telomeres.](./telomere-model.png)
 
 #### Telomeres are replicated by telomerase, a specialized polymerase that carries its own RNA template
+- **telomerase** is a special **reverse transcriptase** that carries its own template (template is RNA)
+
+![Telomere formation.](./telomere-formation.png)
 
 ## pp. 859-886
 
@@ -309,7 +393,7 @@
     - preferred 5' end **properly paired**
     - **used to remove RNA primer**
 
-### 4
+### 4<SPACE/> The modern view of DNA polymerase III and replication
 - DNA pol II, IV, V: DNA repair (not in this class)
 - DNA pol III: holoenzyme does **most of the replication**
   - complex of more than 10 polypeptides: 830 kDa
