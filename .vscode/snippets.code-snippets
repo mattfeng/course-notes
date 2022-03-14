@@ -254,5 +254,95 @@
 		"body": [
 			"bacteriophage"
 		]
+	},
+	"synthesis": {
+		"prefix": "syn",
+		"body": [
+			"synthesis"
+		]
+	},
+	"bacteria": {
+		"prefix": "bac",
+		"body": [
+			"bacteria"
+		]
+	},
+	"initiation": {
+		"prefix": "ini",
+		"body": [
+			"initiat"
+		]
+	},
+	"ribosome": {
+		"prefix": "rib",
+		"body": [
+			"ribosome"
+		]
+	},
+	"antibotics": {
+		"prefix": "ant",
+		"body": [
+			"antibiotic"
+		]
+	},
+	"antibody": {
+		"prefix": "anb",
+		"body": [
+			"antibody"
+		]
+	},
+	"inhibit": {
+		"prefix": "inh",
+		"body": [
+			"inhibit"
+		]
+	},
+	"protein": {
+		"prefix": "ptn",
+		"body": [
+			"protein"
+		]
+	},
+	"elongation": {
+		"prefix": "elg",
+		"body": [
+			"elongation"
+		]
+	},
+	"termination": {
+		"prefix": "ter",
+		"body": [
+			"terminat"
+		]
+	},
+	"polymerase": {
+		"prefix": "pol",
+		"body": [
+			"polymerase"
+		]
+	},
+	"promoter": {
+		"prefix": "prom",
+		"body": [
+			"promoters"
+		]
+	},
+	"transcription": {
+		"prefix": "trs",
+		"body": [
+			"transcription"
+		]
+	},
+	"translation": {
+		"prefix": "trl",
+		"body": [
+			"translation"
+		]
+	},
+	"nucleotide": {
+		"prefix": "nt",
+		"body": [
+			"nucleotide"
+		]
 	}
 }
