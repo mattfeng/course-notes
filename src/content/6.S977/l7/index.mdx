@@ -1,0 +1,22 @@
+# Lecture 7. ML-driven small molecule selection in drug discovery (Jeremy Jenkins)
+
+## JAEGAR &mdash; Hunting for Antimalarials with Generative Chemistry
+- molecules are embedded in 28-dimensional latent space
+- how JAEGAR generates new molecules
+  1. seed molecule as starting point
+  2. deterministic sampling of neighbors along principal axes proportional to eigenvalue (SVD)
+  3. filter using QSAR model
+- for testing antimalarials
+  - train activity model with Novartis internal _Plasmodium falciparum_ proliferation assay
+    - 21065 molecules
+  - JAEGAR generates molecules and predicts their activity
+  - use 3 proprietary molecules as seed molecules
+  - consensus check JAEGAR's activities with different pQSAR model
+- **EC50**. dose effective in producing 50% of maximal response
+
+### Results
+- dissimilar molecules
+- high activity against _P. vivax_ PI(4)K kinase
+  - **PI4K**. **phosphatidylinositol 4-kinase**
+- low off-target effects (toxicity) compared to existing pan-kinase inhibitor (**staurosporine**)
+- JAEGAR overestimated antimalarial activity
