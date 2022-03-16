@@ -344,5 +344,17 @@
 		"body": [
 			"nucleotide"
 		]
+	},
+	"synthetase": {
+		"prefix": "stt",
+		"body": [
+			"synthetase"
+		]
+	},
+	"tRNA": {
+		"prefix": "tr",
+		"body": [
+			"tRNA"
+		]
 	}
 }
