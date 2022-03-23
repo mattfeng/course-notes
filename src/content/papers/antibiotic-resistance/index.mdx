@@ -52,6 +52,7 @@
   - quinolone
   - oxazolidinone
   - sulfa
+  - nitrofuran
 - high throughput screening has not discovered any new antibiotics
 - method
   1. train DNN to predict growth inhibition of _E. coli_ using collection of 2335 molecules
@@ -63,3 +64,15 @@
 - OD600 < 0.2 $\implies$ growth inhibition
 - **minimum inhibitory concentration (MIC)**. lowest concentration of an antimicrobial that will inhibit the visible growth of a microorganism after overnight incubation
 - **colony forming unit (CFU)**. an estimate of the number of viable bacterial/fungal cells in a sample
+- some antibiotics don't work against metabolically-repressed (starving) bacteria
+
+## Eradicating bacterial persisters with combinations of strongly and weakly metabolism-dependent antibiotics
+- **bacterial persisters**. cells that survive antibiotic treatment despite lacking genetically encoded antibiotic resistance determinants
+- metabolism-dependent classes
+  - **beta-lactam**: ampicillin
+  - **quinolone**: ciprofloxacin
+  - **aminoglycoside**: gentamicin
+- use cell media richness to control metabolic state (repressed or active)
+  - 100%, 10%, 1% LB
+- **bacteriostatic agent (bacteriostat, bstatic).** a biological or chemical agent that stops bacteria from reproducing, while not necessarily killing them otherwise
+  - e.g. chloramphenicol
