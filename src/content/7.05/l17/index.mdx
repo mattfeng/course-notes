@@ -1,5 +1,13 @@
 # Lecture 16. Chemistry of replication and transcription: polymerases
 
+export const BSUB = () => {
+  return <span><i>B. subtilis</i></span>
+}
+
+export const ECOLI = () => {
+  return <span><i>E. coli</i></span>
+}
+
 - Readings
   - pp. 119-123
   - pp. 827-844
@@ -326,31 +334,178 @@
   - GC-rich forms a hairpin, stalling RNA polymerase
   - AT-rich region has weak binding to RNA polymerase, causing the polymerase to fall off
 
+![Termination sequence forms a hairpin loop.](./termination.png)
+
 #### Some mRNAs directly sense metabolite concentrations
+- **riboswitches**. RNA secondary structures that are capable of directly binding small molecules
+- example: controls riboflavin (vitamin B2) biosynthesis in <BSUB/>
+  - **FMN (flavin mononucleotide)** is an intermediate in making riboflavin
+  - FMN binds to nascent mRNA encoding protein involved in making FMN, creating a premature termination loop, preventing a functional mRNA from being produced
+
+![Riboswitch in FMN synthesis.](./riboswitch.png)
 
 #### The _rho_ protein helps to terminate the transcription of some genes
+- $\rho$ protein detects additional termination signals that are not recognized by RNA polymerase alone
+- $\rho$ is a hexameric helicase that only acts on ssRNA
+  - when $\rho$ reaches RNA polymerase, it breaks the RNA-DNA hybrid helix and ends transcription
+- a common feature of **protein-dependent and protein indepedent termination** is that **functioning signals lie in the _newly synthesized RNA_ rather than in the DNA template**
 
-#### Precursors of tRNA nd rRNA are cleaved and chemically modified after transcription in prokaryotes
+#### Some antibiotics inhibit transcription
+- **rifampicin**
+  - inhibits the formation of the first few phosphodiester bonds in the RNA chain, preventing **initiation of RNA synthesis**
+  - binds and blocks channel where RNA-DNA hybrid passes through
+- **actinomycin D**
+  - binds tightly and specific to dsDNA and prevents it from being a template for RNA synthesis
+  - phenoxazone ring intercalates base pairs in DNA
+  - used as a specific **inhibitor of formation of new RNA** in both eukaryotes and prokaryotes
+
+![Actinomysin D.](./actinomysin.png)
+
+#### Precursors of tRNA and rRNA are cleaved and chemically modified after transcription in prokaryotes
+- in prokaryotes, mRNA is not modified
+
+![Primary transcript of rRNA and tRNA in E. coli.](./primary-transcript-ecoli.png)
+
+- tRNA and rRNA are derived from modifying precursors
+  - **cleavage**
+    - **ribonuclease P (RNase P)**: generates 5' terminus of all tRNA in <ECOLI/>
+    - **ribonuclease III (RNase III)**: cuts out the 5S, 16S, and 23S rRNAs from the primary transcript
+      - cleaves at specific sites with double-helix hairpin regions
+  - **base addition**
+    - `CCA` is chemically added to every 3' end of tRNA
+  - **modification of bases and ribose units**
+    - uridylate $\to$ ribothymidylate, pseudouridylate
 
 ### 29.2<SPACE/>Transcription in eukaryotes is highly regulated
+- **multicellular eukaryotes use differential transcriptional regulation to create different cell types**
+- gene expression controlled by
+  1. nuclear membrane
+  2. complex transcriptional regulation
+      - more promoters
+      - enhancers
+  3. RNA processing
+      - eukaryotes modify primary transcript much more
 
 #### Three types of RNA polymerase synthesize RNA in eukaryotic cells
+- **RNA polymerase I**
+  - located in nucleoli
+  - 18S, 5.8S, 28S rRNA
+  - insensitive to $\alpha$-amanitin
+- **RNA polymerase II**
+  - located in nucleoplasm
+  - synthesizes
+    - pre-mRNAs
+    - splicing apparatus
+    - precursors to small regulatory RNAs
+  - contains a unique **carboxyl-terminal domain (CTD)**
+    - repeats of `YSPTSPS`; regulated by phosphorylation of serines on CTD
+  - strongly inhibited by $\alpha$-amanitin ($K_d = \pu{10 nM}$)
+- **RNA polymerase III**
+  - located in nucleoplasm
+  - 5S rRNA and tRNAs
+  - inhibited at high concentrations by $\alpha$-amanitin
+- different promoters for different polymerases
+  - RNA polymerase I
+    - rDNA transcribed is _tandem repeats_ of three rRNA genes
+    - **ribosomal initiator element (rInr)**
+  - RNA polymerase II
+    - many possible consensus sequences for promoters
+  - RNA polymerase III
+    - lie _within_ the transcribed sequence
+    - type I promoter: for 5S rRNA gene
+      - A+C block
+    - type II promoter: for tRNA genes
+      - A+B block
+
+![Eukaryotic promoters.](./eukaryotic-promoters.png)
 
 #### Three common elements can be found in the RNA polymerase II promoter region
+- promoters are **cis-acting elements**; they are located on the same molecule of DNA as the genes being transcribed
+  - **trans-acting element**: encoded on a different molecule of DNA (or same molecule, but different gene)
+1. **TATA(AAA)** box
+    - found between -30 and -100
+2. Initiator element (Inr)
+    - found between -3 and +5
+    - defines the start site and increases transcriptional activity
+3. **downstream core promoter element (DPE)**
+    - found between +28 and +32
+    - found in transcripts lacking TATA box
+- other elements
+  - **CAAT box**: `5 GGNCAATCT 3`
+  - **GC box**: `5 GGGCGG 3`
+    - **constitutive genes** tend to have GC boxes
+  - TATA, GC, CAAT are all _cis-acting elements_ (found on the **template strand**), whereas -35 sequence on prokaryotic RNA polymerase is on the **sense strand**
 
 #### The TFIID protein complex initiates the assembly of the active transcription complex
+- TF: transcription factor
+- II: RNA polymerase **II**
+- A, B, C, D, ...: individual transcription factors
+- **TATA-box binding protein (TBP)** is part of the **TFIID** complex
+- TBP binds $10^5$ more tightly to TATA box as to nonconsensus sequences
+- TBP-TATA-box complex is asymmetric: ensures unidirectional transcription
+- TBP-TATA-box is the heart of the initiation complex
+  - TBP provides binding sites for other components
+- TFII{A,B,D,E,F,H} + RNApolII = **basal transcription apparatus**
+- **phosphorylation of CTD by TFIIH marks transition from initiation to elongation**
+  - if CTD has fewer than 10 repeats, **it is not viable**
+
+![Eukaryotic transcription initiation.](./eukaryotic-transcription-initiation.png)
 
 #### Multiple transcription factors interact with eukaryotic promoters
+- additional TFs bind to enhance transcription rate
+- e.g. **heat-shock transcription factor (HSTF)**
+  - binds to **heat-shock response element** that precedes many heat-shock releated genes
 
 #### Enhancer sequences can stimulate transcription at start sites thousands of bases away
+- **particular enhancers are only effective in certain cell types**
+- cancer can result if relation between genes and enhancers is disrupted
+  - e.g. Burkitt lymphoma, B-cell leukemia, translocation brings _myc_ (a transcription factor) under control of an enhancer
 
 ## pp. 925-931
 
 ### 31<SPACE/>The control of gene expression in prokaryotes
+- gene expression is controlled first at the **transcription level**
+- gene expression is regulated in response to changes in concentrations of specific molecules
 
 ### 31.1<SPACE/>Many DNA-binding proteins recognize specific DNA sequences
+- **symmetric matching is a recurring theme in protein-DNA interactions**
+- the dsDNA exhibits a symmetry because of the double-helix; this lets a protein dimer bind
+
+![lac repressor-DNA complex.](./lac-repressor.png)
+
+#### The helix-turn-helix motif is common to many prokaryotic DNA-binding proteins
+- **helix-turn-helix** is common motif
+  - second helix is the one that lies in the major groove
+- other motifs exist as well, including beta strands inserted into major groove
+
+![Helix-turn-helix motif.](./helix-turn-helix.png)
 
 ### 31.2<SPACE/>Prokaryotic DNA-binding proteins bind specifically to regulatory sites in operons
+- observation: two other proteins are synthesized **in concert** with $\beta$-galactosidase
+  1. **galactoside permease**: transports lactose into bacteria
+  2. **thiogalactoside transacetylase**: detoxifies collateral compounds that may also be transported into the bacteria
+- these genes must be expressed together: done so via an **operon**
+
+#### An operon consists of regulatory elements and protein-encoding genes
+- gene encoding repressor
+- **repressor** binds to **operator site**
+- **operon = operator site + structural genes** (no repressor gene!)
+
+![The lactose operon. z: beta-galactosidase; y: permease; a: transacetylase.](./lactose-operon.png)
+
+- **polygenic/polycistronic transcript**. an mRNA molecule encoding more than one protein
+
+#### The _lac_ repressor protein in the absence of lactose binds to the operator and blocks transcription
+- _lac_ repressor has allosteric change in prescence of lactose; lactose prevents it from binding to DNA
+- rate constant of association is $\approx \pu{10^{10} M-1 s-1}$, indicating **one-dimensional search**
+
+![](./lac-repressor-structure.png)
+
+#### Ligand binding can induce structural changes in regulatory proteins
+
+#### The operon is a common regulatory unit in prokaryotes
+
+#### Transcription can be stimulated by proteins that contact RNA polymerase
 
 ## pp. 941-947
 
