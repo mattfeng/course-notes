@@ -6,6 +6,13 @@ import * as styles from "../styles/notes.module.scss"
 const IndexPage = () => (
   <div className={styles.mainContainer}>
     <div>
+      <h1>talks</h1>
+      <ul>
+        <li>
+          <Link to="/talks/withinsight">with/in/sight</Link>
+        </li>
+      </ul>
+
       <h1>software development</h1>
       <ul>
         <li>
