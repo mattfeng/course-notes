@@ -1,0 +1,22 @@
+# Inverse design for molecules
+
+## Chemical space
+- the set of all possible chemical compounds
+- size: approximately
+
+## Discrete optimization is hard
+- no gradients to guide us
+
+## Inverse design
+- Is there a $f^{-1}$ that given a property finds a candidate?
+- Is there a way to use gradient-based optimization in molecular design?
+
+## Molecular generation
+- model should be
+  - **diverse** (avoid mode collapse)
+    - this is important because we want to be able to generate any number of molecules, not just one drug
+
+## Invariances
+- Permutation invariance
+  - need to figure out "un-pooling"
+  - there is a canonical choice _or_ augmentation with all permutations

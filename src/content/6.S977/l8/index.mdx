@@ -1,0 +1,108 @@
+# Lecture 8. Synthetic Biology Approaches to Disease Therapeutics	
+- Ron Weiss, Professor
+
+## Notes
+- tackling the complexity of disease and development requires appropriately sophisticated tools for control
+- central dogma of synbio
+  - sensing
+  - logic processing
+  - actuation (e.g. therapeutic functions)
+    - altered gene expression
+    - changes in protein activity
+    - metabolic activity
+- example applications
+  - cancer
+    - high level: detecting and killing HeLa cancer cells
+    - and going beyond Boolean logic
+  - programmable organoids
+    - high level: self-timed, multi-step hiPS to beta-cell differention
+    - start with iPSCs and convert them to organoids
+      - in particular, liver organoids
+  - ultrasensitive sense-and-response
+    - high level: sense abnormal blood biomarker and respond quickly
+- basic building blocks
+  - `R`. repressor
+  - `I`. inducer
+  - `O`. output
+  - `NOT(R)`
+  - `NOT(R) OR I`. allows for **modulation**
+  - `AND(A, B)`. A, B both repress R that represses O.
+- Agenda
+  - Programmable organoids
+  - ML to optimize cell classifiers for cancer immunotherapy
+  - Neuromorphic computing in cells
+
+### Organoids
+- going from cells to mini-organs
+  - regenerative medicine
+  - better in-vitro testing
+    - personalized in-vitro testing
+- current progress
+  1. primary cells
+  2. co-culture of two cell types, inclusion of hydrogels and encapsulation
+  3. iPSC-derived spheroids coaxed with small molecules and culture additives
+  4. 3D printers, micropatterning, scaffolds
+- challenges
+  - how do we get all the cell-types
+  - support co-development
+  - proper maturation
+  - pervasive vascularization
+- how do we recapitulate the major aspects of organs?
+- at the moment, synbio is the only tool to control the development of cells
+- prior work
+  - [A synthetic multicellular system for programmed pattern formation](https://www.nature.com/articles/nature03461)
+- `if endoderm`: doesn't work well with boolean logic
+  - will transition to neuromorphic computing
+
+```python
+if dox:             # took 10 years
+  # form_endoderm
+  express(GATA6)
+if endoderm:
+  form_pancreas()
+if pancreas:
+  form_beta_cells()
+```
+
+- Got **liver organoids** by accident
+- 3D liver organoid assays
+  - D30: pervasive vasculature
+  - D74: organoids
+  - liver function
+    - Albumin (good)
+    - Urea (good)
+  - ADME gene
+    - some are expressed lower than desired
+      - Cyp3A4 ($\in$ cytochrome P450 enzyme superfamily)
+
+```python
+# new program (Deepak Mishra)
+if dox:
+  express(Gata6)
+if hepatocyte:
+  # don't want to differentiation other cell types
+  express(hepatocyte maturation TFs)
+```
+
+- problem with mammalian synthetic biology: **epigenetic silencing**. genes could not turn back on
+  - potential solution: synbio at the **translational** regulation
+    - genes always stay on
+
+### ML to optimize cancer detection
+- use ML to determine best stoichiometry of miRNA to detect HeLa cells
+
+### Neuromorphic computing: Using ML to develop ML in cells
+- researchers
+  - Andrew Moorman
+- endoderm $\to$ pancreatic progenitors need `Pdx1` expressed as a pulse
+- biomarker patterns that help detect cell state are often non-binary and difficult to recognize during differentiation
+- "region algebra": neuromorphic circuits for classification
+
+#### How are neuromorphic circuits implemented?
+- weighted addition
+  - two inputs express the same protein
+- weighted subtraction
+  - use CRISPR endonuclease that stays bound
+  - can't get negative values
+- can change the decision boundary by changing genetic elements
+- **biocompiler**
